@@ -16,3 +16,13 @@ SECURITY_AUDIT_REPORT.md
 .output
 .agents/
 skills-lock.json
+
+# Nasak production runtime files (secrets and generated state)
+deploy/runtime/
+deploy/*.env
+deploy/*.json
+backups/
+*.dump
+*.dump.sha256
+firebase-credentials.json
+google-services.json

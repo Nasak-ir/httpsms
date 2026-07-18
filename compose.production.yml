@@ -1,0 +1,118 @@
+name: nasak-sms
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-httpsms}
+      POSTGRES_USER: ${POSTGRES_USER:-httpsms}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    networks: [backend]
+    logging: *default-logging
+    security_opt: ["no-new-privileges:true"]
+
+  redis:
+    image: redis:8-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [backend]
+    logging: *default-logging
+    security_opt: ["no-new-privileges:true"]
+
+  api:
+    build:
+      context: ./api
+      args:
+        GIT_COMMIT: ${GIT_COMMIT:-unknown}
+    restart: unless-stopped
+    env_file:
+      - ${NASAK_SMS_API_ENV_FILE:-./deploy/runtime/api.env}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${NASAK_SMS_API_PORT:-3800}:8000"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://127.0.0.1:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks: [backend]
+    logging: *default-logging
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+
+  web:
+    build:
+      context: ./web
+      args:
+        API_BASE_URL: ${PUBLIC_API_BASE_URL:-https://sms.nasak.ir/api}
+        APP_URL: ${PUBLIC_APP_URL:-https://sms.nasak.ir}
+        APP_NAME: ${PUBLIC_APP_NAME:-Nasak SMS}
+        APP_GITHUB_URL: ${PUBLIC_APP_GITHUB_URL:-https://github.com/Nasak-ir/httpsms}
+        APP_DOCUMENTATION_URL: ${PUBLIC_APP_DOCUMENTATION_URL:-https://github.com/Nasak-ir/httpsms/blob/main/docs/NASAK_PRODUCTION.md}
+        APP_DOWNLOAD_URL: ${PUBLIC_APP_DOWNLOAD_URL:-https://github.com/Nasak-ir/httpsms/releases/latest/download/NasakSms.apk}
+        APP_ENV: production
+        GITHUB_SHA: ${GIT_COMMIT:-unknown}
+        FIREBASE_API_KEY: ${FIREBASE_API_KEY:?FIREBASE_API_KEY is required}
+        FIREBASE_AUTH_DOMAIN: ${FIREBASE_AUTH_DOMAIN:?FIREBASE_AUTH_DOMAIN is required}
+        FIREBASE_PROJECT_ID: ${FIREBASE_PROJECT_ID:?FIREBASE_PROJECT_ID is required}
+        FIREBASE_STORAGE_BUCKET: ${FIREBASE_STORAGE_BUCKET:?FIREBASE_STORAGE_BUCKET is required}
+        FIREBASE_MESSAGING_SENDER_ID: ${FIREBASE_MESSAGING_SENDER_ID:?FIREBASE_MESSAGING_SENDER_ID is required}
+        FIREBASE_APP_ID: ${FIREBASE_APP_ID:?FIREBASE_APP_ID is required}
+        FIREBASE_MEASUREMENT_ID: ${FIREBASE_MEASUREMENT_ID:-}
+        CLOUDFLARE_TURNSTILE_SITE_KEY: ${CLOUDFLARE_TURNSTILE_SITE_KEY:-}
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${NASAK_SMS_WEB_PORT:-3801}:3000"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--spider", "http://127.0.0.1:3000/"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    networks: [backend]
+    logging: *default-logging
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx:size=32m
+      - /var/run:size=4m
+    cap_drop: ["ALL"]
+    cap_add: ["CHOWN", "SETGID", "SETUID"]
+    security_opt: ["no-new-privileges:true"]
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  postgres-data:

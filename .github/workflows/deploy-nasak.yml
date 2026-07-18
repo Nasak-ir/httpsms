@@ -1,0 +1,52 @@
+name: Deploy Nasak SMS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "api/**"
+      - "web/**"
+      - "compose.production.yml"
+      - "ops/**"
+      - ".github/workflows/deploy-nasak.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nasak-sms-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: ${{ vars.NASAK_DEPLOY_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Configure SSH
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -d -m 0700 ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_ed25519
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 0600 ~/.ssh/id_ed25519 ~/.ssh/known_hosts
+          printf 'Host production\n  HostName %s\n  User %s\n  IdentityFile ~/.ssh/id_ed25519\n  IdentitiesOnly yes\n' "$DEPLOY_HOST" "$DEPLOY_USER" > ~/.ssh/config
+
+      - name: Deploy verified main branch
+        run: |
+          ssh production 'set -Eeuo pipefail
+            cd /opt/nasak-sms/repository
+            git fetch --prune origin main
+            git checkout main
+            git reset --hard origin/main
+            sudo /opt/nasak-sms/repository/ops/deploy.sh'
+
+      - name: Smoke test
+        run: |
+          curl --fail --silent --show-error --retry 5 --retry-delay 3 https://sms.nasak.ir/healthz
+          curl --fail --silent --show-error --retry 5 --retry-delay 3 https://sms.nasak.ir/api/health

@@ -1,0 +1,16 @@
+[Unit]
+Description=Nasak SMS self-hosted gateway
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/nasak-sms/repository
+ExecStart=/usr/bin/docker compose --env-file /opt/nasak-sms/shared/compose.env -f /opt/nasak-sms/repository/compose.production.yml up -d
+ExecStop=/usr/bin/docker compose --env-file /opt/nasak-sms/shared/compose.env -f /opt/nasak-sms/repository/compose.production.yml stop
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
