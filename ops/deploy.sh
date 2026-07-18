@@ -36,12 +36,18 @@ done
 curl -fsS http://127.0.0.1:3800/health >/dev/null
 curl -fsS http://127.0.0.1:3801/ >/dev/null
 
-set -a
-# shellcheck disable=SC1090
-source "$SHARED_DIR/api.env"
-# shellcheck disable=SC1090
-source "$COMPOSE_ENV"
-set +a
+read_env_value() {
+  local key=$1 file=$2
+  sed -n "s/^${key}=//p" "$file" | tail -n 1 | tr -d '\r'
+}
+
+EVENTS_QUEUE_USER_ID=$(read_env_value EVENTS_QUEUE_USER_ID "$SHARED_DIR/api.env")
+EVENTS_QUEUE_USER_API_KEY=$(read_env_value EVENTS_QUEUE_USER_API_KEY "$SHARED_DIR/api.env")
+POSTGRES_USER=$(read_env_value POSTGRES_USER "$COMPOSE_ENV")
+POSTGRES_DB=$(read_env_value POSTGRES_DB "$COMPOSE_ENV")
+
+POSTGRES_USER=${POSTGRES_USER:-httpsms}
+POSTGRES_DB=${POSTGRES_DB:-httpsms}
 
 if [[ -z ${EVENTS_QUEUE_USER_ID:-} || -z ${EVENTS_QUEUE_USER_API_KEY:-} ]]; then
   echo "System queue user is not configured." >&2
