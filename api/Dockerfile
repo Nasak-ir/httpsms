@@ -1,7 +1,9 @@
 FROM golang AS builder
 
 ARG GIT_COMMIT
+ARG GOPROXY=https://proxy.golang.org,direct
 ENV GIT_COMMIT=$GIT_COMMIT
+ENV GOPROXY=$GOPROXY
 
 WORKDIR /http-sms
 

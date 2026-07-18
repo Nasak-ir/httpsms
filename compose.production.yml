@@ -44,6 +44,7 @@ services:
       context: ./api
       args:
         GIT_COMMIT: ${GIT_COMMIT:-unknown}
+        GOPROXY: ${GOPROXY:-https://proxy.golang.org,direct}
     restart: unless-stopped
     env_file:
       - ${NASAK_SMS_API_ENV_FILE:-./deploy/runtime/api.env}

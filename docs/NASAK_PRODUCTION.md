@@ -88,3 +88,7 @@ sudo docker compose --env-file /opt/nasak-sms/shared/compose.env \
 
 Never commit production `.env`, Firebase service-account JSON,
 `google-services.json`, database dumps, or API keys.
+
+For servers where `proxy.golang.org` is unavailable, set `GOPROXY` in
+`compose.env` to an approved regional mirror. This affects build-time module
+downloads only and is not used by the running API.
