@@ -28,3 +28,4 @@ backups/
 *-src.tar.gz
 firebase-credentials.json
 google-services.json
+!android/app/google-services.example.json
