@@ -24,6 +24,23 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: Check out source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: false
+
+      - name: Package immutable release
+        run: |
+          tar \
+            --exclude='.git' \
+            --exclude='.env' \
+            --exclude='.env.*' \
+            --exclude='node_modules' \
+            --exclude='*.bundle' \
+            --exclude='*-src.tar.gz' \
+            -czf "nasak-sms-${GITHUB_SHA}.tar.gz" .
+          sha256sum "nasak-sms-${GITHUB_SHA}.tar.gz" > "nasak-sms-${GITHUB_SHA}.tar.gz.sha256"
+
       - name: Configure SSH
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
@@ -37,14 +54,34 @@ jobs:
           chmod 0600 ~/.ssh/id_ed25519 ~/.ssh/known_hosts
           printf 'Host production\n  HostName %s\n  User %s\n  IdentityFile ~/.ssh/id_ed25519\n  IdentitiesOnly yes\n' "$DEPLOY_HOST" "$DEPLOY_USER" > ~/.ssh/config
 
-      - name: Deploy verified main branch
+      - name: Upload verified release
         run: |
-          ssh production 'set -Eeuo pipefail
-            cd /opt/nasak-sms/repository
-            git fetch --prune origin main
-            git checkout main
-            git reset --hard origin/main
-            sudo /opt/nasak-sms/repository/ops/deploy.sh'
+          scp "nasak-sms-${GITHUB_SHA}.tar.gz" production:/tmp/
+          scp "nasak-sms-${GITHUB_SHA}.tar.gz.sha256" production:/tmp/
+
+      - name: Deploy verified release
+        run: |
+          ssh production "RELEASE_SHA=${GITHUB_SHA} bash -s" <<'REMOTE'
+          set -Eeuo pipefail
+          archive="/tmp/nasak-sms-${RELEASE_SHA}.tar.gz"
+          checksum="${archive}.sha256"
+          stage="/opt/nasak-sms/incoming/${RELEASE_SHA}"
+
+          case "$stage" in
+            /opt/nasak-sms/incoming/*) ;;
+            *) echo "Unsafe release path" >&2; exit 1 ;;
+          esac
+
+          cd /tmp
+          sha256sum --check "$checksum"
+          sudo rm -rf -- "$stage"
+          sudo install -d -m 0750 -o root -g root "$stage"
+          sudo tar -xzf "$archive" -C "$stage"
+          sudo rsync -a --delete --exclude='.git/' "$stage/" /opt/nasak-sms/repository/
+          sudo env GIT_COMMIT="$RELEASE_SHA" /opt/nasak-sms/repository/ops/deploy.sh
+          sudo rm -rf -- "$stage"
+          rm -f -- "$archive" "$checksum"
+          REMOTE
 
       - name: Smoke test
         run: |

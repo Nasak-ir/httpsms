@@ -19,7 +19,9 @@ chmod 600 "$COMPOSE_ENV" "$SHARED_DIR/api.env"
 cd "$REPO_DIR"
 
 export GIT_COMMIT
-GIT_COMMIT=$(git rev-parse --short=12 HEAD)
+if [[ -z ${GIT_COMMIT:-} ]]; then
+  GIT_COMMIT=$(git rev-parse --short=12 HEAD 2>/dev/null || printf 'unknown')
+fi
 
 compose=(docker compose --env-file "$COMPOSE_ENV" -f "$COMPOSE_FILE")
 "${compose[@]}" config --quiet

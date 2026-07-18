@@ -24,5 +24,7 @@ deploy/*.json
 backups/
 *.dump
 *.dump.sha256
+*.bundle
+*-src.tar.gz
 firebase-credentials.json
 google-services.json

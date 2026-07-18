@@ -35,14 +35,16 @@ ENV API_BASE_URL=$API_BASE_URL \
     FIREBASE_MESSAGING_SENDER_ID=$FIREBASE_MESSAGING_SENDER_ID \
     FIREBASE_APP_ID=$FIREBASE_APP_ID \
     FIREBASE_MEASUREMENT_ID=$FIREBASE_MEASUREMENT_ID \
-    CLOUDFLARE_TURNSTILE_SITE_KEY=$CLOUDFLARE_TURNSTILE_SITE_KEY
+    CLOUDFLARE_TURNSTILE_SITE_KEY=$CLOUDFLARE_TURNSTILE_SITE_KEY \
+    CI=true \
+    HUSKY=0
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install pnpm
 RUN npm install -g pnpm
 
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 RUN pnpm run generate
