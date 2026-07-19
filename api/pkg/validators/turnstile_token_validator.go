@@ -46,6 +46,12 @@ func NewTurnstileTokenValidator(logger telemetry.Logger, tracer telemetry.Tracer
 // ValidateToken validates the cloudflare turnstile token
 // https://developers.cloudflare.com/turnstile/get-started/server-side-validation/
 func (v *TurnstileTokenValidator) ValidateToken(ctx context.Context, ipAddress, token string) bool {
+	// CAPTCHA is optional in the self-hosted Nasak deployment. Authentication,
+	// ownership checks and API rate limits still protect this endpoint.
+	if v.secretKey == "" {
+		return true
+	}
+
 	ctx, span, ctxLogger := v.tracer.StartWithLogger(ctx, v.logger)
 	defer span.End()
 

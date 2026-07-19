@@ -1,16 +1,16 @@
-# Graph Report - httpsms  (2026-07-19)
+# Graph Report - nasak-sms  (2026-07-19)
 
 ## Corpus Check
-- 406 files · ~314,758 words
+- 409 files · ~312,875 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3444 nodes · 6927 edges · 274 communities (217 shown, 57 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 317 edges (avg confidence: 0.8)
+- 3425 nodes · 4775 edges · 728 communities (148 shown, 580 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 320 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `31b66877`
+- Built from commit: `bb106827`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -137,7 +137,6 @@
 - playwright
 - Integration Tests
 - Self Host Setup - Docker
-- billing_usage_test.go
 - bulk_message_handler.go
 - testClient
 - EmailNotificationListener
@@ -148,8 +147,6 @@
 - PhoneNumberValidator.kt
 - NewSMTPEmailService
 - message_send_schedule_test.go
-- user_test.go
-- MessageAPISentPayload
 - BillingListener
 - PhoneAPIKeyListener
 - BillingUsageHistory
@@ -220,6 +217,7 @@
 - login.vue
 - app.ts
 - Constants.kt
+- docs.go
 - health-check.sh
 - generate-firebase-credentials.sh
 - BlogInfo.vue
@@ -235,6 +233,8 @@
 - qrcode
 - getWeekday
 - saveEmailNotifications
+- Typography.kt
+- settings.gradle.kts
 - github.com/NdoleStudio/httpsms
 - github.com/NdoleStudio/httpsms/tests
 - MessageSendExpiredCheckPayload
@@ -266,18 +266,468 @@
 - pre-push
 - pre-rebase
 - prepare-commit-msg
+- webhook_responses.go
+- backup.sh
+- deploy.sh
+- check_http
+- install-docker-ubuntu.sh
+- install-firebase-credentials.sh
+- Constants
+- discord.go
+- heartbeat.go
+- webhook.go
+- discord_message_failed_event.go
+- listeners.go
+- message_send_failed_event.go
+- message_thead_api_deleted_event.go
+- user_account_created_event.go
+- user_account_deleted_event.go
+- BroadcastReceiver
+- Context
+- Intent
+- Result
+- String
+- Worker
+- String
+- String
+- Array
+- BroadcastReceiver
+- Context
+- Intent
+- Pair
+- Result
+- String
+- Worker
+- Boolean
+- Context
+- String
+- BroadcastReceiver
+- Context
+- Intent
+- BroadcastReceiver
+- Context
+- Int
+- Intent
+- Pair
+- Result
+- String
+- Worker
+- BroadcastReceiver
+- Context
+- Intent
+- Result
+- String
+- Worker
+- AppCompatActivity
+- Boolean
+- Bundle
+- ArrayList
+- Boolean
+- Context
+- PendingIntent
+- String
+- Boolean
+- String
+- Context
+- String
+- ViewModel
+- Boolean
+- String
+- Boolean
+- Context
+- String
+- ViewModel
+- Boolean
+- Boolean
+- String
+- Result
+- Worker
+- Context
+- Duration
+- Context
+- Duration
+- Context
+- Context
+- Context
+- Request
+- T
+- Context
+- Builder
+- T
+- Hermes
+- Hermes
+- T
+- T
+- Hermes
+- Location
+- Time
+- T
+- Context
+- UUID
+- Time
+- UUID
+- T
+- Time
+- Time
+- UUID
+- Time
+- UUID
+- Time
+- UUID
+- Time
+- UUID
+- StringArray
+- Time
+- UUID
+- Time
+- UUID
+- T
+- Time
+- UUID
+- StringArray
+- Time
+- UUID
+- Duration
+- SIM
+- Time
+- UUID
+- Time
+- UUID
+- Location
+- Time
+- UUID
+- T
+- StringArray
+- Time
+- UUID
+- UUID
+- SIM
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- Time
+- UUID
+- Duration
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- Time
+- UUID
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- Time
+- UUID
+- Time
+- UUID
+- Time
+- UUID
+- Time
+- UUID
+- SIM
+- Time
+- UUID
+- Time
+- Time
+- Time
+- Time
+- Time
+- Time
+- Time
+- UUID
+- Ctx
+- Router
+- Ctx
+- Router
+- Ctx
+- Router
+- App
+- Ctx
+- Router
+- Ctx
+- Router
+- Values
+- Builder
+- Ctx
+- Router
+- App
+- Context
+- Ctx
+- Ctx
+- Router
+- Ctx
+- Router
+- App
+- Ctx
+- T
+- Ctx
+- Router
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Context
+- Event
+- Handler
+- T
+- T
+- Context
+- Context
+- DB
+- Time
+- Context
+- DB
+- UUID
+- Context
+- DB
+- UUID
+- Context
+- DB
+- Context
+- DB
+- BulkMessage
+- Context
+- DB
+- Message
+- UUID
+- Context
+- DB
+- UUID
+- Context
+- DB
+- UUID
+- Context
+- DB
+- Time
+- UUID
+- Context
+- DB
+- Phone
+- UUID
+- Context
+- DB
+- UUID
+- Context
+- Map
+- Collection
+- Context
+- Database
+- UUID
+- Collection
+- Context
+- Database
+- Context
+- Database
+- Location
+- Time
+- Time
+- Time
+- Time
+- SIM
+- Time
+- Time
+- UUID
+- BulkMessage
+- Message
+- Phone
+- T
+- Time
+- Context
+- Event
+- Map
+- service
+- UUID
+- Context
+- Duration
+- service
+- Context
+- Message
+- Context
+- Duration
+- Context
+- service
+- Context
+- Duration
+- Event
+- Float64Histogram
+- Span
+- Context
+- Message
+- Context
+- Duration
+- Context
+- Event
+- service
+- Time
+- UUID
+- Context
+- Event
+- Map
+- service
+- Context
+- service
+- Context
+- Context
+- MessageSendScheduleWindow
+- service
+- UUID
+- BulkMessage
+- Context
+- Duration
+- Event
+- Message
+- PhoneNumber
+- service
+- SIM
+- Time
+- UUID
+- SpanContext
+- T
+- Context
+- service
+- Time
+- UUID
+- T
+- Context
+- service
+- UUID
+- Context
+- Event
+- Phone
+- service
+- SIM
+- Span
+- Time
+- UUID
+- Context
+- Duration
+- Event
+- Phone
+- PhoneNumber
+- service
+- SIM
+- UUID
+- Event
+- Context
+- Event
+- Request
+- service
+- StringArray
+- UUID
+- Context
+- Interface
+- Time
+- Context
+- Ctx
+- Span
+- Event
+- SpanContext
+- Context
+- Values
+- BulkMessage
+- Context
+- Location
+- Values
+- Context
+- Values
+- Context
+- Values
+- Context
+- Values
+- Context
+- MessageSendScheduleWindow
+- Values
+- Context
+- Values
+- Context
+- Values
+- Context
+- Values
+- Context
+- Values
+- Context
+- Values
+- Context
+- Values
+- Context
+- Duration
+- Message
+- Request
+- T
+- Context
+- Duration
+- T
+- Time
 
 ## God Nodes (most connected - your core abstractions)
-1. `Tracer` - 263 edges
-2. `UserID` - 233 edges
-3. `Logger` - 200 edges
-4. `Container` - 147 edges
-5. `New()` - 76 edges
-6. `MessageService` - 66 edges
-7. `Client` - 55 edges
-8. `request` - 42 edges
-9. `UserService` - 41 edges
-10. `User` - 40 edges
+1. `Container` - 148 edges
+2. `Tracer` - 116 edges
+3. `New()` - 76 edges
+4. `MessageService` - 55 edges
+5. `Settings` - 41 edges
+6. `NewContainer()` - 38 edges
+7. `Logger` - 38 edges
+8. `UserID` - 36 edges
+9. `UserService` - 35 edges
+10. `BillingService` - 34 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `newAPIClient()` --calls--> `New()`  [INFERRED]
@@ -294,131 +744,107 @@
 ## Import Cycles
 - None detected.
 
-## Communities (274 total, 57 thin omitted)
+## Communities (728 total, 580 thin omitted)
 
 ### Community 0 - "Settings"
-Cohesion: 0.06
-Nodes (18): AppCompatActivity, Bundle, Context, String, LoginActivity, Boolean, Context, Long (+10 more)
+Cohesion: 0.13
+Nodes (6): Boolean, Context, Long, String, Settings, SharedPreferences
 
 ### Community 1 - "Container"
-Cohesion: 0.10
-Nodes (8): App, Float64Histogram, Handler, RoundTripper, NewContainer(), Container, Resource, FCMClient
+Cohesion: 0.19
+Nodes (4): Handler, NewContainer(), paidFeaturesEnabled(), Authenticated()
 
 ### Community 2 - "helpers_test.go"
-Cohesion: 0.10
-Nodes (60): defaultClientConfig(), T, TestWithBaseURL(), TestWithHTTPClient(), WithApplicationID(), WithBaseURL(), WithBotToken(), WithHTTPClient() (+52 more)
-
-### Community 3 - "PhoneNotificationService"
-Cohesion: 0.23
-Nodes (6): Ctx, Router, NewMessageThreadHandler(), NewMessageThreadHandlerValidator(), MessageThreadHandler, MessageThreadHandlerValidator
+Cohesion: 0.16
+Nodes (40): assertWebhookJWT(), fetchBulkMessages(), fetchOutstandingMessage(), findBulkEntry(), findFCMRequests(), findWebhookRequests(), fireEvent(), newAPIClient() (+32 more)
 
 ### Community 4 - "HttpSmsApiService"
 Cohesion: 0.06
-Nodes (37): Encrypter, String, create(), HttpSmsApiService, Array, Boolean, Context, Int (+29 more)
+Nodes (26): create(), HttpSmsApiService, Array, Boolean, Context, Int, Long, Message (+18 more)
 
 ### Community 5 - "MessageThreadService"
-Cohesion: 0.22
-Nodes (8): Context, service, Time, UUID, MessageThreadGetParams, MessageThreadService, MessageThreadStatusParams, MessageThreadUpdateParams
+Cohesion: 0.21
+Nodes (4): NewMessageThreadService(), MessageThreadGetParams, MessageThreadService, MessageThreadUpdateParams
 
 ### Community 6 - "api.ts"
 Cohesion: 0.04
 Nodes (57): useBillingStore, EntitiesBillingUsage, EntitiesDiscord, EntitiesMessageSendSchedule, EntitiesMessageSendScheduleWindow, EntitiesPhoneAPIKey, EntitiesSIM, EntitiesSubscriptionName (+49 more)
 
 ### Community 7 - "index.vue"
-Cohesion: 0.03
-Nodes (48): activeDiscord, activePhone, activeSchedule, activeWebhook, apiKey, apiKeyShow, authStore, avatarUrl (+40 more)
+Cohesion: 0.04
+Nodes (47): activeDiscord, activePhone, activeSchedule, activeWebhook, apiKey, apiKeyShow, authStore, avatarUrl (+39 more)
 
 ### Community 8 - "WebhookService"
-Cohesion: 0.05
-Nodes (28): Context, Context, Context, Request, Context, StringArray, Time, UUID (+20 more)
+Cohesion: 0.06
+Nodes (13): Ctx, Router, NewWebhookHandler(), NewWebhookService(), NewWebhookHandlerValidator(), WebhookHandler, WebhookIndex, WebhookStore (+5 more)
 
 ### Community 9 - "handler"
-Cohesion: 0.06
-Nodes (11): App, Ctx, Router, Values, Ctx, Router, Ctx, Router (+3 more)
+Cohesion: 0.07
+Nodes (5): App, Ctx, Router, handler, MessageHandler
 
 ### Community 10 - "MessageService"
-Cohesion: 0.18
-Nodes (5): Event, service, MessageEventName, MessageService, MessageStoreEventParams
+Cohesion: 0.17
+Nodes (4): MessageEventName, MessagePhoneDeliveredPayload, MessagePhoneSentPayload, MessageStoreEventParams
 
 ### Community 11 - "SendSmsWorker"
 Cohesion: 0.11
-Nodes (22): android, ArrayList, Context, Message, PendingIntent, Result, String, Worker (+14 more)
+Nodes (14): android, ArrayList, Context, Message, PendingIntent, Result, String, Worker (+6 more)
 
 ### Community 12 - "index.vue"
 Cohesion: 0.05
 Nodes (41): authStore, canResendSelected, config, deleteMessages(), errorMessages, errorTitle, exportMessages(), fetchMessages() (+33 more)
 
 ### Community 13 - "MainActivity"
-Cohesion: 0.18
-Nodes (7): AppCompatActivity, Boolean, Bundle, Context, Long, String, MainActivity
+Cohesion: 0.08
+Nodes (15): AppCompatActivity, Boolean, Bundle, Context, Long, String, MainActivity, SettingsActivity (+7 more)
 
 ### Community 14 - "Logger"
-Cohesion: 0.11
-Nodes (27): axiomLogger(), consoleLogger(), getGCEInstanceID(), instanceID(), isLocal(), logDriver(), logger(), NewLiteContainer() (+19 more)
-
-### Community 15 - "Tracer"
-Cohesion: 0.12
-Nodes (14): Database, Ctx, Router, NewHeartbeatHandler(), NewGormHeartbeatMonitorRepository(), NewGormHeartbeatRepository(), service, NewHeartbeatService() (+6 more)
+Cohesion: 0.08
+Nodes (26): axiomLogger(), consoleLogger(), getGCEInstanceID(), instanceID(), isLocal(), logDriver(), logger(), NewLiteContainer() (+18 more)
 
 ### Community 16 - "index.vue"
 Cohesion: 0.06
-Nodes (24): authStore, canResend(), config, contact, contactIsPhoneNumber, form, { formatPhoneNumber }, formMessage (+16 more)
+Nodes (30): authStore, canResend(), config, contact, contactIsPhoneNumber, deleteMessage(), form, { formatPhoneNumber } (+22 more)
 
 ### Community 17 - "SentReceiver"
-Cohesion: 0.08
-Nodes (22): DeliveredMessageWorker, DeliveredReceiver, FailedMessageWorker, BroadcastReceiver, Context, Intent, Result, String (+14 more)
+Cohesion: 0.10
+Nodes (13): AppCompatActivity, Bundle, Context, String, LoginActivity, LoginScreen(), Context, Result (+5 more)
 
 ### Community 18 - "BillingUsage"
-Cohesion: 0.16
-Nodes (6): Time, UUID, Context, Time, UUID, BillingUsage
+Cohesion: 0.20
+Nodes (4): Context, Time, UUID, BillingUsage
 
 ### Community 19 - "index.vue"
-Cohesion: 0.05
-Nodes (38): authStore, billingStore, checkoutURL, config, dialog, enterpriseCheckoutURL, errorMessages, { formatDecimal, formatTimestamp } (+30 more)
+Cohesion: 0.33
+Nodes (4): canadaProvinces, countries, SelectOption, usStates
 
 ### Community 20 - "SettingsViewModel"
-Cohesion: 0.24
-Nodes (6): Boolean, Context, String, ViewModel, SettingsUiState, SettingsViewModel
+Cohesion: 0.07
+Nodes (28): File Structure, Nuxt 4 + Vuetify 4 Migration Implementation Plan, Task 10: Create Pinia Store — Billing, Task 11: Create Middleware, Task 12: Port Layouts, Task 13: Port Components — Toast, LoadingDashboard, LoadingButton, BackButton, Task 14: Port Components — CopyButton, FixedHeader, BlogAuthorBio, BlogInfo, NuxtLogo, Task 15: Port Components — FirebaseAuth, MessageThread, MessageThreadHeader (+20 more)
 
 ### Community 21 - "DiscordService"
-Cohesion: 0.17
-Nodes (7): DB, Interface, NewGormIntegration3CXRepository(), NewIntegration3CXService(), NewGormLogger(), Config, Integration3CxRepository
-
-### Community 22 - "Cache"
-Cohesion: 0.40
-Nodes (3): Context, Duration, redisCache
-
-### Community 23 - "Integration3CXService"
-Cohesion: 0.11
-Nodes (14): Time, UUID, Context, Event, Context, DB, Context, Event (+6 more)
-
-### Community 24 - "BillingService"
-Cohesion: 0.13
-Nodes (12): Ctx, Router, NewMessageSendScheduleHandler(), NewMessageSendScheduleListener(), NewGormMessageSendScheduleRepository(), service, NewMessageSendScheduleService(), NewPhoneHandlerValidator() (+4 more)
+Cohesion: 0.16
+Nodes (6): Database, DB, Interface, Config, HeartbeatMonitorRepository, HeartbeatRepository
 
 ### Community 25 - "Values"
 Cohesion: 0.08
-Nodes (12): Time, Time, SIM, Time, Context, Values, MessageAttachment, MessageBulkSend (+4 more)
+Nodes (9): Context, Values, MessageAttachment, MessageBulkSend, MessageCallMissed, MessageEvent, MessageOutstanding, MessageReceive (+1 more)
 
 ### Community 26 - "User"
-Cohesion: 0.12
-Nodes (9): UUID, Location, Time, UUID, Context, DB, AuthContext, User (+1 more)
+Cohesion: 0.14
+Nodes (4): Context, SubscriptionName, User, gormUserRepository
 
 ### Community 27 - "Context"
-Cohesion: 0.09
-Nodes (23): SIM, Time, UUID, SIM, Time, UUID, Ctx, Router (+15 more)
+Cohesion: 0.22
+Nodes (5): NewPhoneService(), PhoneUpdatedPayload, PhoneFCMTokenParams, PhoneService, PhoneUpsertParams
 
 ### Community 28 - "MessageHandlerValidator"
-Cohesion: 0.12
-Nodes (13): Context, Ctx, NewDiscordHandler(), NewDiscordListener(), NewGormDiscordRepository(), service, NewDiscordService(), NewDiscordHandlerValidator() (+5 more)
-
-### Community 29 - "IndexParams"
-Cohesion: 0.21
-Nodes (7): BulkMessage, Context, DB, Message, UUID, gormMessageRepository, IndexParams
+Cohesion: 0.07
+Nodes (27): Architecture, Components: Class-based → `<script setup>`, Decisions, Directory Structure (Nuxt 4), Dynamic Routes: `_id` → `[id]`, Firebase: `this.$fire.auth` → VueFire composables, httpSMS Frontend Migration: Nuxt 2 + Vuetify 2 → Nuxt 4 + Vuetify 4, Key Migration Patterns (+19 more)
 
 ### Community 30 - "Nuxt 4 + Vuetify 4 Migration Implementation Plan"
-Cohesion: 0.07
-Nodes (28): File Structure, Nuxt 4 + Vuetify 4 Migration Implementation Plan, Task 10: Create Pinia Store — Billing, Task 11: Create Middleware, Task 12: Port Layouts, Task 13: Port Components — Toast, LoadingDashboard, LoadingButton, BackButton, Task 14: Port Components — CopyButton, FixedHeader, BlogAuthorBio, BlogInfo, NuxtLogo, Task 15: Port Components — FirebaseAuth, MessageThread, MessageThreadHeader (+20 more)
+Cohesion: 0.08
+Nodes (23): 1. Generate Firebase Credentials, 2. Set Environment Variable, 3. Start the Stack, 4. Wait for Seeding, 5. Run Tests, 6. Tear Down, Adding New Tests, API fails to start (+15 more)
 
 ### Community 31 - "FirebaseAuth.vue"
 Cohesion: 0.10
@@ -429,120 +855,80 @@ Cohesion: 0.08
 Nodes (27): activePhoneApiKey, activePhoneNumber, appStore, authStore, config, createPhoneApiKey(), deleteApiKey(), deleteApiKeyDialog (+19 more)
 
 ### Community 33 - "UserService"
-Cohesion: 0.10
-Nodes (16): Time, Context, Location, service, Time, UUID, ApiResponseData, APIResponseRelationshipsSubscriptionInvoice (+8 more)
-
-### Community 34 - "MessageThreadHandler"
-Cohesion: 0.22
-Nodes (7): Ctx, Router, NewBillingHandler(), NewBillingHandlerValidator(), BillingHandler, BillingHandlerValidator, validator
+Cohesion: 0.11
+Nodes (12): Context, service, ApiResponseData, APIResponseRelationshipsSubscriptionInvoice, UserAPIKeyRotatedPayload, UserSubscriptionCancelledPayload, UserSubscriptionCreatedPayload, UserSubscriptionExpiredPayload (+4 more)
 
 ### Community 35 - "PhoneService"
-Cohesion: 0.06
-Nodes (32): Time, UUID, SIM, Time, UUID, Time, UUID, Context (+24 more)
-
-### Community 36 - "MessageSendScheduleHandlerValidator"
-Cohesion: 0.18
-Nodes (9): App, Ctx, NewPhoneAPIKeyHandler(), service, NewEntitlementService(), NewPhoneAPIKeyHandlerValidator(), PhoneAPIKeyHandler, EntitlementService (+1 more)
+Cohesion: 0.17
+Nodes (6): NewNotificationService(), MessageNotificationScheduledPayload, MessageNotificationSendPayload, PhoneNotificationScheduleParams, PhoneNotificationSendParams, PhoneNotificationService
 
 ### Community 37 - "Client"
 Cohesion: 0.08
-Nodes (22): NewMarketingListener(), BearerAuth(), Handler, Context, NewGoogleCloudStorageAttachmentRepository(), NewEmulatorFCMClient(), NewFirebaseFCMClient(), Context (+14 more)
+Nodes (11): App, Float64Histogram, Phone, RoundTripper, Container, Client, GuildService, service (+3 more)
 
 ### Community 38 - "Migration Order (Tasks)"
-Cohesion: 0.07
-Nodes (27): Architecture, Components: Class-based → `<script setup>`, Decisions, Directory Structure (Nuxt 4), Dynamic Routes: `_id` → `[id]`, Firebase: `this.$fire.auth` → VueFire composables, httpSMS Frontend Migration: Nuxt 2 + Vuetify 2 → Nuxt 4 + Vuetify 4, Key Migration Patterns (+19 more)
-
-### Community 39 - "Response"
-Cohesion: 0.12
-Nodes (5): Time, SIM, MessageCallMissed, PhoneFCMToken, PhoneUpsert
+Cohesion: 0.11
+Nodes (7): DeliveredMessageWorker, DeliveredReceiver, FailedMessageWorker, Receiver, FailedMessageWorker, SentMessageWorker, SentReceiver
 
 ### Community 40 - "LemonsqueezyService"
-Cohesion: 0.13
-Nodes (9): Time, Time, Time, Time, SubscriptionName, UserSubscriptionCancelledPayload, UserSubscriptionCreatedPayload, UserSubscriptionExpiredPayload (+1 more)
-
-### Community 41 - "googlePushQueue"
-Cohesion: 0.14
-Nodes (12): Context, Duration, Context, Duration, Event, Span, Context, Duration (+4 more)
+Cohesion: 0.12
+Nodes (15): File Structure, Global Constraints, Self-Review, Task 10: Full validation, Task 11: End-to-end integration test, Task 1: Add `UnarchiveThread` field to the Phone entity, Task 2: Add `UnarchiveThread` to the received-message event payload, Task 3: Populate `UnarchiveThread` on the payload in ReceiveMessage (+7 more)
 
 ### Community 42 - "filters.ts"
-Cohesion: 0.41
-Nodes (10): useFilters(), BillingPeriodDateOrdinalParts, formatBillingPeriod(), formatBillingPeriodDateOrdinal(), formatDecimal(), formatMoney(), formatPhoneNumber(), formatTimestamp() (+2 more)
+Cohesion: 0.27
+Nodes (13): parts, props, useFilters(), BillingPeriodDateOrdinalParts, formatBillingPeriod(), formatBillingPeriodDateOrdinal(), formatBillingPeriodDateOrdinalParts(), formatDecimal() (+5 more)
 
 ### Community 43 - "UserID"
-Cohesion: 0.17
-Nodes (11): Ctx, Router, NewEventsHandler(), EmulatorPushQueue(), Float64Histogram, NewEventDispatcher(), NewGooglePushQueue(), EventsHandler (+3 more)
+Cohesion: 0.21
+Nodes (5): NewEventsHandler(), EventsHandler, PushQueue, PushQueueConfig, PushQueueTask
 
 ### Community 44 - "index.vue"
 Cohesion: 0.13
 Nodes (17): authStore, bulkOrders, errorMessages, errorTitle, fetchBulkOrders(), { formatTimestamp }, formFile, loading (+9 more)
 
 ### Community 45 - "SIM"
-Cohesion: 0.17
-Nodes (6): UUID, Context, Values, PhoneDelete, PhoneIndex, PhoneHandlerValidator
+Cohesion: 0.20
+Nodes (4): NewPhoneHandlerValidator(), PhoneDelete, PhoneUpsert, PhoneHandlerValidator
 
 ### Community 46 - "EventDispatcher"
-Cohesion: 0.22
-Nodes (10): T, TestComputeBillingCycle(), TestDaysInMonth(), computeBillingCycle(), daysInMonth(), Context, DB, Time (+2 more)
+Cohesion: 0.20
+Nodes (7): TestComputeBillingCycle(), TestDaysInMonth(), computeBillingCycle(), daysInMonth(), NewGormBillingUsageRepository(), Month, gormBillingUsageRepository
 
 ### Community 47 - "dependencies"
-Cohesion: 0.09
-Nodes (22): dependencies, chart.js, chartjs-adapter-moment, date-fns, firebase, flag-icons, highlight.js, libphonenumber-js (+14 more)
+Cohesion: 0.13
+Nodes (14): 1. Data model — `api/pkg/entities/phone.go`, 2. Event payload — `api/pkg/events/message_phone_received_event.go`, 3. Populate the flag — `api/pkg/services/message_service.go`, 4. Thread service trigger — `api/pkg/services/message_thread_service.go`, 5. Listener — `api/pkg/listeners/message_thread_listener.go`, 6. Request/params — phone upsert, 7. Web frontend — `web/`, 8. Swagger (+6 more)
 
 ### Community 48 - "HeartbeatService"
-Cohesion: 0.22
-Nodes (6): Context, Time, UUID, HeartbeatMonitorParams, HeartbeatMonitorStoreParams, HeartbeatStoreParams
+Cohesion: 0.08
+Nodes (11): NewHeartbeatService(), NewHeartbeatHandlerValidator(), PhoneHeartbeatCheckPayload, PhoneHeartbeatOfflinePayload, HeartbeatIndex, HeartbeatStore, HeartbeatMonitorParams, HeartbeatMonitorStoreParams (+3 more)
 
 ### Community 49 - "formatEventPayload"
-Cohesion: 0.17
-Nodes (17): eventPayloadJSONStringEnd(), eventPayloadNextNonSpace(), formatEventPayload(), Builder, highlightEventPayloadJSON(), indentEventPayloadJSON(), isEventPayloadDigit(), isEventPayloadNumberCharacter() (+9 more)
-
-### Community 50 - "Message"
-Cohesion: 0.19
-Nodes (4): StringArray, Time, UUID, Message
+Cohesion: 0.13
+Nodes (14): Android (Kotlin), Android (Kotlin), Android — Task-Oriented, Event-Driven, API (Go), API (Go), API — Layered Architecture with Event-Driven Processing, Architecture, Build, Test, and Lint Commands (+6 more)
 
 ### Community 51 - "PhoneAPIKeyHandler"
-Cohesion: 0.11
-Nodes (21): Duration, Sign(), Verify(), cloneFirebaseRequest(), firebaseAuthTransport(), firebaseClientMessage(), firebaseSafeError(), Context (+13 more)
-
-### Community 52 - "MessageSendScheduleService"
-Cohesion: 0.31
-Nodes (3): Context, Event, MessageThreadListener
-
-### Community 53 - "hermesNotificationEmailFactory"
-Cohesion: 0.14
-Nodes (7): Hermes, SIM, Time, UUID, factory, hermesNotificationEmailFactory, MessageSendFailedPayload
+Cohesion: 0.13
+Nodes (18): cloneFirebaseRequest(), firebaseAuthTransport(), firebaseClientMessage(), firebaseSafeError(), Context, Ctx, DB, Request (+10 more)
 
 ### Community 54 - "MessageSendSchedule"
-Cohesion: 0.22
-Nodes (7): Context, MessageSendScheduleWindow, Values, NewMessageSendScheduleHandlerValidator(), MessageSendScheduleStore, MessageSendScheduleWindow, MessageSendScheduleHandlerValidator
-
-### Community 55 - "request"
-Cohesion: 0.08
-Nodes (5): Time, Integration3CXMessage, MessageSend, request, UserNotificationUpdate
+Cohesion: 0.11
+Nodes (8): NewMessageSendScheduleService(), sanitizeWindows(), NewMessageSendScheduleHandlerValidator(), MessageSendScheduleStore, MessageSendScheduleWindow, MessageSendScheduleService, MessageSendScheduleUpsertParams, MessageSendScheduleHandlerValidator
 
 ### Community 56 - "zerologLogger"
-Cohesion: 0.21
-Nodes (5): Event, SpanContext, NewZerologLogger(), Level, zerologLogger
+Cohesion: 0.23
+Nodes (3): NewZerologLogger(), Level, zerologLogger
 
 ### Community 57 - ".getCallLog"
-Cohesion: 0.19
-Nodes (11): BroadcastReceiver, Context, Int, Intent, Pair, Result, String, Worker (+3 more)
+Cohesion: 0.33
+Nodes (3): MissedCallWorker, PhoneStateReceiver, ZonedDateTime
 
 ### Community 58 - "container.go"
-Cohesion: 0.13
-Nodes (7): Context, Values, NewWebhookHandlerValidator(), WebhookIndex, WebhookStore, WebhookUpdate, WebhookHandlerValidator
-
-### Community 59 - "Heartbeat"
-Cohesion: 0.22
-Nodes (6): Time, UUID, Context, DB, Heartbeat, gormHeartbeatRepository
-
-### Community 60 - "DiscordStore"
-Cohesion: 0.15
-Nodes (5): Context, Values, DiscordIndex, DiscordStore, DiscordUpdate
+Cohesion: 0.20
+Nodes (6): Context, Ctx, NewDiscordHandler(), NewDiscordHandlerValidator(), DiscordHandler, DiscordHandlerValidator
 
 ### Community 61 - "message_service.go"
 Cohesion: 0.18
-Nodes (13): Duration, PhoneNumber, SIM, Time, UUID, HandleMessageFailedParams, MessageCheckExpired, MessageGetOutstandingParams (+5 more)
+Nodes (6): NewMessageService(), HandleMessageFailedParams, MessageCheckExpired, MessageReceiveParams, MessageSearchParams, ServiceAttachment
 
 ### Community 62 - "[id].vue"
 Cohesion: 0.10
@@ -553,60 +939,40 @@ Cohesion: 0.15
 Nodes (9): Int, Intent, Service, StickyNotificationService, IBinder, Notification, NotificationRequest, NotificationType (+1 more)
 
 ### Community 64 - "PhoneHeartbeatMissedPayload"
-Cohesion: 0.17
-Nodes (9): Ctx, Router, NewWebhookHandler(), NewGormWebhookRepository(), service, NewWebhookService(), WebhookHandler, WebhookRepository (+1 more)
+Cohesion: 0.27
+Nodes (10): defaultClientConfig(), TestWithBaseURL(), TestWithHTTPClient(), WithApplicationID(), WithBaseURL(), WithBotToken(), WithHTTPClient(), clientConfig (+2 more)
 
 ### Community 65 - "UserHandler"
-Cohesion: 0.07
-Nodes (25): Router, NewBulkMessageHandler(), App, Ctx, NewIntegration3CxHandler(), APIKeyAuth(), getAPIKeyFromRequest(), Ctx (+17 more)
-
-### Community 66 - "MessageListener"
-Cohesion: 0.31
-Nodes (3): Context, Event, MessageListener
+Cohesion: 0.13
+Nodes (13): NewMessageHandler(), service, NewBillingService(), NewUserService(), NewMessageHandlerValidator(), Cache, Email, Mailer (+5 more)
 
 ### Community 67 - "gormPhoneAPIKeyRepository"
-Cohesion: 0.16
-Nodes (9): StringArray, Time, UUID, Context, DB, Phone, UUID, PhoneAPIKey (+1 more)
+Cohesion: 0.13
+Nodes (8): Time, Context, Phone, UUID, LocalAuthCredential, PhoneAPIKey, UserID, IndexParams
 
 ### Community 68 - "WebhookStore"
 Cohesion: 0.15
-Nodes (5): BulkMessage, Context, Message, HandleMessageParams, MessageGetParams
-
-### Community 69 - "response"
-Cohesion: 0.12
-Nodes (15): Time, BillingUsageResponse, BillingUsagesResponse, DiscordResponse, DiscordsResponse, HeartbeatResponse, HeartbeatsResponse, MessageThreadsResponse (+7 more)
-
-### Community 70 - "File Structure"
-Cohesion: 0.12
-Nodes (15): File Structure, Global Constraints, Self-Review, Task 10: Full validation, Task 11: End-to-end integration test, Task 1: Add `UnarchiveThread` field to the Phone entity, Task 2: Add `UnarchiveThread` to the received-message event payload, Task 3: Populate `UnarchiveThread` on the payload in ReceiveMessage (+7 more)
+Nodes (3): MessageSendRetryPayload, HandleMessageParams, MessageService
 
 ### Community 71 - "devDependencies"
-Cohesion: 0.13
-Nodes (15): devDependencies, @commitlint/cli, @commitlint/config-conventional, eslint, eslint-config-prettier, lint-staged, @nuxt/eslint, @nuxtjs/seo (+7 more)
+Cohesion: 0.11
+Nodes (17): husky.sh script, devDependencies, @commitlint/cli, @commitlint/config-conventional, eslint, eslint-config-prettier, husky, lint-staged (+9 more)
 
 ### Community 72 - ".MessageService"
-Cohesion: 0.20
-Nodes (7): Router, NewAttachmentHandler(), NewGormMessageRepository(), NewMessageService(), AttachmentHandler, AttachmentRepository, MessageRepository
+Cohesion: 0.18
+Nodes (8): NewAttachmentHandler(), AllowedContentTypes(), ContentTypeFromExtension(), ExtensionFromContentType(), SanitizeFilename(), TestExtensionFromContentType(), TestSanitizeFilename(), AttachmentHandler
 
 ### Community 73 - "NewMongoDB"
-Cohesion: 0.18
-Nodes (14): createMongoIndexes(), Context, Database, NewMongoDB(), newMongoRegistry(), parseMongoDBName(), uuidDecodeValue(), uuidEncodeValue() (+6 more)
-
-### Community 74 - "user_service.go"
-Cohesion: 0.36
-Nodes (3): Context, Event, WebhookListener
-
-### Community 75 - "PhoneAPIKeyService"
-Cohesion: 0.13
-Nodes (11): Time, Time, Time, Context, service, UUID, LocalAuthCredential, UserID (+3 more)
+Cohesion: 0.21
+Nodes (12): createMongoIndexes(), NewMongoDB(), newMongoRegistry(), parseMongoDBName(), uuidDecodeValue(), uuidEncodeValue(), DecodeContext, EncodeContext (+4 more)
 
 ### Community 76 - "Design"
-Cohesion: 0.13
-Nodes (14): 1. Data model — `api/pkg/entities/phone.go`, 2. Event payload — `api/pkg/events/message_phone_received_event.go`, 3. Populate the flag — `api/pkg/services/message_service.go`, 4. Thread service trigger — `api/pkg/services/message_thread_service.go`, 5. Listener — `api/pkg/listeners/message_thread_listener.go`, 6. Request/params — phone upsert, 7. Web frontend — `web/`, 8. Swagger (+6 more)
+Cohesion: 0.14
+Nodes (13): 1. Hero, 2. Why promote httpSMS (benefit cards), 3. How it works (3 numbered steps), 4. FAQ (static two-column grid — no expansion panels), 5. Closing CTA banner, Affiliates Landing Page — Design, Conventions to follow, Files (+5 more)
 
 ### Community 77 - "Build, Test, and Lint Commands"
-Cohesion: 0.13
-Nodes (14): Android (Kotlin), Android (Kotlin), Android — Task-Oriented, Event-Driven, API (Go), API (Go), API — Layered Architecture with Event-Driven Processing, Architecture, Build, Test, and Lint Commands (+6 more)
+Cohesion: 0.15
+Nodes (12): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+4 more)
 
 ### Community 78 - "MessageThreadHeader.vue"
 Cohesion: 0.13
@@ -617,124 +983,76 @@ Cohesion: 0.14
 Nodes (14): errors, { formatPhoneNumber }, formAttachments, formContent, formPhoneNumber, getRecipientNumber(), { mdAndDown, mdAndUp }, notificationsStore (+6 more)
 
 ### Community 80 - "errors.ts"
-Cohesion: 0.19
-Nodes (7): Time, UUID, Context, DB, UUID, MessageThread, gormMessageThreadRepository
+Cohesion: 0.12
+Nodes (8): NewGormMessageThreadRepository(), gormMessageThreadRepository, MessageThreadsResponse, appStore, notificationsStore, phonesStore, threadsStore, startsWithLetter()
 
 ### Community 81 - "NotificationEmailFactory"
-Cohesion: 0.25
-Nodes (10): generateWebhookSendFailedPlainText(), NewHermesNotificationEmailFactory(), replaceWebhookSendFailedEventPayloadPlaceholder(), T, TestGenerateWebhookSendFailedPlainTextFallsBackToFormattedPayload(), testNotificationEmailFactory(), TestReplaceWebhookSendFailedEventPayloadPlaceholder(), TestWebhookSendFailedFormatsOnlyEventPayload() (+2 more)
-
-### Community 82 - "gormPhoneRepository"
-Cohesion: 0.32
-Nodes (5): Context, DB, Phone, UUID, gormPhoneRepository
-
-### Community 83 - "mongoHeartbeatMonitorRepository"
-Cohesion: 0.24
-Nodes (6): Collection, Context, Database, UUID, NewMongoHeartbeatMonitorRepository(), mongoHeartbeatMonitorRepository
+Cohesion: 0.09
+Nodes (24): eventPayloadJSONStringEnd(), eventPayloadNextNonSpace(), formatEventPayload(), highlightEventPayloadJSON(), indentEventPayloadJSON(), isEventPayloadDigit(), isEventPayloadNumberCharacter(), TestFormatEventPayloadEscapesPayloadHTML() (+16 more)
 
 ### Community 84 - "otelTracer"
-Cohesion: 0.37
-Nodes (6): functionName(), getName(), Context, Ctx, Span, otelTracer
+Cohesion: 0.32
+Nodes (4): functionName(), getName(), NewOtelLogger(), otelTracer
 
 ### Community 85 - "Affiliates Landing Page — Design"
-Cohesion: 0.14
-Nodes (13): 1. Hero, 2. Why promote httpSMS (benefit cards), 3. How it works (3 numbered steps), 4. FAQ (static two-column grid — no expansion panels), 5. Closing CTA banner, Affiliates Landing Page — Design, Conventions to follow, Files (+5 more)
-
-### Community 86 - "scripts"
-Cohesion: 0.14
-Nodes (14): scripts, api:models, build, dev, generate, lint, lint:js, lint:prettier (+6 more)
-
-### Community 87 - "New"
-Cohesion: 0.28
-Nodes (10): New(), T, TestGetSendDelay_BulkIndex_RateBasedDelay(), TestGetSendDelay_BulkIndex_ZeroRate_ReturnsZero(), TestGetSendDelay_IndexZero_ReturnsZero(), TestGetSendDelay_NoSendAtNoIndex_ReturnsZero(), TestGetSendDelay_WithSendAt_ReturnsTimeUntil(), TestGetSendDelay_WithSendAtInPast_ReturnsZero() (+2 more)
-
-### Community 88 - "HermesGeneratorConfig"
-Cohesion: 0.18
-Nodes (5): Hermes, newHermesTheme(), hermesTheme, StylesDefinition, Theme
-
-### Community 89 - "gormHeartbeatMonitorRepository"
-Cohesion: 0.30
-Nodes (4): Context, DB, UUID, gormHeartbeatMonitorRepository
-
-### Community 90 - ".ValidateStore"
-Cohesion: 0.39
-Nodes (6): BulkMessage, Context, Location, Values, FileHeader, BulkMessageHandlerValidator
-
-### Community 91 - "Contributor Covenant Code of Conduct"
-Cohesion: 0.15
-Nodes (12): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+4 more)
-
-### Community 92 - "Login "Last Used" Badge — Design"
 Cohesion: 0.15
 Nodes (12): Approach, Display, Edge cases, Goal, Login "Last Used" Badge — Design, Out of scope, Problem, Reading the method (+4 more)
 
-### Community 93 - "index.vue"
-Cohesion: 0.15
-Nodes (12): config, faqPanel, { lgAndUp, mdAndUp, mdAndDown, md, smAndDown, xl }, planMessages, planMonthlyPrice, planYearlyMonthlyPrice, planYearlyPrice, pricing (+4 more)
-
-### Community 94 - "Email"
-Cohesion: 0.21
-Nodes (8): formatBillingDate(), Hermes, Location, Time, NewHermesUserEmailFactory(), Email, HermesGeneratorConfig, hermesUserEmailFactory
-
-### Community 95 - "HeartbeatIndex"
-Cohesion: 0.18
-Nodes (4): Context, Values, HeartbeatIndex, HeartbeatStore
-
-### Community 96 - "UserHandlerValidator"
-Cohesion: 0.20
-Nodes (4): Context, Values, UserPaymentInvoice, UserUpdate
-
-### Community 97 - "EmailNotificationService"
-Cohesion: 0.39
-Nodes (4): Context, Duration, service, EmailNotificationService
-
-### Community 99 - "Webhook Email Payload Formatting"
+### Community 86 - "scripts"
 Cohesion: 0.17
 Nodes (11): 1. Payload formatter, 2. Hermes dictionary rendering, 3. Webhook email factory, Data Flow, Decisions, Design, Error Handling and Security, Out of Scope (+3 more)
 
-### Community 100 - "httpSMS"
+### Community 87 - "New"
+Cohesion: 0.16
+Nodes (11): New(), TestGetSendDelay_BulkIndex_RateBasedDelay(), TestGetSendDelay_BulkIndex_ZeroRate_ReturnsZero(), TestGetSendDelay_IndexZero_ReturnsZero(), TestGetSendDelay_NoSendAtNoIndex_ReturnsZero(), TestGetSendDelay_WithSendAt_ReturnsTimeUntil(), TestGetSendDelay_WithSendAtInPast_ReturnsZero(), saveToCache() (+3 more)
+
+### Community 88 - "HermesGeneratorConfig"
 Cohesion: 0.17
-Nodes (12): Android App, API, API Clients, Chat/forum, Flows, httpSMS, Integration Testing, License (+4 more)
+Nodes (5): newHermesTheme(), HermesGeneratorConfig, hermesTheme, StylesDefinition, Theme
 
-### Community 101 - "auth.ts"
-Cohesion: 0.11
-Nodes (20): createApiFetch(), setApiKey(), setAuthHeader(), useApi(), useApiComposable(), appStore, authStore, config (+12 more)
+### Community 90 - ".ValidateStore"
+Cohesion: 0.16
+Nodes (8): encodeBase62(), NewBulkMessageHandler(), sanitizeFilename(), truncateFilename(), NewBulkMessageHandlerValidator(), FileHeader, BulkMessageHandler, BulkMessageHandlerValidator
 
-### Community 102 - "compilerOptions"
+### Community 91 - "Contributor Covenant Code of Conduct"
 Cohesion: 0.17
 Nodes (11): compilerOptions, module, moduleResolution, paths, strict, target, files, include (+3 more)
 
-### Community 103 - "UserEmailFactory"
-Cohesion: 0.60
-Nodes (5): T, TestFormatBillingDate_RendersInProvidedTimezone(), TestUsageLimitAlert_IncludesPercentBreakdownAndLimit(), TestUsageLimitExceeded_IncludesBreakdownAndBillingPeriod(), testUserEmailFactory()
+### Community 92 - "Login "Last Used" Badge — Design"
+Cohesion: 0.17
+Nodes (8): Location, Time, UUID, UserNotificationUpdate, UserInvoiceGenerateParams, UserNotificationUpdateParams, UserSendPhoneDeadEmailParams, UserUpdateParams
 
-### Community 104 - "attachment_repository.go"
+### Community 94 - "Email"
+Cohesion: 0.20
+Nodes (7): formatBillingDate(), NewHermesUserEmailFactory(), TestFormatBillingDate_RendersInProvidedTimezone(), TestUsageLimitAlert_IncludesPercentBreakdownAndLimit(), TestUsageLimitExceeded_IncludesBreakdownAndBillingPeriod(), testUserEmailFactory(), hermesUserEmailFactory
+
+### Community 95 - "HeartbeatIndex"
 Cohesion: 0.21
-Nodes (8): Ctx, AllowedContentTypes(), ContentTypeFromExtension(), ExtensionFromContentType(), SanitizeFilename(), T, TestExtensionFromContentType(), TestSanitizeFilename()
+Nodes (11): createApiFetch(), setApiKey(), setAuthHeader(), useApi(), useApiComposable(), AuthUser, FirebaseEmailAuthData, FirebaseEmailAuthResponse (+3 more)
 
-### Community 105 - "UserListener"
-Cohesion: 0.40
-Nodes (3): Context, Event, UserListener
+### Community 96 - "UserHandlerValidator"
+Cohesion: 0.11
+Nodes (8): Ctx, Router, NewUserHandler(), NewUserHandlerValidator(), UserHandler, UserPaymentInvoice, UserUpdate, UserHandlerValidator
 
-### Community 106 - "gormHeartbeatRepository"
-Cohesion: 0.24
-Nodes (5): Context, MessageSendScheduleWindow, UUID, sanitizeWindows(), MessageSendScheduleUpsertParams
+### Community 100 - "httpSMS"
+Cohesion: 0.05
+Nodes (38): Backup و بازیابی, اتصال به سایت اصلی نسک, ارسال پیام, امنیت, توسعه, راه‌اندازی گوشی, سلامت سرویس, متغیرهای self-hosted (+30 more)
+
+### Community 101 - "auth.ts"
+Cohesion: 0.09
+Nodes (22): generateQrCode(), dependencies, chart.js, chartjs-adapter-moment, date-fns, firebase, flag-icons, highlight.js (+14 more)
 
 ### Community 107 - "MessageThreadIndex"
-Cohesion: 0.20
-Nodes (4): Context, Values, MessageThreadIndex, MessageThreadUpdate
+Cohesion: 0.17
+Nodes (5): NewMessageThreadHandlerValidator(), MessageThreadIndex, MessageThreadUpdate, MessageThreadStatusParams, MessageThreadHandlerValidator
 
 ### Community 108 - "PhoneAPIKeyIndex"
-Cohesion: 0.20
-Nodes (4): Context, Values, PhoneAPIKeyIndex, PhoneAPIKeyStoreRequest
-
-### Community 109 - "response.go"
-Cohesion: 0.29
-Nodes (4): Context, DB, UUID, gormMessageSendScheduleRepository
+Cohesion: 0.18
+Nodes (4): NewPhoneAPIKeyHandlerValidator(), PhoneAPIKeyIndex, PhoneAPIKeyStoreRequest, PhoneAPIKeyHandlerValidator
 
 ### Community 110 - "gormLogger"
-Cohesion: 0.24
-Nodes (5): Context, Interface, Time, LogLevel, gormLogger
+Cohesion: 0.22
+Nodes (3): NewGormLogger(), LogLevel, gormLogger
 
 ### Community 111 - "resetErrors"
 Cohesion: 0.18
@@ -745,152 +1063,68 @@ Cohesion: 0.20
 Nodes (8): SendMessageRequest, SIM, useMessagesStore, useThreadsStore, EntitiesBulkMessage, EntitiesMessage, EntitiesMessageThread, SearchMessagesRequest
 
 ### Community 113 - "default.vue"
-Cohesion: 0.21
-Nodes (6): AppCompatActivity, Boolean, Bundle, SettingsActivity, HttpSmsTheme(), Boolean
-
-### Community 114 - "Phone"
-Cohesion: 0.25
-Nodes (5): Duration, SIM, Time, UUID, Phone
-
-### Community 115 - "PhoneAPIKey"
-Cohesion: 0.29
-Nodes (5): Collection, Context, Database, NewMongoHeartbeatRepository(), mongoHeartbeatRepository
-
-### Community 116 - "MessagePhoneSendingPayload"
-Cohesion: 0.40
-Nodes (4): SIM, Time, UUID, MessagePhoneSendingPayload
-
-### Community 117 - "HeartbeatListener"
-Cohesion: 0.31
-Nodes (6): Time, UUID, MessageStatus, MessageType, MessageThreadAPIDeletedPayload, MessageSearchParams
-
-### Community 118 - "Getting Started page — Design"
 Cohesion: 0.22
 Nodes (8): Conventions to follow, Discoverability, Getting Started page — Design, Goal, Out of scope, Page structure (top → bottom), Placeholders, Route
 
+### Community 118 - "Getting Started page — Design"
+Cohesion: 0.36
+Nodes (5): ApplicationService, CommandCreateRequest, CommandCreateRequestOption, CommandCreateResponse, CommandCreateResponseOption
+
 ### Community 119 - "playwright"
 Cohesion: 0.28
-Nodes (8): BROWSER, npx, axiom, context7, playwright, mcp-remote, @modelcontextprotocol/server-playwright, @upstash/context7-mcp
-
-### Community 120 - "Integration Tests"
-Cohesion: 0.22
-Nodes (7): Adding New Tests, CI/CD, Integration Tests, Prerequisites, Project Structure, Test Coverage, Test Data
+Nodes (8): axiom, context7, playwright, BROWSER, npx, mcp-remote, @modelcontextprotocol/server-playwright, @upstash/context7-mcp
 
 ### Community 121 - "Self Host Setup - Docker"
-Cohesion: 0.22
-Nodes (9): 1. Setup Firebase, 2. Setup SMTP Email service, 3. Setup Cloudflare Turnstile, 4. Download the code, 5. Setup the environment variables, 6. Build and Run, 7. Create the System User, 8. Build the Android App. (+1 more)
-
-### Community 122 - "billing_usage_test.go"
-Cohesion: 0.43
-Nodes (7): T, TestBillingUsage_IsEntitled_BelowLimit(), TestBillingUsage_IsEntitled_BulkCountExceeding(), TestBillingUsage_IsEntitled_BulkCountFittingExactly(), TestBillingUsage_IsEntitled_ExceedingLimitIsNotEntitled(), TestBillingUsage_IsEntitled_ReachingExactlyLimitIsEntitled(), TestBillingUsage_TotalMessages()
+Cohesion: 0.53
+Nodes (5): billingLimitsEnabled(), T, TestBillingLimitsEnabled_DefaultsToFalse(), TestBillingLimitsEnabled_RequiresExplicitTrue(), TestBillingService_IsEntitledWithoutCreditLimits()
 
 ### Community 123 - "bulk_message_handler.go"
-Cohesion: 0.09
-Nodes (15): Time, UUID, UUID, Context, DB, UUID, Context, Event (+7 more)
+Cohesion: 0.11
+Nodes (6): NewDiscordService(), DiscordStore, DiscordUpdate, DiscordService, DiscordStoreParams, DiscordUpdateParams
 
 ### Community 124 - "testClient"
-Cohesion: 0.39
-Nodes (6): Builder, testClient(), T, TestPhoneAPIKeyHandler_delete(), TestPhoneAPIKeyHandler_index(), TestPhoneAPIKeyHandler_store()
-
-### Community 125 - "EmailNotificationListener"
-Cohesion: 0.46
-Nodes (3): Context, Event, EmailNotificationListener
-
-### Community 126 - "MemoryAttachmentRepository"
-Cohesion: 0.36
-Nodes (4): Context, Map, NewMemoryAttachmentRepository(), MemoryAttachmentRepository
+Cohesion: 0.38
+Nodes (3): NewGooglePushQueue(), HttpMethod, googlePushQueue
 
 ### Community 127 - "Nasak SMS production deployment"
 Cohesion: 0.25
 Nodes (7): Android gateway, Architecture, First deployment, Nasak SMS production deployment, Operations, Required external configuration, Server layout
 
 ### Community 128 - "Running Locally"
-Cohesion: 0.25
-Nodes (8): 1. Generate Firebase Credentials, 2. Set Environment Variable, 3. Start the Stack, 4. Wait for Seeding, 5. Run Tests, 6. Tear Down, One-Liner, Running Locally
+Cohesion: 0.38
+Nodes (3): NewMarketingService(), MarketingService, UserRecord
 
 ### Community 129 - "BootReceiver"
-Cohesion: 0.43
-Nodes (4): BootReceiver, BroadcastReceiver, Context, Intent
-
-### Community 130 - "PhoneNumberValidator.kt"
-Cohesion: 0.48
-Nodes (6): fixNumber(), formatE164(), isValidPhoneNumber(), Boolean, String, PhoneNumberValidator
-
-### Community 131 - "NewSMTPEmailService"
-Cohesion: 0.33
-Nodes (5): Context, NewSMTPEmailService(), Auth, SMTPConfig, smtpMailer
-
-### Community 132 - "message_send_schedule_test.go"
-Cohesion: 0.48
-Nodes (6): T, TestResolveScheduledAt_BeforeWindow_ReturnsWindowStart(), TestResolveScheduledAt_InactiveSchedule_ReturnsCurrentUTC(), TestResolveScheduledAt_NilSchedule_ReturnsCurrentUTC(), TestResolveScheduledAt_NoWindows_ReturnsCurrentUTC(), TestResolveScheduledAt_WithinWindow_ReturnsCurrentUTC()
-
-### Community 133 - "user_test.go"
-Cohesion: 0.48
-Nodes (6): T, TestUser_GetBillingAnchorDay_EmptySubscription(), TestUser_GetBillingAnchorDay_FreeUser(), TestUser_GetBillingAnchorDay_PaidUser(), TestUser_GetBillingAnchorDay_PaidUserDay31(), TestUser_GetBillingAnchorDay_PaidUserNilRenewsAt()
-
-### Community 134 - "MessageAPISentPayload"
-Cohesion: 0.40
-Nodes (4): SIM, Time, UUID, MessagePhoneSentPayload
-
-### Community 135 - "BillingListener"
-Cohesion: 0.31
-Nodes (6): Time, UUID, MessageSendSchedule, MessageSendScheduleWindow, MessageSendScheduleResponse, MessageSendSchedulesResponse
-
-### Community 136 - "PhoneAPIKeyListener"
-Cohesion: 0.48
-Nodes (3): Context, Event, PhoneAPIKeyListener
-
-### Community 137 - "BillingUsageHistory"
-Cohesion: 0.29
-Nodes (3): Context, Values, BillingUsageHistory
-
-### Community 138 - "BulkMessage"
-Cohesion: 0.38
-Nodes (3): Location, Time, BulkMessage
-
-### Community 140 - "File Structure"
 Cohesion: 0.29
 Nodes (6): File Structure, Global Constraints, Task 1: Build the event payload formatter, Task 2: Add opt-in rich dictionary rendering to the Hermes theme, Task 3: Wire formatting into the webhook failure email, Webhook Email Payload Formatting Implementation Plan
 
-### Community 141 - "Message Thread Archive UI Design"
+### Community 130 - "PhoneNumberValidator.kt"
 Cohesion: 0.29
 Nodes (6): Active Thread Styling, Archive and Unarchive Behavior, Error Handling, Goal, Message Thread Archive UI Design, Validation
 
-### Community 142 - "website.vue"
-Cohesion: 0.29
-Nodes (5): appStore, authStore, { lgAndUp, mdAndUp }, route, router
+### Community 131 - "NewSMTPEmailService"
+Cohesion: 0.40
+Nodes (4): Auth, NewSMTPEmailService(), SMTPConfig, smtpMailer
+
+### Community 132 - "message_send_schedule_test.go"
+Cohesion: 0.40
+Nodes (4): main(), getEnvWithDefault(), LoadEnv(), splitCommaEnv()
+
+### Community 140 - "File Structure"
+Cohesion: 0.47
+Nodes (4): testClient(), TestPhoneAPIKeyHandler_delete(), TestPhoneAPIKeyHandler_index(), TestPhoneAPIKeyHandler_store()
+
+### Community 141 - "Message Thread Archive UI Design"
+Cohesion: 0.32
+Nodes (4): App, Ctx, NewIntegration3CxHandler(), Integration3CXHandler
 
 ### Community 143 - "parseErrors"
 Cohesion: 0.29
 Nodes (7): deleteDiscord(), deleteWebhook(), loadDiscordIntegrations(), loadWebhooks(), parseErrors(), saveDiscord(), saveWebhook()
 
-### Community 144 - "package.json"
-Cohesion: 0.29
-Nodes (6): lint-staged, *.{css,scss,sass,vue}, *.{js,ts,vue}, name, private, type
-
-### Community 145 - "main"
-Cohesion: 0.40
-Nodes (4): main(), getEnvWithDefault(), LoadEnv(), splitCommaEnv()
-
-### Community 146 - "memoryCache"
-Cohesion: 0.48
-Nodes (3): Context, Event, BillingListener
-
 ### Community 147 - "redisCache"
 Cohesion: 0.18
-Nodes (10): T, BadRequest, InternalServerError, NoContent, NotFound, Ok, OkString, PaymentRequired (+2 more)
-
-### Community 148 - "HeartbeatMonitor"
-Cohesion: 0.44
-Nodes (3): Context, Event, HeartbeatListener
-
-### Community 149 - "Context"
-Cohesion: 0.46
-Nodes (3): Context, Event, WebsocketListener
-
-### Community 150 - "Global Constraints"
-Cohesion: 0.33
-Nodes (5): Global Constraints, Message Thread Archive UI Implementation Plan, Task 1: Active Thread Primary Color, Task 2: Archive Without Switching Filters, Task 3: Production Validation
+Nodes (10): BadRequest, InternalServerError, NoContent, NotFound, Ok, OkString, PaymentRequired, response (+2 more)
 
 ### Community 151 - "CopyButton.vue"
 Cohesion: 0.33
@@ -900,65 +1134,37 @@ Nodes (4): disabled, notificationsStore, props, { smAndDown }
 Cohesion: 0.40
 Nodes (5): emit, isClicked, onClick(), props, size
 
-### Community 153 - "countries.ts"
-Cohesion: 0.32
-Nodes (4): encodeBase62(), Ctx, sanitizeFilename(), truncateFilename()
-
 ### Community 154 - "HeartbeatWorker"
-Cohesion: 0.40
-Nodes (3): HeartbeatWorker, Result, Worker
+Cohesion: 0.33
+Nodes (5): Global Constraints, Message Thread Archive UI Implementation Plan, Task 1: Active Thread Primary Color, Task 2: Archive Without Switching Filters, Task 3: Production Validation
 
 ### Community 155 - "gradlew"
-Cohesion: 0.60
-Nodes (3): gradlew script, die(), warn()
+Cohesion: 0.33
+Nodes (5): billingStore, loading, received, sent, total
 
 ### Community 156 - "factory"
 Cohesion: 0.07
-Nodes (29): Context, Duration, NewMemoryCache(), NewRedisCache(), Phone, NewMessageHandler(), NewUserHandler(), Authenticated() (+21 more)
-
-### Community 157 - "MessageCallMissedPayload"
-Cohesion: 0.33
-Nodes (4): SIM, Time, UUID, MessageCallMissedPayload
-
-### Community 158 - "MessageNotificationSentPayload"
-Cohesion: 0.40
-Nodes (4): Duration, Time, UUID, MessageNotificationSentPayload
-
-### Community 159 - "MessagePhoneDeliveredPayload"
-Cohesion: 0.50
-Nodes (3): Time, UUID, MessageSendScheduleDeletedPayload
-
-### Community 160 - "MessagePhoneReceivedPayload"
-Cohesion: 0.40
-Nodes (4): SIM, Time, UUID, MessagePhoneReceivedPayload
-
-### Community 161 - "MessagePhoneSentPayload"
-Cohesion: 0.50
-Nodes (3): Time, UUID, PhoneHeartbeatOnlinePayload
+Nodes (8): DiscordRepository, MessageRepository, MessageSendScheduleRepository, MessageThreadRepository, PhoneNotificationRepository, PhoneRepository, WebhookRepository, Tracer
 
 ### Community 162 - "MessageSendRetryPayload"
-Cohesion: 0.40
-Nodes (4): SIM, Time, UUID, MessageSendRetryPayload
+Cohesion: 0.14
+Nodes (14): scripts, api:models, build, dev, generate, lint, lint:js, lint:prettier (+6 more)
 
 ### Community 164 - "emulator_fcm_client.go"
-Cohesion: 0.60
-Nodes (4): emulatorAndroid, emulatorFCMMessage, emulatorFCMRequest, emulatorFCMResponse
+Cohesion: 0.36
+Nodes (6): NewEmulatorFCMClient(), emulatorAndroid, EmulatorFCMClient, emulatorFCMMessage, emulatorFCMRequest, emulatorFCMResponse
 
 ### Community 165 - ".Check"
-Cohesion: 0.14
-Nodes (12): App, Context, Ctx, NewLemonsqueezyHandler(), Context, service, Context, Values (+4 more)
-
-### Community 166 - "service"
-Cohesion: 0.33
-Nodes (3): Time, UUID, HeartbeatMonitor
+Cohesion: 0.42
+Nodes (3): NewLemonsqueezyService(), LemonsqueezyService, WebhookRequestSubscription
 
 ### Community 167 - "validateAttachmentURL"
-Cohesion: 0.60
-Nodes (3): Context, saveToCache(), validateAttachmentURL()
+Cohesion: 0.17
+Nodes (10): appStore, authStore, config, hasDrawer, { lgAndUp }, phonesStore, route, startPoller() (+2 more)
 
 ### Community 168 - "Features"
-Cohesion: 0.40
-Nodes (5): Back Pressure, End-to-end Encryption, Features, Message Expiration, Webhook
+Cohesion: 0.60
+Nodes (4): fixNumber(), formatE164(), isValidPhoneNumber(), PhoneNumberValidator
 
 ### Community 169 - "BackButton.vue"
 Cohesion: 0.40
@@ -980,41 +1186,17 @@ Nodes (4): authStore, { lgAndUp }, phonesStore, threadsStore
 Cohesion: 0.40
 Nodes (4): Development Server, Nuxt Minimal Starter, Production, Setup
 
-### Community 174 - "MessageNotificationFailedPayload"
-Cohesion: 0.50
-Nodes (3): Time, UUID, MessageNotificationFailedPayload
-
-### Community 175 - "MessageSendScheduleDeletedPayload"
-Cohesion: 0.12
-Nodes (10): Time, UUID, Time, UUID, Time, UUID, Event, PhoneHeartbeatCheckPayload (+2 more)
-
 ### Community 176 - "PhoneHeartbeatOnlinePayload"
-Cohesion: 0.33
-Nodes (4): SIM, Time, UUID, MessageAPIDeletedPayload
-
-### Community 177 - ".WebhookSendFailed"
-Cohesion: 0.33
-Nodes (4): SIM, Time, UUID, MessageSendExpiredPayload
-
-### Community 178 - ".handleRequest"
-Cohesion: 0.40
-Nodes (4): SIM, Time, UUID, MessagePhoneDeliveredPayload
+Cohesion: 0.60
+Nodes (3): gradlew script, die(), warn()
 
 ### Community 184 - "UserResponse"
-Cohesion: 0.36
-Nodes (5): Context, String, ViewModel, MainUiState, MainViewModel
-
-### Community 185 - "Security Policy"
-Cohesion: 0.50
-Nodes (3): Reporting a Vulnerability, Security Policy, Supported Versions
-
-### Community 186 - "Troubleshooting"
-Cohesion: 0.50
-Nodes (4): API fails to start, Seed container fails, Tests timeout waiting for `delivered` status, Troubleshooting
+Cohesion: 0.20
+Nodes (6): Duration, Sign(), Verify(), DB, NewGormUserRepository(), AuthContext
 
 ### Community 187 - "Architecture"
-Cohesion: 0.50
-Nodes (4): Architecture, Components, FCM Redirect, How It Works
+Cohesion: 0.32
+Nodes (5): Context, Time, NewTurnstileTokenValidator(), TurnstileTokenValidator, turnstileVerifyResponse
 
 ### Community 188 - "AppToast.vue"
 Cohesion: 0.50
@@ -1029,68 +1211,44 @@ Cohesion: 0.50
 Nodes (4): scheduleAddWindow(), scheduleDayEnabled(), scheduleToggleDay(), scheduleWindowsForDay()
 
 ### Community 194 - ".onUserAccountDeleted"
+Cohesion: 0.48
+Nodes (4): formatEntityName(), NewEntitlementService(), EntitlementCheckResult, EntitlementService
+
+### Community 195 - ".Send"
+Cohesion: 0.29
+Nodes (6): lint-staged, *.{css,scss,sass,vue}, *.{js,ts,vue}, name, private, type
+
+### Community 196 - ".Send"
 Cohesion: 0.50
-Nodes (3): formatEntityName(), Context, EntitlementCheckResult
+Nodes (3): NewFirebaseFCMClient(), FCMClient, FirebaseFCMClient
 
-### Community 198 - ".ValidateEvent"
+### Community 201 - "install-docker-ubuntu.sh"
 Cohesion: 0.50
-Nodes (3): Time, UUID, MessageSendExpiredCheckPayload
-
-### Community 245 - "MessageSendExpiredCheckPayload"
-Cohesion: 0.40
-Nodes (4): SIM, Time, UUID, MessageAPISentPayload
-
-### Community 247 - "UserAPIKeyRotatedPayload"
-Cohesion: 0.25
-Nodes (5): appStore, notificationsStore, phonesStore, threadsStore, startsWithLetter()
-
-### Community 253 - "loadMessages"
-Cohesion: 0.40
-Nodes (6): deleteMessage(), loadData(), loadMessages(), resendMessage(), scrollToElement(), sendMessage()
-
-### Community 254 - "MainScreen"
-Cohesion: 0.50
-Nodes (4): Boolean, String, MainScreen(), PhoneCard()
-
-### Community 255 - "SettingsScreen"
-Cohesion: 0.50
-Nodes (4): Boolean, String, SettingsScreen(), SwitchSetting()
-
-### Community 256 - "MessageSend"
-Cohesion: 0.67
-Nodes (3): Message, MessageResponse, MessagesResponse
-
-### Community 257 - "PhoneHeartbeatMissedPayload"
-Cohesion: 0.67
-Nodes (3): Phone, PhoneResponse, PhonesResponse
-
-### Community 258 - "BillingDateOrdinal.vue"
-Cohesion: 0.50
-Nodes (3): parts, props, formatBillingPeriodDateOrdinalParts()
+Nodes (3): Reporting a Vulnerability, Security Policy, Supported Versions
 
 ### Community 259 - ".register"
 Cohesion: 0.18
 Nodes (6): Bag, capitalize(), AxiosLikeError, ErrorMessages, getErrorMessages(), sanitize()
 
 ## Knowledge Gaps
-- **640 isolated node(s):** `@modelcontextprotocol/server-playwright`, `BROWSER`, `@upstash/context7-mcp`, `mcp-remote`, `Constants` (+635 more)
+- **653 isolated node(s):** `@modelcontextprotocol/server-playwright`, `BROWSER`, `@upstash/context7-mcp`, `mcp-remote`, `Constants` (+648 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **57 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **580 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `UserID` connect `PhoneAPIKeyService` to `MessageThreadService`, `MessageAPISentPayload`, `BillingListener`, `WebhookService`, `handler`, `BulkMessage`, `MessageIndex`, `BillingUsage`, `IndexParams`, `Integration3CXService`, `Values`, `User`, `Context`, `MessageCallMissedPayload`, `MessageNotificationSentPayload`, `MessagePhoneDeliveredPayload`, `MessagePhoneReceivedPayload`, `MessagePhoneSentPayload`, `MessageSendRetryPayload`, `PhoneService`, `UserService`, `Client`, `service`, `MessageCallMissed`, `LemonsqueezyService`, `Response`, `.Check`, `UserID`, `SIM`, `MessageNotificationFailedPayload`, `MessageSendScheduleDeletedPayload`, `PhoneHeartbeatOnlinePayload`, `.WebhookSendFailed`, `Message`, `PhoneAPIKeyHandler`, `.handleRequest`, `hermesNotificationEmailFactory`, `EventDispatcher`, `request`, `HeartbeatService`, `container.go`, `Heartbeat`, `message_service.go`, `.onUserAccountDeleted`, `gormPhoneAPIKeyRepository`, `WebhookStore`, `.ValidateEvent`, `errors.ts`, `gormPhoneRepository`, `mongoHeartbeatMonitorRepository`, `gormHeartbeatMonitorRepository`, `.ValidateStore`, `UserHandlerValidator`, `attachment_repository.go`, `gormHeartbeatRepository`, `MessageThreadIndex`, `response.go`, `Phone`, `PhoneAPIKey`, `MessagePhoneSendingPayload`, `MessageSendExpiredCheckPayload`, `HeartbeatListener`, `bulk_message_handler.go`?**
-  _High betweenness centrality (0.111) - this node is a cross-community bridge._
-- **Why does `Tracer` connect `factory` to `Container`, `NewSMTPEmailService`, `PhoneNotificationService`, `MessageThreadService`, `PhoneAPIKeyListener`, `handler`, `WebhookService`, `MessageService`, `Logger`, `Tracer`, `memoryCache`, `HeartbeatMonitor`, `DiscordService`, `Cache`, `Integration3CXService`, `BillingService`, `Context`, `User`, `Context`, `MessageHandlerValidator`, `IndexParams`, `UserService`, `MessageThreadHandler`, `PhoneService`, `MessageSendScheduleHandlerValidator`, `.Check`, `Client`, `googlePushQueue`, `UserID`, `SIM`, `EventDispatcher`, `PhoneAPIKeyHandler`, `MessageSendScheduleService`, `MessageSendSchedule`, `container.go`, `Heartbeat`, `PhoneHeartbeatMissedPayload`, `UserHandler`, `MessageListener`, `gormPhoneAPIKeyRepository`, `.MessageService`, `user_service.go`, `PhoneAPIKeyService`, `errors.ts`, `gormPhoneRepository`, `mongoHeartbeatMonitorRepository`, `otelTracer`, `gormHeartbeatMonitorRepository`, `.ValidateStore`, `EmailNotificationService`, `UserListener`, `response.go`, `gormLogger`, `PhoneAPIKey`, `bulk_message_handler.go`, `EmailNotificationListener`, `MemoryAttachmentRepository`?**
-  _High betweenness centrality (0.086) - this node is a cross-community bridge._
-- **Why does `Logger` connect `Logger` to `Container`, `PhoneNotificationService`, `MessageThreadService`, `PhoneAPIKeyListener`, `handler`, `WebhookService`, `MessageService`, `Tracer`, `memoryCache`, `HeartbeatMonitor`, `DiscordService`, `Context`, `Integration3CXService`, `BillingService`, `User`, `Context`, `factory`, `MessageHandlerValidator`, `IndexParams`, `UserService`, `MessageThreadHandler`, `PhoneService`, `MessageSendScheduleHandlerValidator`, `.Check`, `Client`, `googlePushQueue`, `UserID`, `SIM`, `EventDispatcher`, `PhoneAPIKeyHandler`, `MessageSendScheduleService`, `MessageSendSchedule`, `zerologLogger`, `container.go`, `Heartbeat`, `message_service.go`, `PhoneHeartbeatMissedPayload`, `UserHandler`, `MessageListener`, `gormPhoneAPIKeyRepository`, `.Send`, `.MessageService`, `user_service.go`, `PhoneAPIKeyService`, `errors.ts`, `gormPhoneRepository`, `mongoHeartbeatMonitorRepository`, `otelTracer`, `gormHeartbeatMonitorRepository`, `.ValidateStore`, `EmailNotificationService`, `noopLogger`, `UserListener`, `response.go`, `gormLogger`, `PhoneAPIKey`, `bulk_message_handler.go`, `EmailNotificationListener`, `MemoryAttachmentRepository`?**
-  _High betweenness centrality (0.083) - this node is a cross-community bridge._
-- **Are the 4 inferred relationships involving `UserID` (e.g. with `Verify()` and `BearerAuth()`) actually correct?**
-  _`UserID` has 4 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `MessageThreadService` connect `MessageThreadService` to `MessageThreadIndex`, `factory`, `App`?**
+  _High betweenness centrality (0.138) - this node is a cross-community bridge._
+- **Why does `New()` connect `New` to `Container`, `helpers_test.go`, `BillingDateOrdinal.vue`, `MessageThreadService`, `WebhookService`, `BillingUsageHistory`, `Logger`, `Values`, `Context`, `MessageCallMissedPayload`, `PhoneService`, `Client`, `Response`, `SIM`, `EventDispatcher`, `HeartbeatService`, `MessageSendSchedule`, `Security Policy`, `Troubleshooting`, `container.go`, `DiscordStore`, `PhoneHeartbeatMissedPayload`, `UserHandler`, `WebhookStore`, `TestShouldCheckUnarchive`, `PhoneAPIKeyService`, `NotificationEmailFactory`, `UserHandlerValidator`, `MessageThreadIndex`, `PhoneAPIKeyIndex`, `MessageSendExpiredCheckPayload`, `bulk_message_handler.go`, `testClient`?**
+  _High betweenness centrality (0.104) - this node is a cross-community bridge._
+- **Why does `Container` connect `Client` to `PhoneHeartbeatMissedPayload`, `UserHandler`, `Container`, `.onUserAccountDeleted`, `container.go`, `googlePushQueue`, `UserID`, `Message Thread Archive UI Design`, `docs.go`, `Logger`, `NotificationEmailFactory`, `DiscordService`, `UserResponse`, `countries.ts`, `.ValidateStore`, `Architecture`, `factory`, `Email`?**
+  _High betweenness centrality (0.096) - this node is a cross-community bridge._
 - **Are the 74 inferred relationships involving `New()` (e.g. with `axiomLogger()` and `consoleLogger()`) actually correct?**
   _`New()` has 74 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `@modelcontextprotocol/server-playwright`, `BROWSER`, `@upstash/context7-mcp` to the rest of the system?**
-  _640 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _653 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Settings` be split into smaller, more focused modules?**
-  _Cohesion score 0.06342342342342343 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12950971322849214 - nodes in this community are weakly interconnected._
+- **Should `HttpSmsApiService` be split into smaller, more focused modules?**
+  _Cohesion score 0.06458635703918723 - nodes in this community are weakly interconnected._

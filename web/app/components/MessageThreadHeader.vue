@@ -7,7 +7,6 @@ import {
   mdiLogout,
   mdiCellphoneKey,
   mdiDownload,
-  mdiFinance,
   mdiBatteryChargingHigh,
   mdiPackageUp,
   mdiPackageDown,
@@ -15,6 +14,7 @@ import {
   mdiMagnify,
   mdiCommentTextMultipleOutline,
   mdiCircle,
+  mdiChartBoxOutline,
 } from '@mdi/js'
 import { formatPhoneNumber, phoneCountry, humanizeTime } from '~/utils/filters'
 import type { EntitiesPhone } from '~~/shared/types/api'
@@ -73,14 +73,14 @@ async function logout() {
   threadsStore.resetState()
   notificationsStore.addNotification({
     type: 'info',
-    message: 'You have successfully logged out',
+    message: 'از حساب خارج شدید.',
   })
   router.push({ name: 'index' })
 }
 </script>
 
 <template>
-  <v-sheet class="pa-4 d-flex" :elevation="lgAndUp ? 0 : 2" color="black">
+  <v-sheet class="pa-4 d-flex" :elevation="lgAndUp ? 0 : 2" color="surface">
     <div :class="{ 'px-2': mdAndDown }">
       <v-toolbar-title>
         <div class="d-flex pt-2" style="width: 260px">
@@ -89,7 +89,7 @@ async function logout() {
             density="compact"
             color="primary"
             :disabled="owners.length === 0"
-            placeholder="Phone Numbers"
+            placeholder="شماره‌های متصل"
             :class="{ 'mb-n5': !phonesStore.owner }"
             :items="owners"
             :model-value="phonesStore.owner"
@@ -135,12 +135,13 @@ async function logout() {
               <v-icon v-else size="x-small" color="success" :icon="mdiCircle" />
             </v-btn>
           </template>
-          <h4 class="font-weight-bold mt-0 mb-0">Last Heartbeat</h4>
-          {{ humanizeTime(phonesStore.heartbeat.timestamp) }} ago
+          <h4 class="font-weight-bold mt-0 mb-0">آخرین ارتباط گوشی</h4>
+          {{ humanizeTime(phonesStore.heartbeat.timestamp) }} پیش
         </v-tooltip>
       </div>
     </div>
     <v-spacer />
+    <ThemeToggle />
     <v-menu>
       <template #activator="{ props: menuProps }">
         <v-btn v-bind="menuProps" icon variant="text" class="mt-2 mr-n3">
@@ -161,31 +162,33 @@ async function logout() {
             <v-icon v-else :icon="mdiPackageUp" />
           </template>
           <v-list-item-title>
-            {{ threadsStore.archivedThreads ? 'Unarchived' : 'Archived' }}
+            {{
+              threadsStore.archivedThreads ? 'پیام‌های جاری' : 'پیام‌های آرشیوی'
+            }}
           </v-list-item-title>
         </v-list-item>
         <v-list-item v-if="phonesStore.owner" :to="{ name: 'messages' }">
           <template #prepend><v-icon :icon="mdiPlus" /></template>
-          <v-list-item-title>New Message</v-list-item-title>
+          <v-list-item-title>پیام جدید</v-list-item-title>
         </v-list-item>
         <v-list-item v-if="phonesStore.owner" :to="{ name: 'bulk-messages' }">
           <template #prepend
             ><v-icon :icon="mdiCommentTextMultipleOutline"
           /></template>
-          <v-list-item-title>Bulk Messages</v-list-item-title>
+          <v-list-item-title>ارسال گروهی</v-list-item-title>
         </v-list-item>
         <v-list-item v-if="phonesStore.owner" :to="{ name: 'search-messages' }">
           <template #prepend><v-icon :icon="mdiMagnify" /></template>
-          <v-list-item-title>Search Messages</v-list-item-title>
+          <v-list-item-title>جستجوی پیام‌ها</v-list-item-title>
         </v-list-item>
         <v-list-item :to="{ name: 'settings' }">
           <template #prepend><v-icon :icon="mdiAccountCog" /></template>
-          <v-list-item-title>Settings</v-list-item-title>
+          <v-list-item-title>تنظیمات</v-list-item-title>
         </v-list-item>
         <v-list-item :to="{ name: 'phone-api-keys' }">
           <template #prepend><v-icon :icon="mdiCellphoneKey" /></template>
           <v-list-item-title :class="{ 'pr-16': lgAndUp }"
-            >Phone API Keys</v-list-item-title
+            >کلید اتصال گوشی</v-list-item-title
           >
         </v-list-item>
         <v-list-item
@@ -193,15 +196,15 @@ async function logout() {
           :href="appStore.appData.appDownloadUrl"
         >
           <template #prepend><v-icon :icon="mdiDownload" /></template>
-          <v-list-item-title>Download App</v-list-item-title>
+          <v-list-item-title>دانلود اپ نسک</v-list-item-title>
         </v-list-item>
         <v-list-item :to="{ name: 'billing' }">
-          <template #prepend><v-icon :icon="mdiFinance" /></template>
-          <v-list-item-title>Usage & Billing</v-list-item-title>
+          <template #prepend><v-icon :icon="mdiChartBoxOutline" /></template>
+          <v-list-item-title>آمار مصرف</v-list-item-title>
         </v-list-item>
         <v-list-item @click.prevent="logout">
           <template #prepend><v-icon :icon="mdiLogout" /></template>
-          <v-list-item-title>Logout</v-list-item-title>
+          <v-list-item-title>خروج</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>

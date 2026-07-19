@@ -5,7 +5,7 @@ const { lgAndUp, mdAndDown } = useDisplay()
 </script>
 
 <template>
-  <v-app-bar elevation="0" color="#121212" height="70">
+  <v-app-bar elevation="0" color="surface" height="70">
     <v-container>
       <v-row>
         <v-col class="w-full d-flex">
@@ -14,8 +14,12 @@ const { lgAndUp, mdAndDown } = useDisplay()
             class="text-on-surface text-headline-large text-decoration-none"
             :class="{ 'mt-5': mdAndDown, 'mt-4': !mdAndDown }"
           >
-            <v-avatar v-if="lgAndUp" :image="'/img/logo.svg'" :size="30" />
-            HTTP SMS
+            <v-avatar
+              v-if="lgAndUp"
+              :image="'/brand/nasak-mark.png'"
+              :size="34"
+            />
+            پیامک نسک
           </NuxtLink>
           <v-spacer />
           <v-btn
@@ -24,8 +28,7 @@ const { lgAndUp, mdAndDown } = useDisplay()
             :size="lgAndUp ? 'large' : 'default'"
             :to="{ name: 'login' }"
           >
-            Get Started
-            <span v-if="lgAndUp">&nbsp;For Free</span>
+            ورود به پنل
           </v-btn>
         </v-col>
       </v-row>

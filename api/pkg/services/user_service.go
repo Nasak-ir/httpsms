@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
+	"strings"
 	"time"
 
 	"firebase.google.com/go/auth"
@@ -281,7 +283,8 @@ func (service *UserService) Delete(ctx context.Context, source string, userID en
 		return service.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot load user with ID [%s] from the [%T]", userID, service.repository))
 	}
 
-	if !user.IsOnFreePlan() && user.SubscriptionRenewsAt != nil && user.SubscriptionRenewsAt.After(time.Now()) {
+	paidFeaturesEnabled := strings.EqualFold(strings.TrimSpace(os.Getenv("PAID_FEATURES_ENABLED")), "true")
+	if paidFeaturesEnabled && !user.IsOnFreePlan() && user.SubscriptionRenewsAt != nil && user.SubscriptionRenewsAt.After(time.Now()) {
 		return service.tracer.WrapErrorSpan(span, stacktrace.NewError("cannot delete user with ID [%s] because they are have an active [%s] subscription which renews at [%s]", userID, user.SubscriptionName, user.SubscriptionRenewsAt))
 	}
 

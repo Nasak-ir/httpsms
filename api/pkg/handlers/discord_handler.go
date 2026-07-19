@@ -160,19 +160,19 @@ func (h *DiscordHandler) Update(c fiber.Ctx) error {
 
 	var request requests.DiscordUpdate
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall params [%s] into [%T]", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot decode discord update payload"))
 		return h.responseBadRequest(c, err)
 	}
 
 	request.DiscordID = c.Params("discordID")
 	if errors := h.validator.ValidateUpdate(ctx, request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while updating user [%+#v]", spew.Sdump(errors), request))
+		ctxLogger.Warn(stacktrace.NewError("discord update validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while updating discord integration")
 	}
 
 	user, err := h.service.Update(ctx, request.ToUpdateParams(h.userFromContext(c)))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot update discord integration with params [%+#v]", request))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot update discord integration"))
 		return h.responseInternalServerError(c)
 	}
 
@@ -201,12 +201,12 @@ func (h *DiscordHandler) Store(c fiber.Ctx) error {
 
 	var request requests.DiscordStore
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall body [%s] into [%T]", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot decode discord integration payload"))
 		return h.responseBadRequest(c, err)
 	}
 
 	if errors := h.validator.ValidateStore(ctx, request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while storing discord integration [%+#v]", spew.Sdump(errors), request))
+		ctxLogger.Warn(stacktrace.NewError("discord integration validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while storing discord integration")
 	}
 
@@ -223,7 +223,7 @@ func (h *DiscordHandler) Store(c fiber.Ctx) error {
 
 	discordIntegration, err := h.service.Store(ctx, request.ToStoreParams(h.userFromContext(c)))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot store discord integration with params [%+#v]", request))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot store discord integration"))
 		return h.responseInternalServerError(c)
 	}
 
@@ -252,11 +252,9 @@ func (h *DiscordHandler) Event(c fiber.Ctx) error {
 
 	var payload map[string]any
 	if err := json.Unmarshal(c.Body(), &payload); err != nil {
-		ctxLogger.Error(h.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot unmarshall [%s] to [%T]", string(c.Body()), payload)))
+		ctxLogger.Error(h.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot decode discord event payload")))
 		return h.responseBadRequest(c, err)
 	}
-
-	ctxLogger.Info(string(c.Body()))
 
 	if payload["type"].(float64) == 1 {
 		return c.JSON(fiber.Map{"type": 1})
@@ -329,7 +327,7 @@ func (h *DiscordHandler) sendSMS(ctx context.Context, c fiber.Ctx, payload map[s
 	}
 
 	if errors := h.messageValidator.ValidateMessageSend(ctx, discord.UserID, request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while sending payload [%s]", spew.Sdump(errors), c.Body()))
+		ctxLogger.Warn(stacktrace.NewError("discord message validation errors [%s]", spew.Sdump(errors)))
 
 		var embeds []fiber.Map
 		for _, value := range errors {
@@ -370,7 +368,7 @@ func (h *DiscordHandler) sendSMS(ctx context.Context, c fiber.Ctx, payload map[s
 
 	message, err := h.messageService.SendMessage(ctx, request.ToMessageSendParams(discord.UserID, c.OriginalURL()))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot send message with paylod [%s] from discord server [%s]", c.Body(), discord.ServerID))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot send message from discord server [%s]", discord.ServerID))
 		return c.JSON(
 			fiber.Map{
 				"type": 4,

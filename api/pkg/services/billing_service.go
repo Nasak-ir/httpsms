@@ -3,6 +3,9 @@ package services
 import (
 	"context"
 	"fmt"
+	"os"
+	"strconv"
+	"strings"
 	"time"
 
 	"github.com/NdoleStudio/httpsms/pkg/cache"
@@ -14,6 +17,18 @@ import (
 	"github.com/google/uuid"
 	"github.com/palantir/stacktrace"
 )
+
+// billingLimitsEnabled is opt-in for compatibility with the upstream project.
+// Nasak SMS is self-hosted and unlimited by default: usage records are retained
+// for operational reporting, but they never become credits or a send quota.
+func billingLimitsEnabled() bool {
+	value := strings.TrimSpace(os.Getenv("BILLING_LIMITS_ENABLED"))
+	if value == "" {
+		return false
+	}
+	enabled, err := strconv.ParseBool(value)
+	return err == nil && enabled
+}
 
 // BillingService is responsible for tracking usages and billing users
 type BillingService struct {
@@ -50,6 +65,10 @@ func NewBillingService(
 
 // IsEntitledWithCount checks if a user can send or receive and SMS message
 func (service *BillingService) IsEntitledWithCount(ctx context.Context, userID entities.UserID, count uint) *string {
+	if !billingLimitsEnabled() {
+		return nil
+	}
+
 	ctx, span, ctxLogger := service.tracer.StartWithLogger(ctx, service.logger)
 	defer span.End()
 
@@ -179,6 +198,10 @@ func (service *BillingService) DeleteAllForUser(ctx context.Context, userID enti
 }
 
 func (service *BillingService) sendUsageAlert(ctx context.Context, userID entities.UserID) {
+	if !billingLimitsEnabled() {
+		return
+	}
+
 	ctx, span, ctxLogger := service.tracer.StartWithLogger(ctx, service.logger)
 	defer span.End()
 

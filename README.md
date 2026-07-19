@@ -1,4 +1,19 @@
-# httpSMS
+# پیامک نسک
+
+درگاه self-hosted نسک برای ارسال و دریافت SMS از طریق گوشی اندرویدی و سیم‌کارت
+خود مجموعه. این نسخه هیچ credit، اشتراک نرم‌افزاری یا سقف پیام ندارد و پنل آن در
+`sms.nasak.ir` اجرا می‌شود. تعرفه خود اپراتور سیم‌کارت همچنان مستقل از نرم‌افزار
+است.
+
+- راهنمای کامل معماری و عملیات: [docs/NASAK_SMS.md](docs/NASAK_SMS.md)
+- API عمومی: `https://sms.nasak.ir/api`
+- پنل: `https://sms.nasak.ir`
+- Android APK: بخش Releases همین repository
+
+این fork از پروژه متن‌باز httpSMS ساخته شده و مجوز AGPL و تاریخچه attribution
+آن حفظ شده است.
+
+## Upstream project
 
 [![Web](https://github.com/NdoleStudio/httpsms/actions/workflows/web.yml/badge.svg)](https://github.com/NdoleStudio/httpsms/actions/workflows/web.yml)
 [![API](https://github.com/NdoleStudio/httpsms/actions/workflows/api.yml/badge.svg)](https://github.com/NdoleStudio/httpsms/actions/workflows/api.yml)

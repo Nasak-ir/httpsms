@@ -82,11 +82,11 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:34.16.0"))
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
-    implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-messaging")
     implementation("com.squareup.okhttp3:okhttp:5.4.0")
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("androidx.preference:preference-ktx:1.2.1")
+    implementation("androidx.security:security-crypto:1.1.0")
     implementation("androidx.work:work-runtime-ktx:2.11.2")
     implementation("androidx.core:core-ktx:1.16.0")
     implementation("androidx.cardview:cardview:1.0.0")

@@ -117,11 +117,11 @@ func (repository *gormPhoneAPIKeyRepository) LoadAuthContext(ctx context.Context
 	phoneAPIKey := new(entities.PhoneAPIKey)
 	err := repository.db.WithContext(ctx).Where("api_key = ?", apiKey).First(phoneAPIKey).Error
 	if errors.Is(err, gorm.ErrRecordNotFound) {
-		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.PropagateWithCode(err, ErrCodeNotFound, "phone api key [%s] does not exist", apiKey))
+		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.PropagateWithCode(err, ErrCodeNotFound, "phone api key does not exist"))
 	}
 
 	if err != nil {
-		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot load phone api key [%s]", apiKey))
+		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot load phone api key"))
 	}
 
 	authUser := entities.AuthContext{

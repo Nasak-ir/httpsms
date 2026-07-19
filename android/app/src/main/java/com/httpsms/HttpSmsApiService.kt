@@ -276,16 +276,16 @@ class HttpSmsApiService(private val apiKey: String, private val baseURL: URI) {
         try {
             val response = client.newCall(request).execute()
             if (!response.isSuccessful) {
-                Timber.e("error response [${response.body?.string()}] with code [${response.code}] while updating FCM token [$fcmToken] with apiKey [$apiKey]")
+                Timber.e("FCM token update failed with HTTP [${response.code}]")
                 response.close()
                 if (response.code == 401) {
-                    Timber.e("invalid API key [$apiKey]")
+                    Timber.e("invalid API key")
                     return Triple(null, "Cannot validate the API key. Check if it is correct and try again.", null)
                 }
                 return Triple(null,null, "Cannot login to the server, Make sure the phone number is in international format e.g +18005550100")
             }
 
-            Timber.i("FCM token submitted correctly with API key [$apiKey] and server url [$baseURL]" )
+            Timber.i("FCM token submitted successfully")
             val payload = ResponsePhone.fromJson(response.body!!.string())?.data
             response.close()
             return Triple(payload, null, null)

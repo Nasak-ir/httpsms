@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Pusher from 'pusher-js'
 import { useDisplay } from 'vuetify'
 import { setAuthHeader } from '~/composables/useApi'
 import { getAuth } from 'firebase/auth'
@@ -20,18 +19,23 @@ const hasDrawer = computed(() => {
 })
 
 onMounted(() => {
-  setTimeout(() => {
-    const pusher = new Pusher(config.public.pusherKey as string, {
-      cluster: config.public.pusherCluster as string,
-    })
-
-    if (authStore.authUser) {
-      const channel = pusher.subscribe(authStore.authUser.id)
-      channel.bind('phone.updated', () => {
-        canPoll = true
+  setTimeout(async () => {
+    const pusherKey = String(config.public.pusherKey || '').trim()
+    if (pusherKey) {
+      const { default: Pusher } = await import('pusher-js')
+      const pusher = new Pusher(pusherKey, {
+        cluster: String(config.public.pusherCluster || ''),
       })
+
+      if (authStore.authUser) {
+        const channel = pusher.subscribe(authStore.authUser.id)
+        channel.bind('phone.updated', () => {
+          canPoll = true
+        })
+      }
     }
 
+    canPoll = true
     startPoller()
   }, 10_000)
 })
@@ -102,10 +106,10 @@ function startPoller() {
       width: 8px;
     }
     &::-webkit-scrollbar-track {
-      background: #363636;
+      background: rgb(var(--v-theme-surface));
     }
     &::-webkit-scrollbar-thumb {
-      background: #666666;
+      background: rgb(var(--v-theme-on-surface), 0.3);
       border-radius: 8px;
     }
   }

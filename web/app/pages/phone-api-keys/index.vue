@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { mdiArrowLeft, mdiPlus, mdiDelete, mdiEye } from '@mdi/js'
 import QRCode from 'qrcode'
-import Pusher from 'pusher-js'
 import type { Channel } from 'pusher-js'
 import { ErrorMessages } from '~/utils/errors'
 import { getApiErrorMessage, toApiError } from '~/utils/api-error'
@@ -12,7 +11,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Phone API Keys - httpSMS',
+  title: 'کلیدهای اتصال گوشی | پیامک نسک',
 })
 
 const config = useRuntimeConfig()
@@ -42,7 +41,7 @@ let webhookChannel: Channel | null = null
 
 function openCreateApiKeyDialog() {
   errorMessages.value = new ErrorMessages()
-  formPhoneApiKeyName.value = `Phone API Key ${phoneApiKeys.value.length + 1}`
+  formPhoneApiKeyName.value = `گوشی ${phoneApiKeys.value.length + 1}`
   showCreateApiKeyDialog.value = true
 }
 
@@ -214,6 +213,7 @@ onMounted(async () => {
   const pusherKey = config.public.pusherKey as string
   const pusherCluster = config.public.pusherCluster as string
   if (pusherKey && authStore.user?.id) {
+    const { default: Pusher } = await import('pusher-js')
     const pusher = new Pusher(pusherKey, { cluster: pusherCluster })
     webhookChannel = pusher.subscribe(authStore.user.id)
     webhookChannel.bind('phone.updated', () => {

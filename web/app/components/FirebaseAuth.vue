@@ -58,12 +58,12 @@ function clearErrors() {
 function validateEmail(): boolean {
   clearErrors()
   if (!email.value.trim()) {
-    errorMessages.value.add('email', 'Please provide an email address')
+    errorMessages.value.add('email', 'ایمیل را وارد کنید.')
     return false
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email.value.trim())) {
-    errorMessages.value.add('email', 'Please enter a valid email address')
+    errorMessages.value.add('email', 'فرمت ایمیل معتبر نیست.')
     return false
   }
   return true
@@ -73,17 +73,17 @@ function validateLoginForm(): boolean {
   clearErrors()
   let valid = true
   if (!email.value.trim()) {
-    errorMessages.value.add('email', 'Please provide an email address')
+    errorMessages.value.add('email', 'ایمیل را وارد کنید.')
     valid = false
   } else {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email.value.trim())) {
-      errorMessages.value.add('email', 'Please enter a valid email address')
+      errorMessages.value.add('email', 'فرمت ایمیل معتبر نیست.')
       valid = false
     }
   }
   if (!password.value) {
-    errorMessages.value.add('password', 'Please enter your password')
+    errorMessages.value.add('password', 'رمز عبور را وارد کنید.')
     valid = false
   }
   return valid
@@ -165,7 +165,7 @@ async function submitEmailViaApi() {
     console.error(error)
   }
   notificationsStore.addNotification({
-    message: 'Login successful!',
+    message: 'ورود با موفقیت انجام شد.',
     type: 'success',
   })
   router.push({ path: props.to })
@@ -204,7 +204,7 @@ async function onSuccess(user: FirebaseUser, method: LoginMethod) {
     console.error(error)
   }
   notificationsStore.addNotification({
-    message: 'Login successful!',
+    message: 'ورود با موفقیت انجام شد.',
     type: 'success',
   })
   await authStore.onAuthStateChanged(user)
@@ -261,49 +261,41 @@ function handleError(error: unknown, isSocial = false) {
 
   switch (code) {
     case 'auth/wrong-password':
-      errorMessages.value.add('password', 'Incorrect password')
+      errorMessages.value.add('password', 'رمز عبور درست نیست.')
       break
     case 'auth/invalid-credential':
-      errorMessages.value.add('email', 'Invalid email or password')
-      errorMessages.value.add('password', 'Invalid email or password')
+      errorMessages.value.add('email', 'ایمیل یا رمز عبور درست نیست.')
+      errorMessages.value.add('password', 'ایمیل یا رمز عبور درست نیست.')
       break
     case 'auth/user-not-found':
-      errorMessages.value.add(
-        'email',
-        'No account found with this email address',
-      )
+      errorMessages.value.add('email', 'حسابی با این ایمیل پیدا نشد.')
       break
     case 'auth/invalid-email':
-      errorMessages.value.add('email', 'Please enter a valid email address')
+      errorMessages.value.add('email', 'فرمت ایمیل معتبر نیست.')
       break
     case 'auth/email-already-in-use':
-      errorMessages.value.add(
-        'email',
-        'An account already exists with this email',
-      )
+      errorMessages.value.add('email', 'حسابی با این ایمیل وجود دارد.')
       break
     case 'auth/weak-password':
-      errorMessages.value.add(
-        'password',
-        'Password should be at least 6 characters',
-      )
+      errorMessages.value.add('password', 'رمز عبور باید حداقل ۶ کاراکتر باشد.')
       break
     case 'auth/user-disabled':
-      errorMessages.value.add('email', 'This account has been disabled')
+      errorMessages.value.add('email', 'این حساب غیرفعال شده است.')
       break
     case 'auth/too-many-requests':
-      generalError.value = 'Too many failed attempts. Please try again later'
+      generalError.value =
+        'تلاش‌های ناموفق زیاد بود؛ کمی بعد دوباره امتحان کنید.'
       break
     case 'auth/network-request-failed':
       generalError.value =
-        'Unable to connect to the server. Please check your internet connection'
+        'ارتباط با سرور برقرار نشد؛ اتصال اینترنت را بررسی کنید.'
       break
     case 'auth/missing-email':
-      errorMessages.value.add('email', 'Please provide an email address')
+      errorMessages.value.add('email', 'ایمیل را وارد کنید.')
       break
     default:
       generalError.value =
-        firebaseError.message || 'An unexpected error occurred'
+        firebaseError.message || 'خطای پیش‌بینی‌نشده‌ای رخ داد.'
   }
 }
 
@@ -313,18 +305,18 @@ function getGeneralErrorMessage(
 ): string {
   switch (code) {
     case 'auth/user-not-found':
-      return 'No account found with this email address'
+      return 'حسابی با این ایمیل پیدا نشد.'
     case 'auth/wrong-password':
     case 'auth/invalid-credential':
-      return 'The provided credentials are invalid.'
+      return 'اطلاعات ورود معتبر نیست.'
     case 'auth/user-disabled':
-      return 'This account has been disabled'
+      return 'این حساب غیرفعال شده است.'
     case 'auth/too-many-requests':
-      return 'Too many failed attempts. Please try again later'
+      return 'تلاش‌های ناموفق زیاد بود؛ کمی بعد دوباره امتحان کنید.'
     case 'auth/network-request-failed':
-      return 'Unable to connect to the server. Please check your internet connection'
+      return 'ارتباط با سرور برقرار نشد؛ اتصال اینترنت را بررسی کنید.'
     default:
-      return fallback || 'An unexpected error occurred'
+      return fallback || 'خطای پیش‌بینی‌نشده‌ای رخ داد.'
   }
 }
 </script>
@@ -348,10 +340,10 @@ function getGeneralErrorMessage(
         variant="flat"
         class="position-absolute last-used-chip"
       >
-        Last Used
+        آخرین روش
       </v-chip>
       <v-icon color="red" :icon="mdiGoogle" class="mr-2" />
-      Continue with Google
+      ورود با گوگل
     </v-btn>
 
     <v-btn
@@ -372,10 +364,10 @@ function getGeneralErrorMessage(
         variant="flat"
         class="position-absolute last-used-chip"
       >
-        Last Used
+        آخرین روش
       </v-chip>
       <v-icon :icon="mdiGithub" class="mr-2" />
-      Continue with GitHub
+      ورود با گیت‌هاب
     </v-btn>
 
     <v-btn
@@ -396,10 +388,10 @@ function getGeneralErrorMessage(
         variant="flat"
         class="position-absolute last-used-chip"
       >
-        Last Used
+        آخرین روش
       </v-chip>
       <v-icon :icon="mdiEmail" class="mr-2" />
-      Continue with email
+      ورود با ایمیل
     </v-btn>
 
     <!-- Forgot Password Form -->
@@ -410,11 +402,11 @@ function getGeneralErrorMessage(
     >
       <template v-if="!resetEmailSent">
         <p class="text-body-medium text-medium-emphasis mb-4">
-          Enter your email address to reset your password
+          ایمیل حساب را برای بازیابی رمز عبور وارد کنید.
         </p>
         <v-text-field
           v-model="email"
-          label="Email Address"
+          label="ایمیل"
           color="primary"
           type="email"
           variant="outlined"
@@ -438,12 +430,12 @@ function getGeneralErrorMessage(
           type="submit"
           :loading="loading"
         >
-          Send Reset Link
+          ارسال لینک بازیابی
         </v-btn>
       </template>
       <template v-else>
         <v-alert type="success" density="compact" class="mb-3">
-          Check your email for password reset instructions
+          راهنمای بازیابی رمز عبور به ایمیل شما ارسال شد.
         </v-alert>
       </template>
       <v-btn
@@ -454,7 +446,7 @@ function getGeneralErrorMessage(
         class="mt-2"
         @click="backToSignIn"
       >
-        Back to Sign In
+        بازگشت به ورود
       </v-btn>
     </v-form>
 
@@ -466,7 +458,7 @@ function getGeneralErrorMessage(
     >
       <v-text-field
         v-model="email"
-        label="Email Address"
+        label="ایمیل"
         color="primary"
         type="email"
         variant="outlined"
@@ -477,7 +469,7 @@ function getGeneralErrorMessage(
       />
       <v-text-field
         v-model="password"
-        label="Password"
+        label="رمز عبور"
         :type="showPassword ? 'text' : 'password'"
         color="primary"
         variant="outlined"
@@ -499,7 +491,7 @@ function getGeneralErrorMessage(
         class="mb-3 px-0 mt-n4"
         @click="showForgotPasswordForm"
       >
-        Forgot Password?
+        رمز عبور را فراموش کرده‌اید؟
       </v-btn>
       <v-btn
         block
@@ -508,7 +500,7 @@ function getGeneralErrorMessage(
         type="submit"
         :loading="loading"
       >
-        {{ isSignUp ? 'Sign Up' : 'Sign In' }}
+        {{ isSignUp ? 'ساخت حساب' : 'ورود' }}
       </v-btn>
       <v-btn
         block
@@ -518,26 +510,24 @@ function getGeneralErrorMessage(
         class="mt-2"
         @click="isSignUp = !isSignUp"
       >
-        {{
-          isSignUp ? 'Already have an account? Sign In' : 'No account? Sign Up'
-        }}
+        {{ isSignUp ? 'حساب دارید؟ وارد شوید' : 'حساب ندارید؟ ثبت‌نام کنید' }}
       </v-btn>
     </v-form>
 
     <p class="text-body-small text-medium-emphasis mt-4">
-      By continuing, you are indicating that you accept our
+      با ادامه، شرایط استفاده و حریم خصوصی را می‌پذیرید.
       <a
         :href="appStore.appData.url + '/terms-and-conditions'"
         class="text-decoration-none"
       >
-        Terms of Service
+        شرایط استفاده
       </a>
-      and
+      و
       <a
         :href="appStore.appData.url + '/privacy-policy'"
         class="text-decoration-none"
       >
-        Privacy Policy.</a
+        حریم خصوصی.</a
       >
     </p>
   </div>

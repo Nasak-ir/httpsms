@@ -143,12 +143,12 @@ func (h *WebhookHandler) Store(c fiber.Ctx) error {
 
 	var request requests.WebhookStore
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall body [%s] into [%T]", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot decode webhook payload"))
 		return h.responseBadRequest(c, err)
 	}
 
 	if errors := h.validator.ValidateStore(ctx, h.userIDFomContext(c), request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while storing webhook [%+#v]", spew.Sdump(errors), request))
+		ctxLogger.Warn(stacktrace.NewError("webhook validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while storing webhook")
 	}
 
@@ -165,7 +165,7 @@ func (h *WebhookHandler) Store(c fiber.Ctx) error {
 
 	webhook, err := h.service.Store(ctx, request.ToStoreParams(h.userFromContext(c)))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot store webhoook with params [%+#v]", request))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot store webhook"))
 		return h.responseInternalServerError(c)
 	}
 
@@ -193,19 +193,19 @@ func (h *WebhookHandler) Update(c fiber.Ctx) error {
 
 	var request requests.WebhookUpdate
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall params [%s] into [%T]", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot decode webhook update payload"))
 		return h.responseBadRequest(c, err)
 	}
 
 	request.WebhookID = c.Params("webhookID")
 	if errors := h.validator.ValidateUpdate(ctx, h.userIDFomContext(c), request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while updating user [%+#v]", spew.Sdump(errors), request))
+		ctxLogger.Warn(stacktrace.NewError("webhook update validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while updating webhook")
 	}
 
 	user, err := h.service.Update(ctx, request.ToUpdateParams(h.userFromContext(c)))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot update user with params [%+#v]", request))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot update webhook"))
 		return h.responseInternalServerError(c)
 	}
 

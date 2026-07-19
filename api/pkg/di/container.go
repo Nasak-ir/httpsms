@@ -147,7 +147,9 @@ func NewContainer(projectID string, version string) (container *Container) {
 
 	container.RegisterFirebaseEmailAuthRoutes()
 
-	container.RegisterLemonsqueezyRoutes()
+	if paidFeaturesEnabled() {
+		container.RegisterLemonsqueezyRoutes()
+	}
 
 	container.RegisterIntegration3CXRoutes()
 	container.RegisterIntegration3CXListeners()
@@ -250,6 +252,16 @@ func (container *Container) connect(dsn string, config *gorm.Config) (db *gorm.D
 	return gorm.Open(postgres.Open(dsn), config)
 }
 
+func (container *Container) gormConfig() *gorm.Config {
+	config := &gorm.Config{
+		TranslateError: true,
+	}
+	if strings.EqualFold(strings.TrimSpace(os.Getenv("DATABASE_DEBUG_LOGS")), "true") {
+		config.Logger = container.GormLogger()
+	}
+	return config
+}
+
 // DedicatedDB creates an instance of gorm.DB if it has not been created already
 func (container *Container) DedicatedDB() (db *gorm.DB) {
 	container.logger.Debug(fmt.Sprintf("creating %T", db))
@@ -257,14 +269,7 @@ func (container *Container) DedicatedDB() (db *gorm.DB) {
 		return container.dedicatedDB
 	}
 
-	config := &gorm.Config{
-		TranslateError: true,
-	}
-	if isLocal() {
-		config = &gorm.Config{Logger: container.GormLogger()}
-	}
-
-	db, err := container.connect(os.Getenv("DATABASE_URL_DEDICATED"), config)
+	db, err := container.connect(os.Getenv("DATABASE_URL_DEDICATED"), container.gormConfig())
 	if err != nil {
 		container.logger.Fatal(err)
 	}
@@ -316,12 +321,7 @@ func (container *Container) DBWithoutMigration() (db *gorm.DB) {
 
 	container.logger.Debug(fmt.Sprintf("creating %T", db))
 
-	config := &gorm.Config{
-		TranslateError: true,
-		Logger:         container.GormLogger(),
-	}
-
-	db, err := gorm.Open(postgres.Open(os.Getenv("DATABASE_URL")), config)
+	db, err := gorm.Open(postgres.Open(os.Getenv("DATABASE_URL")), container.gormConfig())
 	if err != nil {
 		container.logger.Fatal(err)
 	}
@@ -341,12 +341,7 @@ func (container *Container) DB() (db *gorm.DB) {
 
 	container.logger.Debug(fmt.Sprintf("creating %T", db))
 
-	config := &gorm.Config{
-		TranslateError: true,
-		Logger:         container.GormLogger(),
-	}
-
-	db, err := gorm.Open(postgres.Open(os.Getenv("DATABASE_URL")), config)
+	db, err := gorm.Open(postgres.Open(os.Getenv("DATABASE_URL")), container.gormConfig())
 	if err != nil {
 		container.logger.Fatal(err)
 	}
@@ -1710,7 +1705,7 @@ func (container *Container) RegisterPhoneRoutes() {
 // RegisterUserRoutes registers routes for the /users prefix
 func (container *Container) RegisterUserRoutes() {
 	container.logger.Debug(fmt.Sprintf("registering %T routes", &handlers.UserHandler{}))
-	container.UserHandler().RegisterRoutes(container.App(), container.AuthenticatedMiddleware())
+	container.UserHandler().RegisterRoutes(container.App(), paidFeaturesEnabled(), container.AuthenticatedMiddleware())
 }
 
 // RegisterFirebaseEmailAuthRoutes registers same-origin Firebase email auth routes.
@@ -1741,7 +1736,7 @@ func (container *Container) RegisterSwaggerRoutes() {
 			document.body.style.margin = '0';
 			var links = document.querySelectorAll("link[rel~='icon']");
 			links.forEach(function (link) {
-				link.href = 'https://httpsms.com/favicon.ico';
+				link.href = '/favicon.ico';
 			});
 		});`,
 	}))
@@ -1816,6 +1811,26 @@ func (container *Container) UserRistrettoCache() *ristretto.Cache[string, entiti
 
 // InitializeTraceProvider initializes the open telemetry trace provider
 func (container *Container) InitializeTraceProvider() func() {
+	if strings.TrimSpace(os.Getenv("AXIOM_TOKEN")) == "" {
+		container.logger.Info("external telemetry is disabled; using local no-op providers")
+		tp := trace.NewTracerProvider(
+			trace.WithSampler(trace.NeverSample()),
+			trace.WithResource(container.OtelResources(container.version, container.projectID)),
+		)
+		mp := metric.NewMeterProvider(
+			metric.WithResource(container.OtelResources(container.version, container.projectID)),
+		)
+		otel.SetTracerProvider(tp)
+		otel.SetMeterProvider(mp)
+		otel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(
+			propagation.TraceContext{},
+			propagation.Baggage{},
+		))
+		return func() {
+			_ = tp.Shutdown(context.Background())
+			_ = mp.Shutdown(context.Background())
+		}
+	}
 	return container.initializeAxiomTraceProvider(container.version, container.projectID)
 }
 
@@ -1948,7 +1963,7 @@ func logger(skipFrameCount int) telemetry.Logger {
 }
 
 func logDriver(skipFrameCount int) *zerodriver.Logger {
-	if isLocal() {
+	if isLocal() || strings.TrimSpace(os.Getenv("AXIOM_TOKEN")) == "" {
 		return consoleLogger(skipFrameCount)
 	}
 	return axiomLogger(skipFrameCount)
@@ -1999,4 +2014,8 @@ func consoleLogger(skipFrameCount int) *zerodriver.Logger {
 
 func isLocal() bool {
 	return os.Getenv("ENV") == "local"
+}
+
+func paidFeaturesEnabled() bool {
+	return strings.EqualFold(strings.TrimSpace(os.Getenv("PAID_FEATURES_ENABLED")), "true")
 }

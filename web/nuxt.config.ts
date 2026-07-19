@@ -8,26 +8,17 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     'vuetify-nuxt-module',
     '@pinia/nuxt',
-    '@nuxtjs/google-fonts',
     '@nuxtjs/seo',
   ],
 
-  googleFonts: {
-    families: {
-      Roboto: [100, 300, 400, 500, 700, 900],
-    },
-    display: 'swap',
-    download: true,
-  },
-
-  css: ['vuetify/styles'],
+  css: ['vuetify/styles', '~/assets/main.css'],
 
   site: {
-    url: process.env.APP_URL || 'https://httpsms.com',
-    name: process.env.APP_NAME || 'httpSMS',
+    url: process.env.APP_URL || 'https://sms.nasak.ir',
+    name: process.env.APP_NAME || 'پیامک نسک',
     description:
-      'Turn your Android phone into an SMS gateway. Send and receive text messages worldwide with a simple HTTP API — no SMS provider or short code required.',
-    defaultLocale: 'en',
+      'درگاه پیامک اختصاصی نسک؛ ارسال و دریافت پیامک با سیم‌کارت خودتان و بدون اعتبار نرم‌افزاری.',
+    defaultLocale: 'fa',
   },
 
   // Authenticated app routes that should never appear in search engines or the
@@ -99,7 +90,35 @@ export default defineNuxtConfig({
   vuetify: {
     vuetifyOptions: {
       theme: {
-        defaultTheme: 'dark',
+        defaultTheme: 'nasakDark',
+        themes: {
+          nasakDark: {
+            dark: true,
+            colors: {
+              background: '#0b121a',
+              surface: '#101923',
+              primary: '#31b77a',
+              secondary: '#78a9d4',
+              error: '#ef6461',
+              warning: '#e3aa4e',
+              success: '#31b77a',
+              info: '#58a6d8',
+            },
+          },
+          nasakLight: {
+            dark: false,
+            colors: {
+              background: '#fbf8f0',
+              surface: '#fffdf7',
+              primary: '#167b55',
+              secondary: '#355b7d',
+              error: '#b42318',
+              warning: '#956000',
+              success: '#167b55',
+              info: '#176b9b',
+            },
+          },
+        },
       },
       icons: {
         defaultSet: 'mdi-svg',
@@ -111,14 +130,16 @@ export default defineNuxtConfig({
     public: {
       apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:8000',
       clientVersion: process.env.GITHUB_SHA || 'dev',
-      appUrl: process.env.APP_URL || 'https://httpsms.com',
-      appName: process.env.APP_NAME || 'HTTP SMS',
+      appUrl: process.env.APP_URL || 'https://sms.nasak.ir',
+      appName: process.env.APP_NAME || 'پیامک نسک',
       appGithubUrl:
-        process.env.APP_GITHUB_URL || 'https://github.com/NdoleStudio/httpsms',
+        process.env.APP_GITHUB_URL || 'https://github.com/Nasak-ir/httpsms',
       appDocumentationUrl:
-        process.env.APP_DOCUMENTATION_URL || 'https://docs.httpsms.com',
+        process.env.APP_DOCUMENTATION_URL ||
+        'https://github.com/Nasak-ir/httpsms/blob/main/docs/NASAK_SMS.md',
       appDownloadUrl:
-        process.env.APP_DOWNLOAD_URL || 'https://apk.httpsms.com/HttpSms.apk',
+        process.env.APP_DOWNLOAD_URL ||
+        'https://github.com/Nasak-ir/httpsms/releases/latest/download/NasakSms.apk',
       appEnv: process.env.APP_ENV || 'production',
       checkoutUrl: process.env.CHECKOUT_URL || '',
       enterpriseCheckoutUrl: process.env.ENTERPRISE_CHECKOUT_URL || '',
@@ -158,42 +179,31 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s',
-      title: 'Convert your android phone into an SMS gateway - httpSMS',
-      htmlAttrs: { lang: 'en' },
-      script: [
-        { src: '/integrations.js', async: true, defer: true },
-        {
-          src: 'https://lmsqueezy.com/affiliate.js',
-          async: true,
-          defer: true,
-        },
-        {
-          src: 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit',
-        },
-      ],
+      title: 'پیامک نسک | درگاه پیامک اختصاصی',
+      htmlAttrs: { lang: 'fa', dir: 'rtl' },
+      script: [],
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'Use your android phone to send and receive SMS messages using a simple HTTP API.',
+            'ارسال و دریافت پیامک با گوشی اندرویدی و سیم‌کارت خودتان، بدون خرید اعتبار نرم‌افزاری.',
         },
         { name: 'format-detection', content: 'telephone=no' },
-        { name: 'twitter:site', content: '@NdoleStudio' },
         { name: 'twitter:card', content: 'summary_large_image' },
         {
           property: 'og:title',
-          content: 'Convert your android phone into an SMS gateway - httpSMS',
+          content: 'پیامک نسک | درگاه پیامک اختصاصی',
         },
         {
           property: 'og:description',
           content:
-            'Use your android phone to send and receive SMS messages using a simple HTTP API.',
+            'ارسال و دریافت پیامک با گوشی اندرویدی و سیم‌کارت خودتان، بدون اعتبار نرم‌افزاری.',
         },
         {
           property: 'og:image',
-          content: 'https://httpsms.com/header.png',
+          content: 'https://sms.nasak.ir/brand/nasak-logo.png',
         },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

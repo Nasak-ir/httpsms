@@ -126,10 +126,21 @@ const messageStatusSelectItems = [
 ]
 
 function getCaptcha(): Promise<string> {
+  const siteKey = String(
+    (config.public as Record<string, string>).cloudflareTurnstileSiteKey || '',
+  ).trim()
+  if (!siteKey) {
+    return Promise.resolve('')
+  }
+
   return new Promise<string>((resolve, reject) => {
     const turnstile: Turnstile = (
       window as unknown as { turnstile?: Turnstile }
-    ).turnstile!
+    ).turnstile as Turnstile
+    if (!turnstile) {
+      reject(new Error('سرویس امنیتی جستجو در دسترس نیست.'))
+      return
+    }
     turnstile.ready(() => {
       if (turnstileWidgetId) {
         turnstile.remove(turnstileWidgetId)
@@ -138,8 +149,7 @@ function getCaptcha(): Promise<string> {
 
       turnstileWidgetId =
         turnstile.render('#cloudflare-turnstile', {
-          sitekey: (config.public as Record<string, string>)
-            .cloudflareTurnstileSiteKey!,
+          sitekey: siteKey,
           action: 'search_messages',
           callback: (token) => resolve(token),
           'error-callback': (error: string) => reject(error),

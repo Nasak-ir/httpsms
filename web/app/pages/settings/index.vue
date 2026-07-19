@@ -36,7 +36,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Settings - httpSMS',
+  title: 'تنظیمات | پیامک نسک',
 })
 
 const config = useRuntimeConfig()
@@ -109,11 +109,6 @@ const timezones = (() => {
 })()
 
 const apiKey = computed(() => authStore.user?.api_key ?? '')
-
-const hasActiveSubscription = computed(() => {
-  if (authStore.user === null) return true
-  return authStore.user.subscription_renews_at != null
-})
 
 const phoneNumbers = computed(() =>
   phonesStore.phones.map((phone) => phone.phone_number),
@@ -874,11 +869,13 @@ onMounted(async () => {
             </div>
 
             <!-- API Key -->
-            <h5 class="text-headline-large mb-3 mt-0">API Key</h5>
+            <h5 class="text-headline-large mb-3 mt-0">کلید API حساب</h5>
             <p class="text-medium-emphasis">
-              Use your API Key in the <v-code>x-api-key</v-code> HTTP Header
-              when sending requests to
-              <v-code>https://api.httpsms.com</v-code> endpoints.
+              این کلید را فقط در header با نام
+              <v-code>x-api-key</v-code>
+              و برای درخواست‌های
+              <v-code>https://sms.nasak.ir/api</v-code>
+              استفاده کنید.
             </p>
             <div v-if="apiKey === ''" class="mb-n9 pl-3 pt-5">
               <VProgressCircular
@@ -1319,42 +1316,26 @@ onMounted(async () => {
             />
 
             <!-- Delete Account -->
-            <h5 class="text-headline-large text-error mb-3 mt-10">
-              Delete Account
-            </h5>
-            <p v-if="hasActiveSubscription" class="text-medium-emphasis">
-              You cannot delete your account because you have an active
-              subscription on httpSMS.
-              <NuxtLink class="text-decoration-none" to="/billing"
-                >Cancel your subscription</NuxtLink
-              >
-              before deleting your account.
-            </p>
-            <p v-else class="text-medium-emphasis">
-              You can delete all your data on httpSMS by clicking the button
-              below. This action is <b>irreversible</b> and all your data will
-              be permanently deleted from the httpSMS database instantly and it
-              cannot be recovered.
+            <h5 class="text-headline-large text-error mb-3 mt-10">حذف حساب</h5>
+            <p class="text-medium-emphasis">
+              با حذف حساب، همه گوشی‌ها، پیام‌ها و تنظیمات شما به‌صورت دائمی پاک
+              می‌شوند. این عملیات قابل بازگشت نیست.
             </p>
             <VBtn
               color="error"
               :loading="deletingAccount"
               class="mt-2"
-              :disabled="hasActiveSubscription"
               @click="showDeleteAccountDialog = true"
             >
               <VIcon start :icon="mdiDelete" />
-              Delete your Account
+              حذف حساب
             </VBtn>
             <VDialog v-model="showDeleteAccountDialog" max-width="600px">
               <VCard>
-                <VCardTitle class="text-center"
-                  >Delete your httpSMS account</VCardTitle
-                >
+                <VCardTitle class="text-center">حذف حساب پیامک نسک</VCardTitle>
                 <VCardText class="mt-2 text-center text-medium-emphasis">
-                  Are you sure you want to delete your account? This action is
-                  <b>irreversible</b> and all your data will be permanently
-                  deleted from the httpSMS database instantly.
+                  از حذف حساب مطمئن هستید؟ همه اطلاعات شما برای همیشه پاک خواهد
+                  شد.
                 </VCardText>
                 <VCardActions>
                   <VBtn
@@ -1364,7 +1345,7 @@ onMounted(async () => {
                     @click="deleteUserAccount"
                   >
                     <VIcon v-if="lgAndUp" start :icon="mdiDelete" />
-                    Delete My Account
+                    حذف حساب من
                   </VBtn>
                   <VSpacer />
                   <VBtn
@@ -1372,7 +1353,7 @@ onMounted(async () => {
                     variant="flat"
                     @click="showDeleteAccountDialog = false"
                   >
-                    <span v-if="lgAndUp">Keep My account</span>
+                    <span v-if="lgAndUp">انصراف</span>
                     <span v-else>Close</span>
                   </VBtn>
                 </VCardActions>

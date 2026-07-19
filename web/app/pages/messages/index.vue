@@ -13,7 +13,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'New Message - httpSMS',
+  title: 'ارسال پیام | پیامک نسک',
 })
 
 const router = useRouter()
@@ -67,7 +67,7 @@ async function sendMessage() {
       },
     })
     notificationsStore.addNotification({
-      message: 'Message sent successfully!',
+      message: 'پیام با موفقیت وارد صف ارسال شد.',
       type: 'success',
     })
     await router.push('/threads')

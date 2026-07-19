@@ -28,7 +28,7 @@ func APIKeyAuth(logger telemetry.Logger, tracer telemetry.Tracer, userRepository
 
 		authUser, err := userRepository.LoadAuthContext(ctx, apiKey)
 		if err != nil {
-			ctxLogger.Error(stacktrace.Propagate(err, "cannot load user with api key [%s]", apiKey))
+			ctxLogger.Error(stacktrace.Propagate(err, "cannot load user from API key"))
 			return c.Next()
 		}
 

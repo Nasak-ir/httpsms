@@ -1,8 +1,11 @@
 package com.httpsms
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.BatteryManager
 import androidx.preference.PreferenceManager
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKey
 import timber.log.Timber
 import java.net.URI
 import java.time.ZoneOffset
@@ -10,6 +13,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
 object Settings {
+    private const val SECURE_SETTINGS_NAME = "nasak_sms_secure_settings"
     private const val SETTINGS_SIM1_PHONE_NUMBER = "SETTINGS_SIM1_PHONE_NUMBER"
     private const val SETTINGS_SIM2_PHONE_NUMBER = "SETTINGS_SIM2_PHONE_NUMBER"
     private const val SETTINGS_SIM1_ACTIVE = "SETTINGS_SIM1_ACTIVE_STATUS"
@@ -27,6 +31,46 @@ object Settings {
     private const val SETTINGS_HEARTBEAT_TIMESTAMP = "SETTINGS_HEARTBEAT_TIMESTAMP"
     private const val SETTINGS_ENCRYPTION_KEY = "SETTINGS_ENCRYPTION_KEY"
     private const val SETTINGS_ENCRYPT_RECEIVED_MESSAGES = "SETTINGS_ENCRYPT_RECEIVED_MESSAGES"
+
+    private fun securePreferences(context: Context): SharedPreferences {
+        val masterKey = MasterKey.Builder(context)
+            .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+            .build()
+
+        return EncryptedSharedPreferences.create(
+            context,
+            SECURE_SETTINGS_NAME,
+            masterKey,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+        )
+    }
+
+    private fun getSecureString(context: Context, key: String): String? {
+        val encrypted = securePreferences(context).getString(key, null)
+        if (encrypted != null) {
+            return encrypted
+        }
+
+        // One-time migration from releases that stored gateway credentials in
+        // the default preferences file.
+        val legacyPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        val legacy = legacyPreferences.getString(key, null) ?: return null
+        securePreferences(context).edit().putString(key, legacy).apply()
+        legacyPreferences.edit().remove(key).apply()
+        return legacy
+    }
+
+    private fun setSecureString(context: Context, key: String, value: String?) {
+        val editor = securePreferences(context).edit()
+        if (value == null) {
+            editor.remove(key)
+        } else {
+            editor.putString(key, value)
+        }
+        editor.apply()
+        PreferenceManager.getDefaultSharedPreferences(context).edit().remove(key).apply()
+    }
 
     fun getPhoneNumber(context:Context, sim: String): String {
         if (sim == Constants.SIM2) {
@@ -264,12 +308,7 @@ object Settings {
     private fun getApiKey(context: Context): String?{
         Timber.d(Settings::getApiKey.name)
 
-        val apiKey = PreferenceManager
-            .getDefaultSharedPreferences(context)
-            .getString(this.SETTINGS_API_KEY,null)
-
-        Timber.d("SETTINGS_API_KEY: [$apiKey]")
-        return apiKey
+        return getSecureString(context, SETTINGS_API_KEY)
     }
 
     fun getApiKeyOrDefault(context:Context): String {
@@ -325,30 +364,19 @@ object Settings {
     fun setApiKeyAsync(context: Context, apiKey: String?) {
         Timber.d(Settings::setApiKeyAsync.name)
 
-        PreferenceManager.getDefaultSharedPreferences(context)
-            .edit()
-            .putString(this.SETTINGS_API_KEY, apiKey)
-            .apply()
+        setSecureString(context, SETTINGS_API_KEY, apiKey)
     }
 
     fun getFcmToken(context: Context): String?{
         Timber.d(Settings::getFcmToken.name)
 
-        val activeStatus = PreferenceManager
-            .getDefaultSharedPreferences(context)
-            .getString(this.SETTINGS_FCM_TOKEN,null)
-
-        Timber.d("SETTINGS_FCM_TOKEN: [$activeStatus]")
-        return activeStatus
+        return getSecureString(context, SETTINGS_FCM_TOKEN)
     }
 
     fun setFcmTokenAsync(context: Context, apiKey: String) {
         Timber.d(Settings::setApiKeyAsync.name)
 
-        PreferenceManager.getDefaultSharedPreferences(context)
-            .edit()
-            .putString(this.SETTINGS_FCM_TOKEN, apiKey)
-            .apply()
+        setSecureString(context, SETTINGS_FCM_TOKEN, apiKey)
     }
 
     fun getHeartbeatTimestamp(context: Context): Long {

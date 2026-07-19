@@ -15,7 +15,6 @@ import {
   mdiRefresh,
   mdiContentCopy,
 } from '@mdi/js'
-import Pusher from 'pusher-js'
 import type { Channel } from 'pusher-js'
 import { isValidPhoneNumber } from 'libphonenumber-js'
 import type { EntitiesMessage } from '~~/shared/types/api'
@@ -57,6 +56,7 @@ const formMessageRules = [
 ]
 
 let webhookChannel: Channel | null = null
+let refreshInterval: ReturnType<typeof setInterval> | null = null
 
 const contactIsPhoneNumber = computed(() => {
   const thread = threadsStore.currentThread
@@ -220,24 +220,35 @@ async function sendMessage(event: KeyboardEvent | Event) {
 onMounted(async () => {
   await loadData()
 
-  const pusher = new Pusher(config.public.pusherKey as string, {
-    cluster: config.public.pusherCluster as string,
-  })
+  const pusherKey = String(config.public.pusherKey || '').trim()
+  if (pusherKey && authStore.user?.id) {
+    const { default: Pusher } = await import('pusher-js')
+    const pusher = new Pusher(pusherKey, {
+      cluster: String(config.public.pusherCluster || ''),
+    })
 
-  webhookChannel = pusher.subscribe(authStore.user!.id)
-  webhookChannel.bind('message.phone.sent', () => {
-    if (!loadingMessages.value) loadMessages(false)
-  })
-  webhookChannel.bind('message.send.failed', () => {
-    if (!loadingMessages.value) loadMessages(false)
-  })
-  webhookChannel.bind('message.phone.received', () => {
-    if (!loadingMessages.value) loadMessages(false)
-  })
+    webhookChannel = pusher.subscribe(authStore.user.id)
+    webhookChannel.bind('message.phone.sent', () => {
+      if (!loadingMessages.value) loadMessages(false)
+    })
+    webhookChannel.bind('message.send.failed', () => {
+      if (!loadingMessages.value) loadMessages(false)
+    })
+    webhookChannel.bind('message.phone.received', () => {
+      if (!loadingMessages.value) loadMessages(false)
+    })
+  } else {
+    refreshInterval = setInterval(() => {
+      if (!loadingMessages.value && document.visibilityState === 'visible') {
+        loadMessages(false)
+      }
+    }, 8000)
+  }
 })
 
 onBeforeUnmount(() => {
   if (webhookChannel) webhookChannel.unsubscribe()
+  if (refreshInterval) clearInterval(refreshInterval)
 })
 </script>
 

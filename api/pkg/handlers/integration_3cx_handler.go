@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/NdoleStudio/httpsms/pkg/requests"
-	"github.com/davecgh/go-spew/spew"
 
 	"github.com/NdoleStudio/httpsms/pkg/services"
 	"github.com/NdoleStudio/httpsms/pkg/telemetry"
@@ -58,11 +57,9 @@ func (h *Integration3CXHandler) Messages(c fiber.Ctx) error {
 	ctx, span, ctxLogger := h.tracer.StartFromFiberCtxWithLogger(c, h.logger)
 	defer span.End()
 
-	spew.Dump(string(c.Body()))
-
 	var request requests.Integration3CXMessage
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall [%s] into %T", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot decode 3cx message payload"))
 		return h.responseBadRequest(c, err)
 	}
 
@@ -74,7 +71,7 @@ func (h *Integration3CXHandler) Messages(c fiber.Ctx) error {
 	request.Sanitize()
 	message, err := h.messageService.SendMessage(ctx, request.ToMessageSendParams(h.userIDFomContext(c), c.OriginalURL()))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot send [3cx] message with payload [%s]", c.Body()))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot send 3cx message"))
 		return h.responseInternalServerError(c)
 	}
 

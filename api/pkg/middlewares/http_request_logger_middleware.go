@@ -36,6 +36,8 @@ func isSensitiveRequestPath(path string) bool {
 	path = strings.ToLower(path)
 	return strings.Contains(path, "/auth/") ||
 		strings.Contains(path, "/api-keys") ||
+		strings.Contains(path, "/messages") ||
+		strings.Contains(path, "/webhooks") ||
 		strings.Contains(path, "/password") ||
 		strings.Contains(path, "/tokens")
 }

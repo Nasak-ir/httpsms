@@ -160,7 +160,7 @@ func (repository *gormUserRepository) LoadAuthContext(ctx context.Context, apiKe
 
 	if authUser, found := repository.cache.Get(apiKey); found {
 		if authUser.IsNoop() {
-			return authUser, repository.tracer.WrapErrorSpan(span, stacktrace.NewError("user with api key [%s] does not exist", apiKey))
+			return authUser, repository.tracer.WrapErrorSpan(span, stacktrace.NewError("user for api key does not exist"))
 		}
 		return authUser, nil
 	}
@@ -170,11 +170,11 @@ func (repository *gormUserRepository) LoadAuthContext(ctx context.Context, apiKe
 	if errors.Is(err, gorm.ErrRecordNotFound) {
 		repository.cache.SetWithTTL(apiKey, entities.AuthContext{}, 1, 2*time.Hour)
 
-		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.PropagateWithCode(err, ErrCodeNotFound, "user with api key [%s] does not exist", apiKey))
+		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.PropagateWithCode(err, ErrCodeNotFound, "user for api key does not exist"))
 	}
 
 	if err != nil {
-		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot load user with api key [%s]", apiKey))
+		return entities.AuthContext{}, repository.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot load user with api key"))
 	}
 
 	authUser := entities.AuthContext{

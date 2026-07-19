@@ -48,7 +48,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
      */
     override fun onNewToken(token: String) {
         initTimber()
-        Timber.d("Refreshed token: $token")
+        Timber.d("FCM registration token refreshed")
 
         // If you want to send messages to this application instance or
         // manage this apps subscriptions on the server side, send the
@@ -102,7 +102,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         // [END dispatch_job]
     }
     private fun sendRegistrationToServer(token: String) {
-        Timber.d("sendRegistrationTokenToServer($token)")
+        Timber.d("sending refreshed FCM registration token")
         Settings.setFcmTokenAsync(this, token)
 
         if (Settings.isLoggedIn(this)) {

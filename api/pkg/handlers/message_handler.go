@@ -88,12 +88,12 @@ func (h *MessageHandler) PostSend(c fiber.Ctx) error {
 
 	var request requests.MessageSend
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall [%s] into %T", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot parse message send request"))
 		return h.responseBadRequest(c, err)
 	}
 
 	if errors := h.validator.ValidateMessageSend(ctx, h.userIDFomContext(c), request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while sending payload [%s]", spew.Sdump(errors), c.Body()))
+		ctxLogger.Warn(stacktrace.NewError("message send validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while sending message")
 	}
 
@@ -104,7 +104,7 @@ func (h *MessageHandler) PostSend(c fiber.Ctx) error {
 
 	message, err := h.service.SendMessage(ctx, request.ToMessageSendParams(h.userIDFomContext(c), c.OriginalURL()))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot send message with paylod [%s]", c.Body()))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot queue message"))
 		return h.responseInternalServerError(c)
 	}
 
@@ -133,12 +133,12 @@ func (h *MessageHandler) BulkSend(c fiber.Ctx) error {
 
 	var request requests.MessageBulkSend
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall [%s] into %T", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot parse bulk message request"))
 		return h.responseBadRequest(c, err)
 	}
 
 	if errors := h.validator.ValidateMessageBulkSend(ctx, h.userIDFomContext(c), request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while sending payload [%s]", spew.Sdump(errors), c.Body()))
+		ctxLogger.Warn(stacktrace.NewError("bulk message validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while sending messages")
 	}
 
@@ -286,7 +286,7 @@ func (h *MessageHandler) PostEvent(c fiber.Ctx) error {
 
 	var request requests.MessageEvent
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall [%s] into %T", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot parse message event request"))
 		return h.responseBadRequest(c, err)
 	}
 
@@ -296,7 +296,7 @@ func (h *MessageHandler) PostEvent(c fiber.Ctx) error {
 	}
 
 	if errors := h.validator.ValidateMessageEvent(ctx, request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while storing event [%s] for message [%s]", spew.Sdump(errors), c.Body(), request.MessageID))
+		ctxLogger.Warn(stacktrace.NewError("message event validation errors [%s] for message [%s]", spew.Sdump(errors), request.MessageID))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while storing event")
 	}
 
@@ -317,7 +317,7 @@ func (h *MessageHandler) PostEvent(c fiber.Ctx) error {
 
 	message, err = h.service.StoreEvent(ctx, message, request.ToMessageStoreEventParams(c.OriginalURL()))
 	if err != nil {
-		ctxLogger.Error(h.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot store event for message [%s] with paylod [%s]", request.MessageID, c.Body())))
+		ctxLogger.Error(h.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot store event for message [%s]", request.MessageID)))
 		return h.responseInternalServerError(c)
 	}
 
@@ -345,12 +345,12 @@ func (h *MessageHandler) PostReceive(c fiber.Ctx) error {
 
 	var request requests.MessageReceive
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall [%s] into %T", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot parse incoming message request"))
 		return h.responseBadRequest(c, err)
 	}
 
 	if errors := h.validator.ValidateMessageReceive(ctx, request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], while sending payload [%s]", spew.Sdump(errors), c.Body()))
+		ctxLogger.Warn(stacktrace.NewError("incoming message validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while receiving message")
 	}
 
@@ -366,7 +366,7 @@ func (h *MessageHandler) PostReceive(c fiber.Ctx) error {
 
 	message, err := h.service.ReceiveMessage(ctx, request.ToMessageReceiveParams(h.userIDFomContext(c), c.OriginalURL()))
 	if err != nil {
-		ctxLogger.Error(stacktrace.Propagate(err, "cannot receive message with payload [%s]", c.Body()))
+		ctxLogger.Error(stacktrace.Propagate(err, "cannot store incoming message"))
 		return h.responseInternalServerError(c)
 	}
 
@@ -481,12 +481,12 @@ func (h *MessageHandler) PostCallMissed(c fiber.Ctx) error {
 
 	var request requests.MessageCallMissed
 	if err := c.Bind().Body(&request); err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "cannot marshall [%s] into %T", c.Body(), request))
+		ctxLogger.Warn(stacktrace.Propagate(err, "cannot parse missed call request"))
 		return h.responseBadRequest(c, err)
 	}
 
 	if errors := h.validator.ValidateCallMissed(ctx, request.Sanitize()); len(errors) != 0 {
-		ctxLogger.Warn(stacktrace.NewError("validation errors [%s], for missed call event [%s]", spew.Sdump(errors), c.Body()))
+		ctxLogger.Warn(stacktrace.NewError("missed call validation errors [%s]", spew.Sdump(errors)))
 		return h.responseUnprocessableEntity(c, errors, "validation errors while storing missed call event")
 	}
 
@@ -497,7 +497,7 @@ func (h *MessageHandler) PostCallMissed(c fiber.Ctx) error {
 
 	message, err := h.service.RegisterMissedCall(ctx, request.ToCallMissedParams(h.userIDFomContext(c), c.OriginalURL()))
 	if err != nil {
-		ctxLogger.Error(h.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot store missed call event for user [%s] with paylod [%s]", h.userIDFomContext(c), c.Body())))
+		ctxLogger.Error(h.tracer.WrapErrorSpan(span, stacktrace.Propagate(err, "cannot store missed call event for user [%s]", h.userIDFomContext(c))))
 		return h.responseInternalServerError(c)
 	}
 

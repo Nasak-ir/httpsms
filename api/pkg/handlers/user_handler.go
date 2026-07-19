@@ -39,12 +39,15 @@ func NewUserHandler(
 }
 
 // RegisterRoutes registers the routes for the MessageHandler
-func (h *UserHandler) RegisterRoutes(router fiber.Router, middlewares ...fiber.Handler) {
+func (h *UserHandler) RegisterRoutes(router fiber.Router, paidFeatures bool, middlewares ...fiber.Handler) {
 	h.register(router, fiber.MethodGet, "/v1/users/me", middlewares, h.Show)
 	h.register(router, fiber.MethodPut, "/v1/users/me", middlewares, h.Update)
 	h.register(router, fiber.MethodDelete, "/v1/users/me", middlewares, h.Delete)
 	h.register(router, fiber.MethodDelete, "/v1/users/:userID/api-keys", middlewares, h.DeleteAPIKey)
 	h.register(router, fiber.MethodPut, "/v1/users/:userID/notifications", middlewares, h.UpdateNotifications)
+	if !paidFeatures {
+		return
+	}
 	h.register(router, fiber.MethodGet, "/v1/users/subscription-update-url", middlewares, h.subscriptionUpdateURL)
 	h.register(router, fiber.MethodDelete, "/v1/users/subscription", middlewares, h.cancelSubscription)
 	h.register(router, fiber.MethodGet, "/v1/users/subscription/payments", middlewares, h.subscriptionPayments)

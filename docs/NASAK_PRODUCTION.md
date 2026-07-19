@@ -54,8 +54,9 @@ sudo /opt/nasak-sms/repository/ops/install-firebase-credentials.sh \
 The installer verifies that the service account belongs to the configured
 Firebase project, atomically updates `api.env`, and removes the source file.
 
-Cloudflare Turnstile is required only for the public message-search feature.
-The rest of the panel can run while its keys are empty.
+Cloudflare Turnstile is optional. When both keys are empty, authenticated
+message search stays available without any external CAPTCHA request. The API
+still enforces account ownership, phone limits, validation, and authentication.
 
 ## Server layout
 

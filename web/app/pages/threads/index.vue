@@ -3,9 +3,7 @@ definePageMeta({
   middleware: ['auth'],
 })
 
-useHead({
-  title: 'Threads - httpSMS',
-})
+useHead({ title: 'پیام‌ها | پیامک نسک' })
 
 const { lgAndUp } = useDisplay()
 const authStore = useAuthStore()
@@ -36,16 +34,9 @@ onMounted(async () => {
           :src="'/img/person-texting.svg'"
         />
         <div class="text-center">
-          <h3 class="text-headline-medium mt-4 mb-0">Select a Message</h3>
+          <h3 class="text-headline-medium mt-4 mb-0">پیام‌های نسک</h3>
           <p class="text-medium-emphasis mt-0">
-            Don't hesitate to
-            <a
-              href="https://discord.gg/kGk8HVqeEZ"
-              target="_blank"
-              class="text-decoration-none hover:text-decoration-underline"
-              >message us on Discord</a
-            >
-            if you have any questions
+            یک گفتگو را انتخاب کنید یا از منو، پیام تازه‌ای بفرستید.
           </p>
         </div>
       </div>
