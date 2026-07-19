@@ -68,7 +68,7 @@ useSeoMeta({
         <p>
           <a
             class="text-decoration-none"
-            href="https://github.com/NdoleStudio/httpsms/releases/latest/download/HttpSms.apk"
+            href="https://github.com/Nasak-ir/httpsms/releases/latest/download/NasakSms.apk"
             >⬇️ Download and install</a
           >
           the httpSMS android app on your phone and sign in using your API KEY

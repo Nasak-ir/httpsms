@@ -1575,13 +1575,13 @@
     "semantic_hash": ""
   },
   "web/app/pages/blog/end-to-end-encryption-to-sms-messages.vue": {
-    "mtime": 1784404639.255604,
-    "ast_hash": "5460cdf03ea15a92fc946dde62e2ec20",
+    "mtime": 1784446923.981936,
+    "ast_hash": "a5250156e18373cad2c88258fe6ae7d2",
     "semantic_hash": ""
   },
   "web/app/pages/blog/forward-incoming-sms-from-phone-to-webhook.vue": {
-    "mtime": 1784404639.255604,
-    "ast_hash": "ddfe48d1f281def5fdc65f706dbb7ca8",
+    "mtime": 1784446923.981936,
+    "ast_hash": "d478ed9b46629992d3b629bf86a87b59",
     "semantic_hash": ""
   },
   "web/app/pages/blog/grant-send-and-read-sms-permissions-on-android.vue": {
@@ -1590,8 +1590,8 @@
     "semantic_hash": ""
   },
   "web/app/pages/blog/how-to-send-sms-messages-from-excel.vue": {
-    "mtime": 1784404639.2576447,
-    "ast_hash": "46649b556947c2d6f2be4492e6e3c0b5",
+    "mtime": 1784446923.98043,
+    "ast_hash": "f3198e5fa7bafb8cb5e93e3038d60986",
     "semantic_hash": ""
   },
   "web/app/pages/blog/index.vue": {
@@ -1600,13 +1600,13 @@
     "semantic_hash": ""
   },
   "web/app/pages/blog/send-bulk-sms-from-csv-file-with-no-code.vue": {
-    "mtime": 1784404639.258721,
-    "ast_hash": "89b6e24d9ecee6f96bb38d3f856ee761",
+    "mtime": 1784446923.98043,
+    "ast_hash": "0e08d96bd46db5b48e115e27b0c6c573",
     "semantic_hash": ""
   },
   "web/app/pages/blog/send-sms-from-android-phone-with-python.vue": {
-    "mtime": 1784404639.2592933,
-    "ast_hash": "699f3f4cda91495b9961ae70018e8d9b",
+    "mtime": 1784446923.98043,
+    "ast_hash": "c0af15fdf9d7541354ba136fe83a6cd3",
     "semantic_hash": ""
   },
   "web/app/pages/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier.vue": {
