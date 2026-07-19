@@ -38,6 +38,11 @@ set `FIREBASE_AUTH_REFERER_URL=https://sms.nasak.ir/` so the server-side
 fallback sends the same origin metadata as the browser. Do not store proxy
 credentials in the repository.
 
+Set `LOCAL_AUTH_SECRET` to a long random value. When Firebase Identity Toolkit is
+unreachable from the server, the same endpoint falls back to Nasak-hosted
+email/password credentials hashed with bcrypt and returns a short-lived local
+bearer token accepted by the API middleware.
+
 Install the downloaded service-account JSON without copying it into the
 repository or printing its private key:
 

@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"net"
@@ -14,28 +15,38 @@ import (
 	"strings"
 	"time"
 
+	"github.com/NdoleStudio/httpsms/pkg/authlocal"
+	"github.com/NdoleStudio/httpsms/pkg/entities"
+	"github.com/NdoleStudio/httpsms/pkg/repositories"
 	"github.com/NdoleStudio/httpsms/pkg/requests"
 	"github.com/NdoleStudio/httpsms/pkg/responses"
 	"github.com/NdoleStudio/httpsms/pkg/telemetry"
 	"github.com/gofiber/fiber/v3"
+	"github.com/google/uuid"
 	"github.com/palantir/stacktrace"
+	"golang.org/x/crypto/bcrypt"
 	"golang.org/x/net/proxy"
+	"gorm.io/gorm"
 )
 
 // FirebaseEmailAuthHandler proxies email auth through the API server.
 type FirebaseEmailAuthHandler struct {
 	handler
-	logger telemetry.Logger
-	tracer telemetry.Tracer
-	client *http.Client
+	logger         telemetry.Logger
+	tracer         telemetry.Tracer
+	db             *gorm.DB
+	userRepository repositories.UserRepository
+	client         *http.Client
 }
 
 // NewFirebaseEmailAuthHandler creates a FirebaseEmailAuthHandler.
-func NewFirebaseEmailAuthHandler(logger telemetry.Logger, tracer telemetry.Tracer) *FirebaseEmailAuthHandler {
+func NewFirebaseEmailAuthHandler(logger telemetry.Logger, tracer telemetry.Tracer, db *gorm.DB, userRepository repositories.UserRepository) *FirebaseEmailAuthHandler {
 	logger = logger.WithService("handlers.FirebaseEmailAuthHandler")
 	return &FirebaseEmailAuthHandler{
-		logger: logger,
-		tracer: tracer,
+		logger:         logger,
+		tracer:         tracer,
+		db:             db,
+		userRepository: userRepository,
 		client: &http.Client{
 			Timeout:   20 * time.Second,
 			Transport: firebaseAuthTransport(logger),
@@ -76,8 +87,13 @@ func (h *FirebaseEmailAuthHandler) Authenticate(c fiber.Ctx) error {
 		"returnSecureToken": true,
 	})
 	if err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "firebase email auth failed with status [%d]", status))
-		return h.firebaseError(c, status, err)
+		ctxLogger.Warn(stacktrace.Propagate(err, "firebase email auth failed with status [%d], trying local auth", status))
+		localResponse, localErr := h.authenticateLocally(c.Context(), request)
+		if localErr != nil {
+			ctxLogger.Warn(stacktrace.Propagate(localErr, "local email auth failed after firebase status [%d]", status))
+			return h.firebaseError(c, status, err)
+		}
+		return h.responseOK(c, "local email authentication successful", localResponse)
 	}
 
 	return h.responseOK(c, "firebase email authentication successful", authResponse)
@@ -104,11 +120,83 @@ func (h *FirebaseEmailAuthHandler) Refresh(c fiber.Ctx) error {
 		"refresh_token": request.RefreshToken,
 	})
 	if err != nil {
-		ctxLogger.Warn(stacktrace.Propagate(err, "firebase email token refresh failed with status [%d]", status))
-		return h.firebaseError(c, status, err)
+		ctxLogger.Warn(stacktrace.Propagate(err, "firebase email token refresh failed with status [%d], trying local auth", status))
+		localResponse, localErr := h.refreshLocalToken(request.RefreshToken)
+		if localErr != nil {
+			ctxLogger.Warn(stacktrace.Propagate(localErr, "local token refresh failed after firebase status [%d]", status))
+			return h.firebaseError(c, status, err)
+		}
+		return h.responseOK(c, "local email token refreshed successfully", localResponse)
 	}
 
 	return h.responseOK(c, "firebase email token refreshed successfully", authResponse)
+}
+
+func (h *FirebaseEmailAuthHandler) authenticateLocally(ctx context.Context, request requests.FirebaseEmailAuthRequest) (*responses.FirebaseEmailAuthResponse, error) {
+	if strings.TrimSpace(os.Getenv("LOCAL_AUTH_SECRET")) == "" {
+		return nil, stacktrace.NewError("LOCAL_AUTH_SECRET is not configured")
+	}
+
+	credential := new(entities.LocalAuthCredential)
+	err := h.db.WithContext(ctx).Where("email = ?", request.Email).First(credential).Error
+	if err == nil {
+		if bcrypt.CompareHashAndPassword([]byte(credential.PasswordHash), []byte(request.Password)) != nil {
+			return nil, stacktrace.NewError("invalid local email or password")
+		}
+		return h.localAuthResponse(entities.AuthContext{ID: credential.UserID, Email: request.Email})
+	}
+	if err != nil && !errors.Is(err, gorm.ErrRecordNotFound) {
+		return nil, stacktrace.Propagate(err, "cannot load local auth credential")
+	}
+	if request.Mode != "sign_up" {
+		return nil, stacktrace.NewError("local auth credential does not exist")
+	}
+
+	passwordHash, err := bcrypt.GenerateFromPassword([]byte(request.Password), bcrypt.DefaultCost)
+	if err != nil {
+		return nil, stacktrace.Propagate(err, "cannot hash local auth password")
+	}
+	authUser := entities.AuthContext{
+		ID:    entities.UserID("local:" + uuid.NewString()),
+		Email: request.Email,
+	}
+	if _, _, err = h.userRepository.LoadOrStore(ctx, authUser); err != nil {
+		return nil, stacktrace.Propagate(err, "cannot create local auth user")
+	}
+
+	credential = &entities.LocalAuthCredential{
+		Email:        request.Email,
+		UserID:       authUser.ID,
+		PasswordHash: string(passwordHash),
+	}
+	if err = h.db.WithContext(ctx).Create(credential).Error; err != nil {
+		return nil, stacktrace.Propagate(err, "cannot save local auth credential")
+	}
+
+	return h.localAuthResponse(authUser)
+}
+
+func (h *FirebaseEmailAuthHandler) refreshLocalToken(rawToken string) (*responses.FirebaseEmailAuthResponse, error) {
+	authUser, err := authlocal.Verify(os.Getenv("LOCAL_AUTH_SECRET"), rawToken)
+	if err != nil {
+		return nil, err
+	}
+	return h.localAuthResponse(authUser)
+}
+
+func (h *FirebaseEmailAuthHandler) localAuthResponse(authUser entities.AuthContext) (*responses.FirebaseEmailAuthResponse, error) {
+	const ttl = 7 * 24 * time.Hour
+	token, err := authlocal.Sign(os.Getenv("LOCAL_AUTH_SECRET"), authUser, ttl)
+	if err != nil {
+		return nil, err
+	}
+	return &responses.FirebaseEmailAuthResponse{
+		IDToken:      token,
+		RefreshToken: token,
+		ExpiresIn:    fmt.Sprintf("%.0f", ttl.Seconds()),
+		LocalID:      authUser.ID.String(),
+		Email:        authUser.Email,
+	}, nil
 }
 
 func validateFirebaseEmailAuth(request requests.FirebaseEmailAuthRequest) url.Values {

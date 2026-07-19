@@ -3,9 +3,11 @@ package middlewares
 import (
 	"context"
 	"fmt"
+	"os"
 	"strings"
 
 	"firebase.google.com/go/auth"
+	"github.com/NdoleStudio/httpsms/pkg/authlocal"
 	"github.com/NdoleStudio/httpsms/pkg/entities"
 	"github.com/NdoleStudio/httpsms/pkg/telemetry"
 	"github.com/gofiber/fiber/v3"
@@ -30,6 +32,12 @@ func BearerAuth(logger telemetry.Logger, tracer telemetry.Tracer, authClient *au
 		}
 
 		ctxLogger := tracer.CtxLogger(logger, span)
+
+		if authUser, err := authlocal.Verify(os.Getenv("LOCAL_AUTH_SECRET"), authToken); err == nil {
+			span.AddEvent(fmt.Sprintf("[%s] local token is valid", bearerScheme))
+			c.Locals(ContextKeyAuthUserID, authUser)
+			return c.Next()
+		}
 
 		token, err := authClient.VerifyIDToken(context.Background(), authToken)
 		if err != nil {

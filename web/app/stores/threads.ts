@@ -26,7 +26,9 @@ export const useThreadsStore = defineStore('threads', () => {
 
   async function loadThreads() {
     const phonesStore = usePhonesStore()
-    if (phonesStore.owner === null && phonesStore.phones.length === 0) {
+    const owner = phonesStore.owner || phonesStore.phones[0]?.phone_number
+    if (!owner) {
+      threads.value = []
       loadingThreads.value = false
       return
     }
@@ -35,7 +37,7 @@ export const useThreadsStore = defineStore('threads', () => {
       '/v1/message-threads',
       {
         params: {
-          owner: phonesStore.owner ?? phonesStore.phones[0]?.phone_number,
+          owner,
           limit: 100,
           is_archived: archivedThreads.value,
         },

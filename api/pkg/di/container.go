@@ -384,6 +384,10 @@ ALTER TABLE discords ADD CONSTRAINT IF NOT EXISTS uni_discords_server_id CHECK (
 		container.logger.Fatal(stacktrace.Propagate(err, "cannot migrate %T", &entities.User{}))
 	}
 
+	if err = db.AutoMigrate(&entities.LocalAuthCredential{}); err != nil {
+		container.logger.Fatal(stacktrace.Propagate(err, "cannot migrate %T", &entities.LocalAuthCredential{}))
+	}
+
 	if err = db.AutoMigrate(&entities.MessageSendSchedule{}); err != nil {
 		container.logger.Fatal(stacktrace.Propagate(err, "cannot migrate %T", &entities.MessageSendSchedule{}))
 	}
@@ -1169,6 +1173,8 @@ func (container *Container) FirebaseEmailAuthHandler() (handler *handlers.Fireba
 	return handlers.NewFirebaseEmailAuthHandler(
 		container.Logger(),
 		container.Tracer(),
+		container.DB(),
+		container.UserRepository(),
 	)
 }
 

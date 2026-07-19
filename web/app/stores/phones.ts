@@ -14,7 +14,7 @@ export const usePhonesStore = defineStore('phones', () => {
   })
 
   function setOwner(value: string) {
-    owner.value = value
+    owner.value = value.trim() || null
   }
 
   async function loadPhones(force: boolean = false) {
@@ -24,6 +24,12 @@ export const usePhonesStore = defineStore('phones', () => {
       params: { limit: 100 },
     })
     phones.value = response.data
+    const ownerExists = response.data.some(
+      (x) => x.phone_number === owner.value,
+    )
+    if (!ownerExists) {
+      owner.value = null
+    }
 
     const authStore = useAuthStore()
     if (authStore.user?.active_phone_id) {
