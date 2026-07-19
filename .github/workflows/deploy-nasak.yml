@@ -30,6 +30,8 @@ jobs:
           persist-credentials: false
 
       - name: Package immutable release
+        env:
+          RELEASE_ARCHIVE: ${{ runner.temp }}/nasak-sms-${{ github.sha }}.tar.gz
         run: |
           tar \
             --exclude='.git' \
@@ -38,8 +40,8 @@ jobs:
             --exclude='node_modules' \
             --exclude='*.bundle' \
             --exclude='*-src.tar.gz' \
-            -czf "nasak-sms-${GITHUB_SHA}.tar.gz" .
-          sha256sum "nasak-sms-${GITHUB_SHA}.tar.gz" > "nasak-sms-${GITHUB_SHA}.tar.gz.sha256"
+            -czf "$RELEASE_ARCHIVE" .
+          (cd "$(dirname "$RELEASE_ARCHIVE")" && sha256sum "$(basename "$RELEASE_ARCHIVE")" > "$(basename "$RELEASE_ARCHIVE").sha256")
 
       - name: Configure SSH
         env:
@@ -55,12 +57,15 @@ jobs:
           printf 'Host production\n  HostName %s\n  User %s\n  IdentityFile ~/.ssh/id_ed25519\n  IdentitiesOnly yes\n' "$DEPLOY_HOST" "$DEPLOY_USER" > ~/.ssh/config
 
       - name: Upload verified release
+        env:
+          RELEASE_ARCHIVE: ${{ runner.temp }}/nasak-sms-${{ github.sha }}.tar.gz
         run: |
-          scp "nasak-sms-${GITHUB_SHA}.tar.gz" production:/tmp/
-          scp "nasak-sms-${GITHUB_SHA}.tar.gz.sha256" production:/tmp/
+          scp "$RELEASE_ARCHIVE" production:/tmp/
+          scp "$RELEASE_ARCHIVE.sha256" production:/tmp/
 
       - name: Deploy verified release
         run: |
+          # shellcheck disable=SC2029
           ssh production "RELEASE_SHA=${GITHUB_SHA} bash -s" <<'REMOTE'
           set -Eeuo pipefail
           archive="/tmp/nasak-sms-${RELEASE_SHA}.tar.gz"
