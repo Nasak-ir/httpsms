@@ -48,8 +48,16 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   async function loadUser() {
-    const response = await apiFetch<{ data: EntitiesUser }>('/v1/users/me')
-    user.value = response.data
+    try {
+      const response = await apiFetch<{ data: EntitiesUser }>('/v1/users/me')
+      user.value = response.data
+      setApiKey(response.data.api_key)
+      return response.data
+    } catch (error) {
+      user.value = null
+      setApiKey('')
+      throw error
+    }
   }
 
   async function updateUser(payload: { owner?: string; timezone?: string }) {

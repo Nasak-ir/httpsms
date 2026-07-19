@@ -1560,8 +1560,8 @@
     "semantic_hash": ""
   },
   "web/app/middleware/auth.ts": {
-    "mtime": 1784404639.2536116,
-    "ast_hash": "8a549e226ae2ad250171cc39a92454e3",
+    "mtime": 1784450988.2692924,
+    "ast_hash": "3acc22fbabfd312b68c015deeafacace",
     "semantic_hash": ""
   },
   "web/app/middleware/guest.ts": {
@@ -1640,8 +1640,8 @@
     "semantic_hash": ""
   },
   "web/app/pages/phone-api-keys/index.vue": {
-    "mtime": 1784404639.265339,
-    "ast_hash": "8a821e76083fbdd5c22c06f4b4f05437",
+    "mtime": 1784451027.354042,
+    "ast_hash": "89d937bafdcd71e4e3364c9461b9736a",
     "semantic_hash": ""
   },
   "web/app/pages/privacy-policy/index.vue": {
@@ -1705,8 +1705,8 @@
     "semantic_hash": ""
   },
   "web/app/stores/auth.ts": {
-    "mtime": 1784404639.2747438,
-    "ast_hash": "fdf75967e3f02a5c8185d3e563171ea4",
+    "mtime": 1784450963.8799672,
+    "ast_hash": "c362287d438e2333de168a6105b07945",
     "semantic_hash": ""
   },
   "web/app/stores/billing.ts": {

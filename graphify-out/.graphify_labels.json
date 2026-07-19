@@ -258,5 +258,6 @@
   "256": "MessageSend",
   "257": "PhoneHeartbeatMissedPayload",
   "258": "BillingDateOrdinal.vue",
-  "259": ".register"
+  "259": ".register",
+  "260": ".GetSubscriptionPayments"
 }
