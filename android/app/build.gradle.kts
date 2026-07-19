@@ -20,12 +20,12 @@ val hasReleaseSigning = listOf(
 ).all { !it.isNullOrBlank() }
 
 android {
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.httpsms"
         minSdk = 28
-        targetSdk = 37
+        targetSdk = 36
         versionCode = providers.environmentVariable("ANDROID_VERSION_CODE")
             .orNull
             ?.toIntOrNull()
