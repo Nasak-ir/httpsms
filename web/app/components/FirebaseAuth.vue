@@ -8,7 +8,7 @@ import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
 } from 'firebase/auth'
-import { mdiGoogle, mdiGithub, mdiEmail } from '@mdi/js'
+import { mdiGoogle, mdiGithub, mdiEmail, mdiEye, mdiEyeOff } from '@mdi/js'
 import type { User as FirebaseUser } from 'firebase/auth'
 import { ErrorMessages } from '~/utils/errors'
 
@@ -29,6 +29,7 @@ const showEmailForm = ref(false)
 const isSignUp = ref(false)
 const showForgotPassword = ref(false)
 const resetEmailSent = ref(false)
+const showPassword = ref(false)
 const email = ref('')
 const password = ref('')
 const generalError = ref('')
@@ -93,7 +94,7 @@ async function signInWithGoogle() {
   try {
     const auth = getAuth()
     const result = await signInWithPopup(auth, new GoogleAuthProvider())
-    onSuccess(result.user, 'google')
+    await onSuccess(result.user, 'google')
   } catch (error: unknown) {
     handleError(error, true)
   } finally {
@@ -106,7 +107,7 @@ async function signInWithGithub() {
   try {
     const auth = getAuth()
     const result = await signInWithPopup(auth, new GithubAuthProvider())
-    onSuccess(result.user, 'github')
+    await onSuccess(result.user, 'github')
   } catch (error: unknown) {
     handleError(error, true)
   } finally {
@@ -118,6 +119,16 @@ async function submitEmail() {
   if (!validateLoginForm()) return
   loading.value = true
   try {
+    try {
+      await submitEmailViaApi()
+      return
+    } catch (apiError: unknown) {
+      if (!shouldRetryWithFirebaseSdk(apiError)) {
+        handleApiAuthError(apiError)
+        return
+      }
+    }
+
     const auth = getAuth()
     let result
     if (isSignUp.value) {
@@ -133,12 +144,31 @@ async function submitEmail() {
         password.value,
       )
     }
-    onSuccess(result.user, 'email')
+    await onSuccess(result.user, 'email')
   } catch (error: unknown) {
     handleError(error)
   } finally {
     loading.value = false
   }
+}
+
+async function submitEmailViaApi() {
+  generalError.value = ''
+  await authStore.authenticateWithEmailPassword(
+    email.value.trim(),
+    password.value,
+    isSignUp.value ? 'sign_up' : 'sign_in',
+  )
+  try {
+    localStorage.setItem(LAST_LOGIN_METHOD_KEY, 'email')
+  } catch (error) {
+    console.error(error)
+  }
+  notificationsStore.addNotification({
+    message: 'Login successful!',
+    type: 'success',
+  })
+  router.push({ path: props.to })
 }
 
 async function submitPasswordReset() {
@@ -167,7 +197,7 @@ function backToSignIn() {
   showForgotPassword.value = false
 }
 
-function onSuccess(user: FirebaseUser, method: LoginMethod) {
+async function onSuccess(user: FirebaseUser, method: LoginMethod) {
   try {
     localStorage.setItem(LAST_LOGIN_METHOD_KEY, method)
   } catch (error) {
@@ -177,8 +207,37 @@ function onSuccess(user: FirebaseUser, method: LoginMethod) {
     message: 'Login successful!',
     type: 'success',
   })
-  authStore.onAuthStateChanged(user)
+  await authStore.onAuthStateChanged(user)
   router.push({ path: props.to })
+}
+
+function shouldRetryWithFirebaseSdk(error: unknown): boolean {
+  const apiError = error as {
+    response?: { status?: number }
+    status?: number
+  }
+  const status = apiError.response?.status ?? apiError.status
+  return status === 502 || status === 503 || status === 504
+}
+
+function handleApiAuthError(error: unknown) {
+  clearErrors()
+  const apiError = error as {
+    data?: {
+      data?: Record<string, string[]>
+      message?: string
+    }
+  }
+  const validationErrors = apiError.data?.data
+  if (validationErrors) {
+    Object.entries(validationErrors).forEach(([field, messages]) => {
+      messages.forEach((message) => errorMessages.value.add(field, message))
+    })
+    return
+  }
+  generalError.value =
+    apiError.data?.message ||
+    'اتصال به سرویس ورود برقرار نشد. چند لحظه بعد دوباره تلاش کنید.'
 }
 
 function handleError(error: unknown, isSocial = false) {
@@ -419,13 +478,15 @@ function getGeneralErrorMessage(
       <v-text-field
         v-model="password"
         label="Password"
-        type="password"
+        :type="showPassword ? 'text' : 'password'"
         color="primary"
         variant="outlined"
         density="comfortable"
         class="mb-2"
         :error="errorMessages.has('password')"
         :error-messages="errorMessages.get('password')"
+        :append-inner-icon="showPassword ? mdiEyeOff : mdiEye"
+        @click:append-inner="showPassword = !showPassword"
       />
       <v-alert v-if="generalError" type="error" density="compact" class="mb-3">
         {{ generalError }}

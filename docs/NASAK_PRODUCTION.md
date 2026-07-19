@@ -28,6 +28,16 @@ provide all three matching artifacts:
 Enable Email/Password sign-in in Firebase Authentication. Add
 `sms.nasak.ir` to Firebase Authentication authorized domains.
 
+The web panel first uses the Firebase Web SDK directly. If a user's browser
+cannot reach Firebase, email/password authentication falls back to
+`/api/v1/auth/email`, which exchanges credentials for Firebase tokens from the
+API server. On networks where the server cannot reach Google/Firebase directly,
+set `FIREBASE_AUTH_PROXY_URL` in `/opt/nasak-sms/shared/api.env` to an approved
+HTTP or SOCKS5 proxy. If the Firebase API key has HTTP referrer restrictions,
+set `FIREBASE_AUTH_REFERER_URL=https://sms.nasak.ir/` so the server-side
+fallback sends the same origin metadata as the browser. Do not store proxy
+credentials in the repository.
+
 Install the downloaded service-account JSON without copying it into the
 repository or printing its private key:
 

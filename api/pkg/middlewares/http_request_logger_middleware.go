@@ -3,6 +3,7 @@ package middlewares
 import (
 	"fmt"
 	"slices"
+	"strings"
 
 	"github.com/NdoleStudio/httpsms/pkg/telemetry"
 	"github.com/gofiber/fiber/v3"
@@ -23,10 +24,18 @@ func HTTPRequestLogger(tracer telemetry.Tracer, logger telemetry.Logger) fiber.H
 
 		statusCode := c.Response().StatusCode()
 		span.AddEvent(fmt.Sprintf("finished handling request with traceID: [%s], statusCode: [%d]", span.SpanContext().TraceID().String(), statusCode))
-		if statusCode >= 300 && len(c.Request().Body()) > 0 && !slices.Contains([]int{401, 402}, statusCode) {
+		if statusCode >= 300 && len(c.Request().Body()) > 0 && !slices.Contains([]int{401, 402}, statusCode) && !isSensitiveRequestPath(c.Path()) {
 			ctxLogger.WithString("client.version", c.Get(clientVersionHeader)).Warn(stacktrace.NewError("http.status [%d], body [%s]", statusCode, string(c.Request().Body())))
 		}
 
 		return response
 	}
+}
+
+func isSensitiveRequestPath(path string) bool {
+	path = strings.ToLower(path)
+	return strings.Contains(path, "/auth/") ||
+		strings.Contains(path, "/api-keys") ||
+		strings.Contains(path, "/password") ||
+		strings.Contains(path, "/tokens")
 }

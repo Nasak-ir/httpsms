@@ -145,6 +145,8 @@ func NewContainer(projectID string, version string) (container *Container) {
 	container.RegisterWebhookRoutes()
 	container.RegisterWebhookListeners()
 
+	container.RegisterFirebaseEmailAuthRoutes()
+
 	container.RegisterLemonsqueezyRoutes()
 
 	container.RegisterIntegration3CXRoutes()
@@ -1161,6 +1163,15 @@ func (container *Container) UserHandler() (handler *handlers.UserHandler) {
 	)
 }
 
+// FirebaseEmailAuthHandler creates a new FirebaseEmailAuthHandler.
+func (container *Container) FirebaseEmailAuthHandler() (handler *handlers.FirebaseEmailAuthHandler) {
+	container.logger.Debug(fmt.Sprintf("creating %T", handler))
+	return handlers.NewFirebaseEmailAuthHandler(
+		container.Logger(),
+		container.Tracer(),
+	)
+}
+
 // PhoneHandler creates a new instance of handlers.PhoneHandler
 func (container *Container) PhoneHandler() (handler *handlers.PhoneHandler) {
 	container.logger.Debug(fmt.Sprintf("creating %T", handler))
@@ -1694,6 +1705,12 @@ func (container *Container) RegisterPhoneRoutes() {
 func (container *Container) RegisterUserRoutes() {
 	container.logger.Debug(fmt.Sprintf("registering %T routes", &handlers.UserHandler{}))
 	container.UserHandler().RegisterRoutes(container.App(), container.AuthenticatedMiddleware())
+}
+
+// RegisterFirebaseEmailAuthRoutes registers same-origin Firebase email auth routes.
+func (container *Container) RegisterFirebaseEmailAuthRoutes() {
+	container.logger.Debug(fmt.Sprintf("registering %T routes", &handlers.FirebaseEmailAuthHandler{}))
+	container.FirebaseEmailAuthHandler().RegisterRoutes(container.App())
 }
 
 // RegisterMessageSendScheduleRoutes registers routes for the /send-schedules prefix

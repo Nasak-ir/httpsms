@@ -48,6 +48,8 @@ services:
     restart: unless-stopped
     env_file:
       - ${NASAK_SMS_API_ENV_FILE:-./deploy/runtime/api.env}
+    environment:
+      FIREBASE_API_KEY: ${FIREBASE_API_KEY:?FIREBASE_API_KEY is required}
     depends_on:
       postgres:
         condition: service_healthy
