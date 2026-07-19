@@ -1430,8 +1430,8 @@
     "semantic_hash": ""
   },
   "tests/integration_test.go": {
-    "mtime": 1784404639.232992,
-    "ast_hash": "cd294f2292e99beb1e6935e086da8443",
+    "mtime": 1784448346.2889266,
+    "ast_hash": "0ac06b73679519af4518d8788404d978",
     "semantic_hash": ""
   },
   "tests/seed.sql": {

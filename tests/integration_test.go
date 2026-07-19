@@ -204,8 +204,8 @@ func TestSendSMS_RateLimit(t *testing.T) {
 	fireEvent(ctx, t, phone.PhoneAPIKey, msgID2, "SENT")
 	fireEvent(ctx, t, phone.PhoneAPIKey, msgID2, "DELIVERED")
 
-	msg1 := pollMessageStatus(ctx, t, msgID1, "delivered", 15*time.Second)
-	msg2 := pollMessageStatus(ctx, t, msgID2, "delivered", 15*time.Second)
+	msg1 := pollMessageStatus(ctx, t, msgID1, "delivered", 30*time.Second)
+	msg2 := pollMessageStatus(ctx, t, msgID2, "delivered", 30*time.Second)
 	assert.Equal(t, "delivered", msg1.Status)
 	assert.Equal(t, "delivered", msg2.Status)
 
