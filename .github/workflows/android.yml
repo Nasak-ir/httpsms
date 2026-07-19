@@ -48,6 +48,9 @@ jobs:
           yes | sdkmanager --licenses >/dev/null || true
           sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
+      - name: Prepare Gradle wrapper
+        run: chmod +x android/gradlew
+
       - name: Configure Firebase Android app
         working-directory: android
         run: |
