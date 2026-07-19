@@ -40,6 +40,9 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@48b5f213c81028ace310571dc5ec0fbbca0b2947
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@40fd30fb8d7440372e1316f5d1809ec01dcd3699
+
       - name: Install Android SDK platform
         run: |
           yes | sdkmanager --licenses >/dev/null || true
