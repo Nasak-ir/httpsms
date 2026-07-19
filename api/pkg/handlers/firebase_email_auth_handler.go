@@ -160,6 +160,9 @@ func (h *FirebaseEmailAuthHandler) authenticateLocally(ctx context.Context, requ
 		ID:    entities.UserID("local:" + uuid.NewString()),
 		Email: request.Email,
 	}
+	if existingUser, loadErr := h.userRepository.LoadByEmail(ctx, request.Email); loadErr == nil {
+		authUser.ID = existingUser.ID
+	}
 	if _, _, err = h.userRepository.LoadOrStore(ctx, authUser); err != nil {
 		return nil, stacktrace.Propagate(err, "cannot create local auth user")
 	}
