@@ -3086,7 +3086,7 @@
       "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt",
+      "id": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent",
       "community": 13,
       "norm_label": "mainactivitycontent.kt"
     },
@@ -3096,7 +3096,7 @@
       "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen",
+      "id": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen",
       "community": 13,
       "norm_label": "mainscreen()"
     },
@@ -3106,7 +3106,7 @@
       "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
       "source_location": "L207",
       "_origin": "ast",
-      "id": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
+      "id": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
       "community": 13,
       "norm_label": "phonecard()"
     },
@@ -3116,8 +3116,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt_string",
-      "community": 337,
+      "id": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt_string",
+      "community": 13,
       "norm_label": "string"
     },
     {
@@ -3126,8 +3126,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt_boolean",
-      "community": 336,
+      "id": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt_boolean",
+      "community": 13,
       "norm_label": "boolean"
     },
     {
@@ -3829,7 +3829,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_cache_cache_go",
-      "community": 65,
+      "community": 36,
       "norm_label": "cache.go"
     },
     {
@@ -3839,7 +3839,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "cache_cache",
-      "community": 65,
+      "community": 36,
       "norm_label": "cache"
     },
     {
@@ -4039,7 +4039,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "di_container",
-      "community": 37,
+      "community": 1,
       "norm_label": "container"
     },
     {
@@ -4069,7 +4069,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_di_container_go_app",
-      "community": 37,
+      "community": 1,
       "norm_label": "app"
     },
     {
@@ -4079,7 +4079,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_di_container_go_phone",
-      "community": 37,
+      "community": 36,
       "norm_label": "phone"
     },
     {
@@ -4249,7 +4249,7 @@
       "source_location": "L337",
       "_origin": "ast",
       "id": "di_container_db",
-      "community": 156,
+      "community": 21,
       "norm_label": ".db()"
     },
     {
@@ -4259,7 +4259,7 @@
       "source_location": "L422",
       "_origin": "ast",
       "id": "di_container_firebaseapp",
-      "community": 37,
+      "community": 1,
       "norm_label": ".firebaseapp()"
     },
     {
@@ -4279,7 +4279,7 @@
       "source_location": "L444",
       "_origin": "ast",
       "id": "di_container_cache",
-      "community": 65,
+      "community": 36,
       "norm_label": ".cache()"
     },
     {
@@ -4289,7 +4289,7 @@
       "source_location": "L472",
       "_origin": "ast",
       "id": "di_container_firebaseauthclient",
-      "community": 37,
+      "community": 1,
       "norm_label": ".firebaseauthclient()"
     },
     {
@@ -4299,7 +4299,7 @@
       "source_location": "L482",
       "_origin": "ast",
       "id": "di_container_cloudtasksclient",
-      "community": 37,
+      "community": 1,
       "norm_label": ".cloudtasksclient()"
     },
     {
@@ -4349,7 +4349,7 @@
       "source_location": "L542",
       "_origin": "ast",
       "id": "di_container_fcmclient",
-      "community": 37,
+      "community": 196,
       "norm_label": ".fcmclient()"
     },
     {
@@ -4359,7 +4359,7 @@
       "source_location": "L561",
       "_origin": "ast",
       "id": "di_container_firebasecredentials",
-      "community": 37,
+      "community": 1,
       "norm_label": ".firebasecredentials()"
     },
     {
@@ -4379,7 +4379,7 @@
       "source_location": "L576",
       "_origin": "ast",
       "id": "di_container_messagehandlervalidator",
-      "community": 65,
+      "community": 14,
       "norm_label": ".messagehandlervalidator()"
     },
     {
@@ -4389,7 +4389,7 @@
       "source_location": "L588",
       "_origin": "ast",
       "id": "di_container_turnstiletokenvalidator",
-      "community": 187,
+      "community": 196,
       "norm_label": ".turnstiletokenvalidator()"
     },
     {
@@ -4399,7 +4399,7 @@
       "source_location": "L599",
       "_origin": "ast",
       "id": "di_container_bulkmessagehandlervalidator",
-      "community": 156,
+      "community": 36,
       "norm_label": ".bulkmessagehandlervalidator()"
     },
     {
@@ -4409,7 +4409,7 @@
       "source_location": "L611",
       "_origin": "ast",
       "id": "di_container_heartbeathandler",
-      "community": 156,
+      "community": 144,
       "norm_label": ".heartbeathandler()"
     },
     {
@@ -4419,7 +4419,7 @@
       "source_location": "L622",
       "_origin": "ast",
       "id": "di_container_billinghandler",
-      "community": 206,
+      "community": 34,
       "norm_label": ".billinghandler()"
     },
     {
@@ -4429,7 +4429,7 @@
       "source_location": "L633",
       "_origin": "ast",
       "id": "di_container_webhookhandler",
-      "community": 156,
+      "community": 8,
       "norm_label": ".webhookhandler()"
     },
     {
@@ -4439,7 +4439,7 @@
       "source_location": "L644",
       "_origin": "ast",
       "id": "di_container_heartbeathandlervalidator",
-      "community": 156,
+      "community": 144,
       "norm_label": ".heartbeathandlervalidator()"
     },
     {
@@ -4449,7 +4449,7 @@
       "source_location": "L653",
       "_origin": "ast",
       "id": "di_container_billinghandlervalidator",
-      "community": 206,
+      "community": 34,
       "norm_label": ".billinghandlervalidator()"
     },
     {
@@ -4459,7 +4459,7 @@
       "source_location": "L662",
       "_origin": "ast",
       "id": "di_container_discordhandlervalidator",
-      "community": 58,
+      "community": 156,
       "norm_label": ".discordhandlervalidator()"
     },
     {
@@ -4529,7 +4529,7 @@
       "source_location": "L741",
       "_origin": "ast",
       "id": "di_container_float64histogram",
-      "community": 37,
+      "community": 1,
       "norm_label": ".float64histogram()"
     },
     {
@@ -4539,7 +4539,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_di_container_go_float64histogram",
-      "community": 37,
+      "community": 1,
       "norm_label": "float64histogram"
     },
     {
@@ -4559,7 +4559,7 @@
       "source_location": "L765",
       "_origin": "ast",
       "id": "di_container_phoneapikeyrepository",
-      "community": 156,
+      "community": 36,
       "norm_label": ".phoneapikeyrepository()"
     },
     {
@@ -4569,7 +4569,7 @@
       "source_location": "L776",
       "_origin": "ast",
       "id": "di_container_integration3cxrepository",
-      "community": 37,
+      "community": 196,
       "norm_label": ".integration3cxrepository()"
     },
     {
@@ -4579,7 +4579,7 @@
       "source_location": "L786",
       "_origin": "ast",
       "id": "di_container_phonerepository",
-      "community": 156,
+      "community": 36,
       "norm_label": ".phonerepository()"
     },
     {
@@ -4629,7 +4629,7 @@
       "source_location": "L839",
       "_origin": "ast",
       "id": "di_container_billingusagerepository",
-      "community": 156,
+      "community": 65,
       "norm_label": ".billingusagerepository()"
     },
     {
@@ -4639,7 +4639,7 @@
       "source_location": "L849",
       "_origin": "ast",
       "id": "di_container_entitlementservice",
-      "community": 194,
+      "community": 65,
       "norm_label": ".entitlementservice()"
     },
     {
@@ -4669,7 +4669,7 @@
       "source_location": "L880",
       "_origin": "ast",
       "id": "di_container_phonenotificationrepository",
-      "community": 156,
+      "community": 21,
       "norm_label": ".phonenotificationrepository()"
     },
     {
@@ -4679,7 +4679,7 @@
       "source_location": "L890",
       "_origin": "ast",
       "id": "di_container_messagethreadrepository",
-      "community": 156,
+      "community": 21,
       "norm_label": ".messagethreadrepository()"
     },
     {
@@ -4739,7 +4739,7 @@
       "source_location": "L973",
       "_origin": "ast",
       "id": "di_container_integration3cxservice",
-      "community": 37,
+      "community": 196,
       "norm_label": ".integration3cxservice()"
     },
     {
@@ -4749,7 +4749,7 @@
       "source_location": "L984",
       "_origin": "ast",
       "id": "di_container_httpclient",
-      "community": 37,
+      "community": 196,
       "norm_label": ".httpclient()"
     },
     {
@@ -4759,7 +4759,7 @@
       "source_location": "L993",
       "_origin": "ast",
       "id": "di_container_httproundtripper",
-      "community": 37,
+      "community": 196,
       "norm_label": ".httproundtripper()"
     },
     {
@@ -4769,7 +4769,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_di_container_go_roundtripper",
-      "community": 37,
+      "community": 196,
       "norm_label": "roundtripper"
     },
     {
@@ -4779,7 +4779,7 @@
       "source_location": "L1003",
       "_origin": "ast",
       "id": "di_container_httproundtripperwithoutretry",
-      "community": 37,
+      "community": 196,
       "norm_label": ".httproundtripperwithoutretry()"
     },
     {
@@ -4789,7 +4789,7 @@
       "source_location": "L1012",
       "_origin": "ast",
       "id": "di_container_otelresources",
-      "community": 37,
+      "community": 1,
       "norm_label": ".otelresources()"
     },
     {
@@ -4799,7 +4799,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resource",
-      "community": 37,
+      "community": 1,
       "norm_label": "resource"
     },
     {
@@ -4809,7 +4809,7 @@
       "source_location": "L1023",
       "_origin": "ast",
       "id": "di_container_retryhttproundtripper",
-      "community": 37,
+      "community": 196,
       "norm_label": ".retryhttproundtripper()"
     },
     {
@@ -4829,7 +4829,7 @@
       "source_location": "L1043",
       "_origin": "ast",
       "id": "di_container_marketingservice",
-      "community": 37,
+      "community": 1,
       "norm_label": ".marketingservice()"
     },
     {
@@ -4859,7 +4859,7 @@
       "source_location": "L1086",
       "_origin": "ast",
       "id": "di_container_useremailfactory",
-      "community": 94,
+      "community": 65,
       "norm_label": ".useremailfactory()"
     },
     {
@@ -4899,7 +4899,7 @@
       "source_location": "L1131",
       "_origin": "ast",
       "id": "di_container_messagehandler",
-      "community": 65,
+      "community": 10,
       "norm_label": ".messagehandler()"
     },
     {
@@ -4909,7 +4909,7 @@
       "source_location": "L1143",
       "_origin": "ast",
       "id": "di_container_bulkmessagehandler",
-      "community": 90,
+      "community": 156,
       "norm_label": ".bulkmessagehandler()"
     },
     {
@@ -4929,7 +4929,7 @@
       "source_location": "L1166",
       "_origin": "ast",
       "id": "di_container_firebaseemailauthhandler",
-      "community": 156,
+      "community": 65,
       "norm_label": ".firebaseemailauthhandler()"
     },
     {
@@ -4989,7 +4989,7 @@
       "source_location": "L1239",
       "_origin": "ast",
       "id": "di_container_lemonsqueezyhandler",
-      "community": 156,
+      "community": 165,
       "norm_label": ".lemonsqueezyhandler()"
     },
     {
@@ -5009,7 +5009,7 @@
       "source_location": "L1263",
       "_origin": "ast",
       "id": "di_container_phoneapikeyhandler",
-      "community": 156,
+      "community": 75,
       "norm_label": ".phoneapikeyhandler()"
     },
     {
@@ -5019,7 +5019,7 @@
       "source_location": "L1276",
       "_origin": "ast",
       "id": "di_container_discordhandler",
-      "community": 58,
+      "community": 14,
       "norm_label": ".discordhandler()"
     },
     {
@@ -5029,7 +5029,7 @@
       "source_location": "L1291",
       "_origin": "ast",
       "id": "di_container_lemonsqueezyhandlervalidator",
-      "community": 153,
+      "community": 37,
       "norm_label": ".lemonsqueezyhandlervalidator()"
     },
     {
@@ -5069,7 +5069,7 @@
       "source_location": "L1332",
       "_origin": "ast",
       "id": "di_container_discordclient",
-      "community": 64,
+      "community": 156,
       "norm_label": ".discordclient()"
     },
     {
@@ -5079,7 +5079,7 @@
       "source_location": "L1342",
       "_origin": "ast",
       "id": "di_container_plunkclient",
-      "community": 37,
+      "community": 1,
       "norm_label": ".plunkclient()"
     },
     {
@@ -5259,7 +5259,7 @@
       "source_location": "L1570",
       "_origin": "ast",
       "id": "di_container_messageservice",
-      "community": 37,
+      "community": 156,
       "norm_label": ".messageservice()"
     },
     {
@@ -5269,7 +5269,7 @@
       "source_location": "L1584",
       "_origin": "ast",
       "id": "di_container_attachmentrepository",
-      "community": 37,
+      "community": 156,
       "norm_label": ".attachmentrepository()"
     },
     {
@@ -5279,7 +5279,7 @@
       "source_location": "L1614",
       "_origin": "ast",
       "id": "di_container_apibaseurl",
-      "community": 37,
+      "community": 156,
       "norm_label": ".apibaseurl()"
     },
     {
@@ -5289,7 +5289,7 @@
       "source_location": "L1620",
       "_origin": "ast",
       "id": "di_container_attachmenthandler",
-      "community": 37,
+      "community": 156,
       "norm_label": ".attachmenthandler()"
     },
     {
@@ -5459,7 +5459,7 @@
       "source_location": "L1766",
       "_origin": "ast",
       "id": "di_container_userrepository",
-      "community": 156,
+      "community": 36,
       "norm_label": ".userrepository()"
     },
     {
@@ -5469,7 +5469,7 @@
       "source_location": "L1777",
       "_origin": "ast",
       "id": "di_container_phoneristrettocache",
-      "community": 37,
+      "community": 36,
       "norm_label": ".phoneristrettocache()"
     },
     {
@@ -5479,7 +5479,7 @@
       "source_location": "L1795",
       "_origin": "ast",
       "id": "di_container_userristrettocache",
-      "community": 156,
+      "community": 36,
       "norm_label": ".userristrettocache()"
     },
     {
@@ -5489,7 +5489,7 @@
       "source_location": "L1813",
       "_origin": "ast",
       "id": "di_container_initializetraceprovider",
-      "community": 37,
+      "community": 1,
       "norm_label": ".initializetraceprovider()"
     },
     {
@@ -5499,7 +5499,7 @@
       "source_location": "L1837",
       "_origin": "ast",
       "id": "di_container_initializegoogletraceprovider",
-      "community": 37,
+      "community": 1,
       "norm_label": ".initializegoogletraceprovider()"
     },
     {
@@ -5509,7 +5509,7 @@
       "source_location": "L1873",
       "_origin": "ast",
       "id": "di_container_initializeaxiomtraceprovider",
-      "community": 37,
+      "community": 1,
       "norm_label": ".initializeaxiomtraceprovider()"
     },
     {
@@ -5519,7 +5519,7 @@
       "source_location": "L1932",
       "_origin": "ast",
       "id": "di_container_initializeuptraceprovider",
-      "community": 37,
+      "community": 1,
       "norm_label": ".initializeuptraceprovider()"
     },
     {
@@ -5839,7 +5839,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_config_go",
-      "community": 64,
+      "community": 2,
       "norm_label": "client_config.go"
     },
     {
@@ -5849,7 +5849,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "discord_clientconfig",
-      "community": 64,
+      "community": 2,
       "norm_label": "clientconfig"
     },
     {
@@ -5859,7 +5859,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_config_defaultclientconfig",
-      "community": 64,
+      "community": 2,
       "norm_label": "defaultclientconfig()"
     },
     {
@@ -5869,7 +5869,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_go",
-      "community": 64,
+      "community": 2,
       "norm_label": "client_option.go"
     },
     {
@@ -5879,7 +5879,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "discord_option",
-      "community": 64,
+      "community": 2,
       "norm_label": "option"
     },
     {
@@ -5889,7 +5889,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "discord_clientoptionfunc",
-      "community": 64,
+      "community": 2,
       "norm_label": "clientoptionfunc"
     },
     {
@@ -5899,7 +5899,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "discord_clientoptionfunc_apply",
-      "community": 64,
+      "community": 2,
       "norm_label": ".apply()"
     },
     {
@@ -5909,7 +5909,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_withhttpclient",
-      "community": 64,
+      "community": 2,
       "norm_label": "withhttpclient()"
     },
     {
@@ -5919,7 +5919,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_withbaseurl",
-      "community": 64,
+      "community": 2,
       "norm_label": "withbaseurl()"
     },
     {
@@ -5929,7 +5929,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_withapplicationid",
-      "community": 64,
+      "community": 2,
       "norm_label": "withapplicationid()"
     },
     {
@@ -5939,7 +5939,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_withbottoken",
-      "community": 64,
+      "community": 2,
       "norm_label": "withbottoken()"
     },
     {
@@ -5949,7 +5949,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_test_go",
-      "community": 64,
+      "community": 2,
       "norm_label": "client_option_test.go"
     },
     {
@@ -5959,7 +5959,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_test_testwithhttpclient",
-      "community": 64,
+      "community": 2,
       "norm_label": "testwithhttpclient()"
     },
     {
@@ -5979,7 +5979,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_discord_client_option_test_testwithbaseurl",
-      "community": 64,
+      "community": 2,
       "norm_label": "testwithbaseurl()"
     },
     {
@@ -7339,7 +7339,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_entities_local_auth_credential",
-      "community": 67,
+      "community": 185,
       "norm_label": "local_auth_credential.go"
     },
     {
@@ -7349,7 +7349,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "entities_localauthcredential",
-      "community": 67,
+      "community": 185,
       "norm_label": "localauthcredential"
     },
     {
@@ -7359,7 +7359,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_entities_local_auth_credential_go_time",
-      "community": 67,
+      "community": 185,
       "norm_label": "time"
     },
     {
@@ -7369,7 +7369,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_entities_message_go",
-      "community": 117,
+      "community": 50,
       "norm_label": "message.go"
     },
     {
@@ -7379,7 +7379,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "entities_messagetype",
-      "community": 117,
+      "community": 50,
       "norm_label": "messagetype"
     },
     {
@@ -7389,7 +7389,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "entities_messagestatus",
-      "community": 117,
+      "community": 50,
       "norm_label": "messagestatus"
     },
     {
@@ -7399,7 +7399,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "entities_messageeventname",
-      "community": 10,
+      "community": 50,
       "norm_label": "messageeventname"
     },
     {
@@ -7409,7 +7409,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "entities_sim",
-      "community": 39,
+      "community": 27,
       "norm_label": "sim"
     },
     {
@@ -7419,7 +7419,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "entities_sim_string",
-      "community": 39,
+      "community": 27,
       "norm_label": ".string()"
     },
     {
@@ -8679,7 +8679,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_events_message_phone_delivered_event_go",
-      "community": 10,
+      "community": 68,
       "norm_label": "message_phone_delivered_event.go"
     },
     {
@@ -8689,7 +8689,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "events_messagephonedeliveredpayload",
-      "community": 10,
+      "community": 68,
       "norm_label": "messagephonedeliveredpayload"
     },
     {
@@ -8829,7 +8829,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_events_message_phone_sent_event_go",
-      "community": 10,
+      "community": 68,
       "norm_label": "message_phone_sent_event.go"
     },
     {
@@ -8839,7 +8839,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "events_messagephonesentpayload",
-      "community": 10,
+      "community": 68,
       "norm_label": "messagephonesentpayload"
     },
     {
@@ -9149,7 +9149,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_events_phone_deleted_event_go",
-      "community": 199,
+      "community": 27,
       "norm_label": "phone_deleted_event.go"
     },
     {
@@ -9159,7 +9159,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "events_phonedeletedpayload",
-      "community": 199,
+      "community": 27,
       "norm_label": "phonedeletedpayload"
     },
     {
@@ -9649,7 +9649,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_attachment_handler_go",
-      "community": 72,
+      "community": 64,
       "norm_label": "attachment_handler.go"
     },
     {
@@ -9659,7 +9659,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "handlers_attachmenthandler",
-      "community": 72,
+      "community": 64,
       "norm_label": "attachmenthandler"
     },
     {
@@ -9669,7 +9669,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_attachment_handler_newattachmenthandler",
-      "community": 72,
+      "community": 64,
       "norm_label": "newattachmenthandler()"
     },
     {
@@ -9679,7 +9679,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "handlers_attachmenthandler_registerroutes",
-      "community": 72,
+      "community": 64,
       "norm_label": ".registerroutes()"
     },
     {
@@ -9699,7 +9699,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "handlers_attachmenthandler_getattachment",
-      "community": 72,
+      "community": 64,
       "norm_label": ".getattachment()"
     },
     {
@@ -9799,7 +9799,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_bulk_message_handler_go",
-      "community": 90,
+      "community": 39,
       "norm_label": "bulk_message_handler.go"
     },
     {
@@ -9809,7 +9809,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "handlers_bulkmessagehandler",
-      "community": 90,
+      "community": 39,
       "norm_label": "bulkmessagehandler"
     },
     {
@@ -9819,7 +9819,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_bulk_message_handler_newbulkmessagehandler",
-      "community": 90,
+      "community": 39,
       "norm_label": "newbulkmessagehandler()"
     },
     {
@@ -9829,7 +9829,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "handlers_bulkmessagehandler_registerroutes",
-      "community": 90,
+      "community": 39,
       "norm_label": ".registerroutes()"
     },
     {
@@ -9849,7 +9849,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "handlers_bulkmessagehandler_index",
-      "community": 90,
+      "community": 39,
       "norm_label": ".index()"
     },
     {
@@ -9869,7 +9869,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "handlers_bulkmessagehandler_store",
-      "community": 90,
+      "community": 39,
       "norm_label": ".store()"
     },
     {
@@ -9879,7 +9879,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "handlers_bulkmessagehandler_generaterequestid",
-      "community": 90,
+      "community": 39,
       "norm_label": ".generaterequestid()"
     },
     {
@@ -9889,7 +9889,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_bulk_message_handler_sanitizefilename",
-      "community": 90,
+      "community": 39,
       "norm_label": "sanitizefilename()"
     },
     {
@@ -9899,7 +9899,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_bulk_message_handler_encodebase62",
-      "community": 90,
+      "community": 39,
       "norm_label": "encodebase62()"
     },
     {
@@ -9909,7 +9909,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_bulk_message_handler_truncatefilename",
-      "community": 90,
+      "community": 39,
       "norm_label": "truncatefilename()"
     },
     {
@@ -10829,7 +10829,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_lemonsqueezy_handler_go",
-      "community": 144,
+      "community": 165,
       "norm_label": "lemonsqueezy_handler.go"
     },
     {
@@ -10839,7 +10839,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "handlers_lemonsqueezyhandler",
-      "community": 144,
+      "community": 165,
       "norm_label": "lemonsqueezyhandler"
     },
     {
@@ -10849,7 +10849,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_lemonsqueezy_handler_newlemonsqueezyhandler",
-      "community": 144,
+      "community": 165,
       "norm_label": "newlemonsqueezyhandler()"
     },
     {
@@ -10859,7 +10859,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "handlers_lemonsqueezyhandler_registerroutes",
-      "community": 144,
+      "community": 165,
       "norm_label": ".registerroutes()"
     },
     {
@@ -10879,7 +10879,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "handlers_lemonsqueezyhandler_event",
-      "community": 144,
+      "community": 165,
       "norm_label": ".event()"
     },
     {
@@ -10899,7 +10899,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "handlers_lemonsqueezyhandler_handlerequest",
-      "community": 144,
+      "community": 165,
       "norm_label": ".handlerequest()"
     },
     {
@@ -10919,7 +10919,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_handlers_message_handler",
-      "community": 9,
+      "community": 10,
       "norm_label": "message_handler.go"
     },
     {
@@ -10929,7 +10929,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "handlers_messagehandler",
-      "community": 9,
+      "community": 10,
       "norm_label": "messagehandler"
     },
     {
@@ -10939,7 +10939,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "api_pkg_handlers_message_handler_newmessagehandler",
-      "community": 65,
+      "community": 10,
       "norm_label": "newmessagehandler()"
     },
     {
@@ -10949,7 +10949,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "handlers_messagehandler_registerroutes",
-      "community": 9,
+      "community": 10,
       "norm_label": ".registerroutes()"
     },
     {
@@ -10959,7 +10959,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_handlers_message_handler_go_router",
-      "community": 9,
+      "community": 10,
       "norm_label": "router"
     },
     {
@@ -10969,7 +10969,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "handlers_messagehandler_registerphoneapikeyroutes",
-      "community": 9,
+      "community": 10,
       "norm_label": ".registerphoneapikeyroutes()"
     },
     {
@@ -10979,7 +10979,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "handlers_messagehandler_postsend",
-      "community": 9,
+      "community": 10,
       "norm_label": ".postsend()"
     },
     {
@@ -10989,7 +10989,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_handlers_message_handler_go_ctx",
-      "community": 9,
+      "community": 10,
       "norm_label": "ctx"
     },
     {
@@ -10999,7 +10999,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "handlers_messagehandler_bulksend",
-      "community": 9,
+      "community": 10,
       "norm_label": ".bulksend()"
     },
     {
@@ -11009,7 +11009,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "handlers_messagehandler_getoutstanding",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getoutstanding()"
     },
     {
@@ -11019,7 +11019,7 @@
       "source_location": "L239",
       "_origin": "ast",
       "id": "handlers_messagehandler_index",
-      "community": 9,
+      "community": 10,
       "norm_label": ".index()"
     },
     {
@@ -11029,7 +11029,7 @@
       "source_location": "L281",
       "_origin": "ast",
       "id": "handlers_messagehandler_postevent",
-      "community": 9,
+      "community": 10,
       "norm_label": ".postevent()"
     },
     {
@@ -11039,7 +11039,7 @@
       "source_location": "L340",
       "_origin": "ast",
       "id": "handlers_messagehandler_postreceive",
-      "community": 9,
+      "community": 10,
       "norm_label": ".postreceive()"
     },
     {
@@ -11049,7 +11049,7 @@
       "source_location": "L391",
       "_origin": "ast",
       "id": "handlers_messagehandler_delete",
-      "community": 9,
+      "community": 10,
       "norm_label": ".delete()"
     },
     {
@@ -11059,7 +11059,7 @@
       "source_location": "L436",
       "_origin": "ast",
       "id": "handlers_messagehandler_get",
-      "community": 9,
+      "community": 10,
       "norm_label": ".get()"
     },
     {
@@ -11069,7 +11069,7 @@
       "source_location": "L476",
       "_origin": "ast",
       "id": "handlers_messagehandler_postcallmissed",
-      "community": 9,
+      "community": 10,
       "norm_label": ".postcallmissed()"
     },
     {
@@ -11079,7 +11079,7 @@
       "source_location": "L525",
       "_origin": "ast",
       "id": "handlers_messagehandler_search",
-      "community": 9,
+      "community": 10,
       "norm_label": ".search()"
     },
     {
@@ -11279,7 +11279,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_phone_api_key_handler_go",
-      "community": 36,
+      "community": 75,
       "norm_label": "phone_api_key_handler.go"
     },
     {
@@ -11289,7 +11289,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "handlers_phoneapikeyhandler",
-      "community": 36,
+      "community": 75,
       "norm_label": "phoneapikeyhandler"
     },
     {
@@ -11299,7 +11299,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_handlers_phone_api_key_handler_newphoneapikeyhandler",
-      "community": 36,
+      "community": 75,
       "norm_label": "newphoneapikeyhandler()"
     },
     {
@@ -11309,7 +11309,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "handlers_phoneapikeyhandler_registerroutes",
-      "community": 36,
+      "community": 75,
       "norm_label": ".registerroutes()"
     },
     {
@@ -11329,7 +11329,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "handlers_phoneapikeyhandler_index",
-      "community": 36,
+      "community": 75,
       "norm_label": ".index()"
     },
     {
@@ -11349,7 +11349,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "handlers_phoneapikeyhandler_store",
-      "community": 36,
+      "community": 75,
       "norm_label": ".store()"
     },
     {
@@ -11359,7 +11359,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "handlers_phoneapikeyhandler_delete",
-      "community": 36,
+      "community": 75,
       "norm_label": ".delete()"
     },
     {
@@ -11369,7 +11369,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "handlers_phoneapikeyhandler_deletephone",
-      "community": 36,
+      "community": 75,
       "norm_label": ".deletephone()"
     },
     {
@@ -13299,7 +13299,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_middlewares_api_key_auth_middleware",
-      "community": 14,
+      "community": 65,
       "norm_label": "api_key_auth_middleware.go"
     },
     {
@@ -13309,7 +13309,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "api_pkg_middlewares_api_key_auth_middleware_apikeyauth",
-      "community": 14,
+      "community": 65,
       "norm_label": "apikeyauth()"
     },
     {
@@ -13319,7 +13319,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_middlewares_api_key_auth_middleware_go_handler",
-      "community": 14,
+      "community": 65,
       "norm_label": "handler"
     },
     {
@@ -13329,7 +13329,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "api_pkg_middlewares_api_key_auth_middleware_getapikeyfromrequest",
-      "community": 14,
+      "community": 65,
       "norm_label": "getapikeyfromrequest()"
     },
     {
@@ -13339,7 +13339,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_middlewares_api_key_auth_middleware_go_ctx",
-      "community": 14,
+      "community": 65,
       "norm_label": "ctx"
     },
     {
@@ -13379,7 +13379,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_middlewares_bearer_api_key_auth_middleware",
-      "community": 14,
+      "community": 65,
       "norm_label": "bearer_api_key_auth_middleware.go"
     },
     {
@@ -13389,7 +13389,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "api_pkg_middlewares_bearer_api_key_auth_middleware_bearerapikeyauth",
-      "community": 14,
+      "community": 65,
       "norm_label": "bearerapikeyauth()"
     },
     {
@@ -13399,7 +13399,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_middlewares_bearer_api_key_auth_middleware_go_handler",
-      "community": 14,
+      "community": 65,
       "norm_label": "handler"
     },
     {
@@ -13409,7 +13409,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_middlewares_bearer_auth_middleware",
-      "community": 14,
+      "community": 37,
       "norm_label": "bearer_auth_middleware.go"
     },
     {
@@ -13419,7 +13419,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "api_pkg_middlewares_bearer_auth_middleware_bearerauth",
-      "community": 14,
+      "community": 37,
       "norm_label": "bearerauth()"
     },
     {
@@ -13429,7 +13429,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_middlewares_bearer_auth_middleware_go_handler",
-      "community": 14,
+      "community": 37,
       "norm_label": "handler"
     },
     {
@@ -13479,7 +13479,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_middlewares_phone_api_key_auth_middleware",
-      "community": 14,
+      "community": 36,
       "norm_label": "phone_api_key_auth_middleware.go"
     },
     {
@@ -13489,7 +13489,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "api_pkg_middlewares_phone_api_key_auth_middleware_phoneapikeyauth",
-      "community": 14,
+      "community": 36,
       "norm_label": "phoneapikeyauth()"
     },
     {
@@ -13499,7 +13499,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_middlewares_phone_api_key_auth_middleware_go_handler",
-      "community": 14,
+      "community": 36,
       "norm_label": "handler"
     },
     {
@@ -13519,7 +13519,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "repositories_attachmentrepository",
-      "community": 37,
+      "community": 156,
       "norm_label": "attachmentrepository"
     },
     {
@@ -13549,7 +13549,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_repositories_attachment_repository_contenttypefromextension",
-      "community": 72,
+      "community": 64,
       "norm_label": "contenttypefromextension()"
     },
     {
@@ -14819,7 +14819,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_repositories_gorm_phone_api_key_repository",
-      "community": 14,
+      "community": 67,
       "norm_label": "gorm_phone_api_key_repository.go"
     },
     {
@@ -14829,7 +14829,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "repositories_gormphoneapikeyrepository",
-      "community": 14,
+      "community": 67,
       "norm_label": "gormphoneapikeyrepository"
     },
     {
@@ -14839,7 +14839,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_repositories_gorm_phone_api_key_repository_go_db",
-      "community": 14,
+      "community": 67,
       "norm_label": "db"
     },
     {
@@ -14849,7 +14849,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "api_pkg_repositories_gorm_phone_api_key_repository_newgormphoneapikeyrepository",
-      "community": 14,
+      "community": 36,
       "norm_label": "newgormphoneapikeyrepository()"
     },
     {
@@ -15289,7 +15289,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_repositories_gorm_user_repository",
-      "community": 184,
+      "community": 26,
       "norm_label": "gorm_user_repository.go"
     },
     {
@@ -15309,7 +15309,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_repositories_gorm_user_repository_go_db",
-      "community": 184,
+      "community": 26,
       "norm_label": "db"
     },
     {
@@ -15319,7 +15319,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "api_pkg_repositories_gorm_user_repository_newgormuserrepository",
-      "community": 184,
+      "community": 36,
       "norm_label": "newgormuserrepository()"
     },
     {
@@ -15399,7 +15399,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "repositories_gormuserrepository_loadauthcontext",
-      "community": 26,
+      "community": 184,
       "norm_label": ".loadauthcontext()"
     },
     {
@@ -15609,7 +15609,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_repositories_integration_3cx_repository_go",
-      "community": 37,
+      "community": 196,
       "norm_label": "integration_3cx_repository.go"
     },
     {
@@ -15619,7 +15619,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "repositories_integration3cxrepository",
-      "community": 37,
+      "community": 196,
       "norm_label": "integration3cxrepository"
     },
     {
@@ -15749,7 +15749,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_repositories_message_thread_repository_go",
-      "community": 156,
+      "community": 21,
       "norm_label": "message_thread_repository.go"
     },
     {
@@ -15759,7 +15759,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "repositories_messagethreadrepository",
-      "community": 156,
+      "community": 21,
       "norm_label": "messagethreadrepository"
     },
     {
@@ -16159,7 +16159,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_repositories_phone_api_key_repository_go",
-      "community": 14,
+      "community": 36,
       "norm_label": "phone_api_key_repository.go"
     },
     {
@@ -16169,7 +16169,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "repositories_phoneapikeyrepository",
-      "community": 14,
+      "community": 36,
       "norm_label": "phoneapikeyrepository"
     },
     {
@@ -16179,7 +16179,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_repositories_phone_notification_repository_go",
-      "community": 156,
+      "community": 21,
       "norm_label": "phone_notification_repository.go"
     },
     {
@@ -16189,7 +16189,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "repositories_phonenotificationrepository",
-      "community": 156,
+      "community": 21,
       "norm_label": "phonenotificationrepository"
     },
     {
@@ -16429,7 +16429,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_discord_store_request_go",
-      "community": 123,
+      "community": 108,
       "norm_label": "discord_store_request.go"
     },
     {
@@ -16439,7 +16439,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "requests_discordstore",
-      "community": 123,
+      "community": 108,
       "norm_label": "discordstore"
     },
     {
@@ -16449,7 +16449,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "requests_discordstore_sanitize",
-      "community": 123,
+      "community": 108,
       "norm_label": ".sanitize()"
     },
     {
@@ -16459,7 +16459,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "requests_discordstore_tostoreparams",
-      "community": 123,
+      "community": 108,
       "norm_label": ".tostoreparams()"
     },
     {
@@ -16469,7 +16469,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_discord_update_request_go",
-      "community": 123,
+      "community": 60,
       "norm_label": "discord_update_request.go"
     },
     {
@@ -16479,7 +16479,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "requests_discordupdate",
-      "community": 123,
+      "community": 60,
       "norm_label": "discordupdate"
     },
     {
@@ -16489,7 +16489,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "requests_discordupdate_sanitize",
-      "community": 123,
+      "community": 60,
       "norm_label": ".sanitize()"
     },
     {
@@ -16549,7 +16549,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_heartbeat_index_request_go",
-      "community": 48,
+      "community": 117,
       "norm_label": "heartbeat_index_request.go"
     },
     {
@@ -16559,7 +16559,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "requests_heartbeatindex",
-      "community": 48,
+      "community": 117,
       "norm_label": "heartbeatindex"
     },
     {
@@ -16569,7 +16569,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "requests_heartbeatindex_sanitize",
-      "community": 48,
+      "community": 117,
       "norm_label": ".sanitize()"
     },
     {
@@ -16579,7 +16579,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "requests_heartbeatindex_toindexparams",
-      "community": 48,
+      "community": 117,
       "norm_label": ".toindexparams()"
     },
     {
@@ -16799,7 +16799,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "requests_messageevent_tomessagestoreeventparams",
-      "community": 10,
+      "community": 50,
       "norm_label": ".tomessagestoreeventparams()"
     },
     {
@@ -16919,7 +16919,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_message_receive_request_go",
-      "community": 25,
+      "community": 45,
       "norm_label": "message_receive_request.go"
     },
     {
@@ -16929,7 +16929,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "requests_messageattachment",
-      "community": 25,
+      "community": 45,
       "norm_label": "messageattachment"
     },
     {
@@ -16939,7 +16939,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "requests_messagereceive",
-      "community": 25,
+      "community": 45,
       "norm_label": "messagereceive"
     },
     {
@@ -16969,7 +16969,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "requests_messagereceive_sanitize",
-      "community": 25,
+      "community": 45,
       "norm_label": ".sanitize()"
     },
     {
@@ -16979,7 +16979,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "requests_messagereceive_tomessagereceiveparams",
-      "community": 61,
+      "community": 45,
       "norm_label": ".tomessagereceiveparams()"
     },
     {
@@ -16989,7 +16989,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_message_search_request_go",
-      "community": 258,
+      "community": 25,
       "norm_label": "message_search_request.go"
     },
     {
@@ -16999,7 +16999,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "requests_messagesearch",
-      "community": 258,
+      "community": 25,
       "norm_label": "messagesearch"
     },
     {
@@ -17009,7 +17009,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "requests_messagesearch_sanitize",
-      "community": 258,
+      "community": 25,
       "norm_label": ".sanitize()"
     },
     {
@@ -17019,7 +17019,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "requests_messagesearch_tosearchparams",
-      "community": 117,
+      "community": 50,
       "norm_label": ".tosearchparams()"
     },
     {
@@ -17199,7 +17199,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_phone_api_key_index_request_go",
-      "community": 108,
+      "community": 75,
       "norm_label": "phone_api_key_index_request.go"
     },
     {
@@ -17209,7 +17209,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "requests_phoneapikeyindex",
-      "community": 108,
+      "community": 75,
       "norm_label": "phoneapikeyindex"
     },
     {
@@ -17219,7 +17219,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "requests_phoneapikeyindex_sanitize",
-      "community": 108,
+      "community": 75,
       "norm_label": ".sanitize()"
     },
     {
@@ -17229,7 +17229,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "requests_phoneapikeyindex_toindexparams",
-      "community": 108,
+      "community": 75,
       "norm_label": ".toindexparams()"
     },
     {
@@ -17239,7 +17239,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_phone_api_key_store_request_go",
-      "community": 108,
+      "community": 75,
       "norm_label": "phone_api_key_store_request.go"
     },
     {
@@ -17249,7 +17249,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "requests_phoneapikeystorerequest",
-      "community": 108,
+      "community": 75,
       "norm_label": "phoneapikeystorerequest"
     },
     {
@@ -17259,7 +17259,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "requests_phoneapikeystorerequest_sanitize",
-      "community": 108,
+      "community": 75,
       "norm_label": ".sanitize()"
     },
     {
@@ -17269,7 +17269,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_phone_delete_request_go",
-      "community": 45,
+      "community": 27,
       "norm_label": "phone_delete_request.go"
     },
     {
@@ -17279,7 +17279,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "requests_phonedelete",
-      "community": 45,
+      "community": 27,
       "norm_label": "phonedelete"
     },
     {
@@ -17289,7 +17289,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "requests_phonedelete_phoneiduuid",
-      "community": 45,
+      "community": 27,
       "norm_label": ".phoneiduuid()"
     },
     {
@@ -17309,7 +17309,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_phone_fcm_token_request_go",
-      "community": 39,
+      "community": 27,
       "norm_label": "phone_fcm_token_request.go"
     },
     {
@@ -17319,7 +17319,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "requests_phonefcmtoken",
-      "community": 39,
+      "community": 27,
       "norm_label": "phonefcmtoken"
     },
     {
@@ -17329,7 +17329,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "requests_phonefcmtoken_sanitize",
-      "community": 39,
+      "community": 27,
       "norm_label": ".sanitize()"
     },
     {
@@ -17339,7 +17339,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "requests_phonefcmtoken_tophonefcmtokenparams",
-      "community": 39,
+      "community": 27,
       "norm_label": ".tophonefcmtokenparams()"
     },
     {
@@ -17349,7 +17349,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_phone_index_request_go",
-      "community": 185,
+      "community": 27,
       "norm_label": "phone_index_request.go"
     },
     {
@@ -17359,7 +17359,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "requests_phoneindex",
-      "community": 185,
+      "community": 27,
       "norm_label": "phoneindex"
     },
     {
@@ -17369,7 +17369,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "requests_phoneindex_sanitize",
-      "community": 185,
+      "community": 27,
       "norm_label": ".sanitize()"
     },
     {
@@ -17379,7 +17379,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "requests_phoneindex_toindexparams",
-      "community": 185,
+      "community": 27,
       "norm_label": ".toindexparams()"
     },
     {
@@ -17389,7 +17389,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_requests_phone_update_request_go",
-      "community": 45,
+      "community": 27,
       "norm_label": "phone_update_request.go"
     },
     {
@@ -17399,7 +17399,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "requests_phoneupsert",
-      "community": 45,
+      "community": 27,
       "norm_label": "phoneupsert"
     },
     {
@@ -17409,7 +17409,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "requests_phoneupsert_sanitize",
-      "community": 45,
+      "community": 27,
       "norm_label": ".sanitize()"
     },
     {
@@ -17419,7 +17419,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "requests_phoneupsert_toupsertparams",
-      "community": 39,
+      "community": 27,
       "norm_label": ".toupsertparams()"
     },
     {
@@ -18299,7 +18299,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_services_billing_service",
-      "community": 65,
+      "community": 121,
       "norm_label": "billing_service.go"
     },
     {
@@ -18319,7 +18319,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "services_billingservice",
-      "community": 65,
+      "community": 18,
       "norm_label": "billingservice"
     },
     {
@@ -18329,7 +18329,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_services_billing_service_go_service",
-      "community": 65,
+      "community": 18,
       "norm_label": "service"
     },
     {
@@ -18639,7 +18639,7 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "services_discordstoreparams",
-      "community": 123,
+      "community": 108,
       "norm_label": "discordstoreparams"
     },
     {
@@ -19049,7 +19049,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_services_entitlement_service_go",
-      "community": 194,
+      "community": 75,
       "norm_label": "entitlement_service.go"
     },
     {
@@ -19059,7 +19059,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "services_entitlementcheckresult",
-      "community": 194,
+      "community": 75,
       "norm_label": "entitlementcheckresult"
     },
     {
@@ -19069,7 +19069,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "services_entitlementservice",
-      "community": 194,
+      "community": 75,
       "norm_label": "entitlementservice"
     },
     {
@@ -19089,7 +19089,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_services_entitlement_service_newentitlementservice",
-      "community": 194,
+      "community": 75,
       "norm_label": "newentitlementservice()"
     },
     {
@@ -19099,7 +19099,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "services_entitlementservice_check",
-      "community": 194,
+      "community": 75,
       "norm_label": ".check()"
     },
     {
@@ -19119,7 +19119,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_services_entitlement_service_formatentityname",
-      "community": 194,
+      "community": 75,
       "norm_label": "formatentityname()"
     },
     {
@@ -20389,7 +20389,7 @@
       "source_location": "L236",
       "_origin": "ast",
       "id": "services_messagegetparams",
-      "community": 139,
+      "community": 61,
       "norm_label": "messagegetparams"
     },
     {
@@ -20399,7 +20399,7 @@
       "source_location": "L244",
       "_origin": "ast",
       "id": "services_messageservice_getmessages",
-      "community": 139,
+      "community": 61,
       "norm_label": ".getmessages()"
     },
     {
@@ -20419,7 +20419,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "services_messagestoreeventparams",
-      "community": 10,
+      "community": 68,
       "norm_label": "messagestoreeventparams"
     },
     {
@@ -20429,7 +20429,7 @@
       "source_location": "L282",
       "_origin": "ast",
       "id": "services_messageservice_storeevent",
-      "community": 10,
+      "community": 68,
       "norm_label": ".storeevent()"
     },
     {
@@ -20469,7 +20469,7 @@
       "source_location": "L320",
       "_origin": "ast",
       "id": "services_messageservice_receivemessage",
-      "community": 68,
+      "community": 72,
       "norm_label": ".receivemessage()"
     },
     {
@@ -20479,7 +20479,7 @@
       "source_location": "L365",
       "_origin": "ast",
       "id": "services_messageservice_handlemessagesentevent",
-      "community": 10,
+      "community": 68,
       "norm_label": ".handlemessagesentevent()"
     },
     {
@@ -20489,7 +20489,7 @@
       "source_location": "L390",
       "_origin": "ast",
       "id": "services_messageservice_handlemessagedeliveredevent",
-      "community": 10,
+      "community": 68,
       "norm_label": ".handlemessagedeliveredevent()"
     },
     {
@@ -20499,7 +20499,7 @@
       "source_location": "L415",
       "_origin": "ast",
       "id": "services_messageservice_handlemessagefailedevent",
-      "community": 10,
+      "community": 68,
       "norm_label": ".handlemessagefailedevent()"
     },
     {
@@ -20569,7 +20569,7 @@
       "source_location": "L573",
       "_origin": "ast",
       "id": "services_messageservice_storereceivedmessage",
-      "community": 68,
+      "community": 72,
       "norm_label": ".storereceivedmessage()"
     },
     {
@@ -20719,7 +20719,7 @@
       "source_location": "L958",
       "_origin": "ast",
       "id": "services_messagesearchparams",
-      "community": 61,
+      "community": 50,
       "norm_label": "messagesearchparams"
     },
     {
@@ -20729,7 +20729,7 @@
       "source_location": "L967",
       "_origin": "ast",
       "id": "services_messageservice_searchmessages",
-      "community": 61,
+      "community": 50,
       "norm_label": ".searchmessages()"
     },
     {
@@ -20769,7 +20769,7 @@
       "source_location": "L1066",
       "_origin": "ast",
       "id": "services_messageservice_enricherrormessage",
-      "community": 10,
+      "community": 68,
       "norm_label": ".enricherrormessage()"
     },
     {
@@ -20819,7 +20819,7 @@
       "source_location": "L1085",
       "_origin": "ast",
       "id": "services_messageservice_createmessagephonereceivedevent",
-      "community": 68,
+      "community": 72,
       "norm_label": ".createmessagephonereceivedevent()"
     },
     {
@@ -20839,7 +20839,7 @@
       "source_location": "L1093",
       "_origin": "ast",
       "id": "services_messageservice_createmessagephonesentevent",
-      "community": 10,
+      "community": 68,
       "norm_label": ".createmessagephonesentevent()"
     },
     {
@@ -20849,7 +20849,7 @@
       "source_location": "L1097",
       "_origin": "ast",
       "id": "services_messageservice_createmessagesendfailedevent",
-      "community": 10,
+      "community": 68,
       "norm_label": ".createmessagesendfailedevent()"
     },
     {
@@ -20859,7 +20859,7 @@
       "source_location": "L1101",
       "_origin": "ast",
       "id": "services_messageservice_createmessagephonedeliveredevent",
-      "community": 10,
+      "community": 68,
       "norm_label": ".createmessagephonedeliveredevent()"
     },
     {
@@ -21919,7 +21919,7 @@
       "source_location": "L174",
       "_origin": "ast",
       "id": "services_phoneservice_delete",
-      "community": 199,
+      "community": 27,
       "norm_label": ".delete()"
     },
     {
@@ -21979,7 +21979,7 @@
       "source_location": "L278",
       "_origin": "ast",
       "id": "services_phoneservice_createphonedeletedevent",
-      "community": 199,
+      "community": 27,
       "norm_label": ".createphonedeletedevent()"
     },
     {
@@ -22229,7 +22229,7 @@
       "source_location": "L169",
       "_origin": "ast",
       "id": "services_userservice_getbyid",
-      "community": 26,
+      "community": 33,
       "norm_label": ".getbyid()"
     },
     {
@@ -22289,7 +22289,7 @@
       "source_location": "L223",
       "_origin": "ast",
       "id": "services_userservice_updatenotificationsettings",
-      "community": 33,
+      "community": 92,
       "norm_label": ".updatenotificationsettings()"
     },
     {
@@ -22299,7 +22299,7 @@
       "source_location": "L246",
       "_origin": "ast",
       "id": "services_userservice_rotateapikey",
-      "community": 26,
+      "community": 33,
       "norm_label": ".rotateapikey()"
     },
     {
@@ -22369,7 +22369,7 @@
       "source_location": "L395",
       "_origin": "ast",
       "id": "services_userservice_initiatesubscriptioncancel",
-      "community": 67,
+      "community": 33,
       "norm_label": ".initiatesubscriptioncancel()"
     },
     {
@@ -23139,7 +23139,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_billing_handler_validator_go",
-      "community": 206,
+      "community": 34,
       "norm_label": "billing_handler_validator.go"
     },
     {
@@ -23149,7 +23149,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "validators_billinghandlervalidator",
-      "community": 206,
+      "community": 34,
       "norm_label": "billinghandlervalidator"
     },
     {
@@ -23159,7 +23159,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_billing_handler_validator_newbillinghandlervalidator",
-      "community": 206,
+      "community": 34,
       "norm_label": "newbillinghandlervalidator()"
     },
     {
@@ -23359,7 +23359,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_discord_handler_validator_go",
-      "community": 58,
+      "community": 60,
       "norm_label": "discord_handler_validator.go"
     },
     {
@@ -23369,7 +23369,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "validators_discordhandlervalidator",
-      "community": 58,
+      "community": 60,
       "norm_label": "discordhandlervalidator"
     },
     {
@@ -23379,7 +23379,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_discord_handler_validator_newdiscordhandlervalidator",
-      "community": 58,
+      "community": 60,
       "norm_label": "newdiscordhandlervalidator()"
     },
     {
@@ -23419,7 +23419,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "validators_discordhandlervalidator_validatestore",
-      "community": 58,
+      "community": 60,
       "norm_label": ".validatestore()"
     },
     {
@@ -23429,7 +23429,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "validators_discordhandlervalidator_validateupdate",
-      "community": 123,
+      "community": 60,
       "norm_label": ".validateupdate()"
     },
     {
@@ -23439,7 +23439,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_heartbeat_handler_validator_go",
-      "community": 48,
+      "community": 144,
       "norm_label": "heartbeat_handler_validator.go"
     },
     {
@@ -23449,7 +23449,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "validators_heartbeathandlervalidator",
-      "community": 48,
+      "community": 144,
       "norm_label": "heartbeathandlervalidator"
     },
     {
@@ -23459,7 +23459,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_heartbeat_handler_validator_newheartbeathandlervalidator",
-      "community": 48,
+      "community": 144,
       "norm_label": "newheartbeathandlervalidator()"
     },
     {
@@ -23469,7 +23469,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "validators_heartbeathandlervalidator_validateindex",
-      "community": 48,
+      "community": 117,
       "norm_label": ".validateindex()"
     },
     {
@@ -23509,7 +23509,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_lemonsqueezy_handler_validator_go",
-      "community": 153,
+      "community": 165,
       "norm_label": "lemonsqueezy_handler_validator.go"
     },
     {
@@ -23519,7 +23519,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "validators_lemonsqueezyhandlervalidator",
-      "community": 153,
+      "community": 165,
       "norm_label": "lemonsqueezyhandlervalidator"
     },
     {
@@ -23529,7 +23529,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_lemonsqueezy_handler_validator_newlemonsqueezyhandlervalidator",
-      "community": 153,
+      "community": 165,
       "norm_label": "newlemonsqueezyhandlervalidator()"
     },
     {
@@ -23539,7 +23539,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "validators_lemonsqueezyhandlervalidator_validateevent",
-      "community": 153,
+      "community": 165,
       "norm_label": ".validateevent()"
     },
     {
@@ -23569,7 +23569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_validators_message_handler_validator",
-      "community": 65,
+      "community": 14,
       "norm_label": "message_handler_validator.go"
     },
     {
@@ -23579,7 +23579,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "validators_messagehandlervalidator",
-      "community": 65,
+      "community": 14,
       "norm_label": "messagehandlervalidator"
     },
     {
@@ -23589,7 +23589,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "api_pkg_validators_message_handler_validator_newmessagehandlervalidator",
-      "community": 65,
+      "community": 14,
       "norm_label": "newmessagehandlervalidator()"
     },
     {
@@ -23599,7 +23599,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "validators_messagehandlervalidator_validatemessagereceive",
-      "community": 25,
+      "community": 45,
       "norm_label": ".validatemessagereceive()"
     },
     {
@@ -23629,7 +23629,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "validators_messagehandlervalidator_validateattachments",
-      "community": 25,
+      "community": 45,
       "norm_label": ".validateattachments()"
     },
     {
@@ -23679,7 +23679,7 @@
       "source_location": "L286",
       "_origin": "ast",
       "id": "validators_messagehandlervalidator_validatemessagesearch",
-      "community": 258,
+      "community": 25,
       "norm_label": ".validatemessagesearch()"
     },
     {
@@ -23909,7 +23909,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_phone_api_key_handler_validator_go",
-      "community": 108,
+      "community": 75,
       "norm_label": "phone_api_key_handler_validator.go"
     },
     {
@@ -23919,7 +23919,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "validators_phoneapikeyhandlervalidator",
-      "community": 108,
+      "community": 75,
       "norm_label": "phoneapikeyhandlervalidator"
     },
     {
@@ -23929,7 +23929,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_phone_api_key_handler_validator_newphoneapikeyhandlervalidator",
-      "community": 108,
+      "community": 75,
       "norm_label": "newphoneapikeyhandlervalidator()"
     },
     {
@@ -23939,7 +23939,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "validators_phoneapikeyhandlervalidator_validatestore",
-      "community": 108,
+      "community": 75,
       "norm_label": ".validatestore()"
     },
     {
@@ -23969,7 +23969,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "validators_phoneapikeyhandlervalidator_validateindex",
-      "community": 108,
+      "community": 75,
       "norm_label": ".validateindex()"
     },
     {
@@ -23979,7 +23979,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_phone_handler_validator_go",
-      "community": 45,
+      "community": 27,
       "norm_label": "phone_handler_validator.go"
     },
     {
@@ -23989,7 +23989,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "validators_phonehandlervalidator",
-      "community": 45,
+      "community": 27,
       "norm_label": "phonehandlervalidator"
     },
     {
@@ -23999,7 +23999,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "c_users_asus_documents_codex_httpsms_api_pkg_validators_phone_handler_validator_newphonehandlervalidator",
-      "community": 45,
+      "community": 27,
       "norm_label": "newphonehandlervalidator()"
     },
     {
@@ -24009,7 +24009,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "validators_phonehandlervalidator_validateindex",
-      "community": 185,
+      "community": 27,
       "norm_label": ".validateindex()"
     },
     {
@@ -24039,7 +24039,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "validators_phonehandlervalidator_validateupsert",
-      "community": 45,
+      "community": 27,
       "norm_label": ".validateupsert()"
     },
     {
@@ -24049,7 +24049,7 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "validators_phonehandlervalidator_validatefcmtoken",
-      "community": 39,
+      "community": 27,
       "norm_label": ".validatefcmtoken()"
     },
     {
@@ -24059,7 +24059,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "validators_phonehandlervalidator_validatedelete",
-      "community": 45,
+      "community": 27,
       "norm_label": ".validatedelete()"
     },
     {
@@ -24069,7 +24069,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_pkg_validators_turnstile_token_validator",
-      "community": 187,
+      "community": 14,
       "norm_label": "turnstile_token_validator.go"
     },
     {
@@ -24079,7 +24079,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "validators_turnstiletokenvalidator",
-      "community": 187,
+      "community": 14,
       "norm_label": "turnstiletokenvalidator"
     },
     {
@@ -24089,7 +24089,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "validators_turnstileverifyresponse",
-      "community": 187,
+      "community": 14,
       "norm_label": "turnstileverifyresponse"
     },
     {
@@ -24099,7 +24099,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_validators_turnstile_token_validator_go_time",
-      "community": 187,
+      "community": 14,
       "norm_label": "time"
     },
     {
@@ -24109,7 +24109,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "api_pkg_validators_turnstile_token_validator_newturnstiletokenvalidator",
-      "community": 187,
+      "community": 14,
       "norm_label": "newturnstiletokenvalidator()"
     },
     {
@@ -24119,7 +24119,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "validators_turnstiletokenvalidator_validatetoken",
-      "community": 187,
+      "community": 14,
       "norm_label": ".validatetoken()"
     },
     {
@@ -24129,7 +24129,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "api_pkg_validators_turnstile_token_validator_go_context",
-      "community": 187,
+      "community": 14,
       "norm_label": "context"
     },
     {
@@ -27941,7 +27941,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "web_app_pages_search_messages_index_turnstile",
-      "community": 12,
+      "community": 153,
       "norm_label": "turnstile"
     },
     {
@@ -27951,7 +27951,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "web_app_pages_search_messages_index_turnstile_ready",
-      "community": 12,
+      "community": 153,
       "norm_label": ".ready()"
     },
     {
@@ -27961,7 +27961,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "web_app_pages_search_messages_index_turnstile_render",
-      "community": 12,
+      "community": 153,
       "norm_label": ".render()"
     },
     {
@@ -27971,7 +27971,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "web_app_pages_search_messages_index_turnstile_remove",
-      "community": 12,
+      "community": 153,
       "norm_label": ".remove()"
     },
     {
@@ -28301,7 +28301,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "web_app_pages_search_messages_index_getcaptcha",
-      "community": 12,
+      "community": 153,
       "norm_label": "getcaptcha()"
     },
     {
@@ -30041,7 +30041,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "web_app_utils_api_error",
-      "community": 44,
+      "community": 32,
       "norm_label": "api-error.ts"
     },
     {
@@ -30051,7 +30051,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "web_app_utils_api_error_apierror",
-      "community": 44,
+      "community": 32,
       "norm_label": "apierror"
     },
     {
@@ -30061,7 +30061,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "web_app_utils_api_error_toapierror",
-      "community": 44,
+      "community": 32,
       "norm_label": "toapierror()"
     },
     {
@@ -30181,7 +30181,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "web_app_utils_capitalize",
-      "community": 259,
+      "community": 44,
       "norm_label": "capitalize.ts"
     },
     {
@@ -30191,7 +30191,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "web_app_utils_capitalize_capitalize",
-      "community": 259,
+      "community": 44,
       "norm_label": "capitalize()"
     },
     {
@@ -36747,7 +36747,7 @@
       "source_location": "L47",
       "weight": 1.0,
       "source": "android_app_src_main_java_com_httpsms_mainactivity_mainactivity_oncreate",
-      "target": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen"
+      "target": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen"
     },
     {
       "relation": "calls",
@@ -39712,8 +39712,8 @@
       "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
       "source_location": "L49",
       "weight": 1.0,
-      "source": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt",
-      "target": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen",
+      "source": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent",
+      "target": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen",
       "confidence_score": 1.0
     },
     {
@@ -39722,8 +39722,8 @@
       "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
       "source_location": "L207",
       "weight": 1.0,
-      "source": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt",
-      "target": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
+      "source": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent",
+      "target": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
       "confidence_score": 1.0
     },
     {
@@ -39733,8 +39733,41 @@
       "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
       "source_location": "L78",
       "weight": 1.0,
-      "source": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen",
-      "target": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
+      "source": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen",
+      "target": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_mainscreen",
+      "target": "c_users_asus_documents_codex_httpsms_android_app_src_main_java_com_httpsms_ui_main_mainviewmodel_mainviewmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
+      "source_location": "L207",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
+      "target": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt_boolean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
+      "source_location": "L207",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_phonecard",
+      "target": "android_app_src_main_java_com_httpsms_ui_main_mainactivitycontent_kt_string",
       "confidence_score": 1.0
     },
     {
@@ -84594,5 +84627,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bb1068274ecb5ef57b304981228a893c48500745"
+  "built_at_commit": "3bd957b2d871d059da31a8ebdabf265bdaf0d5dd"
 }

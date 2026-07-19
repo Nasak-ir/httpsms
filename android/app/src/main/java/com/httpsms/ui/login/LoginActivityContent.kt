@@ -64,7 +64,7 @@ fun LoginScreen(
         Spacer(modifier = Modifier.height(64.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.logo_cropped),
+            painter = painterResource(id = R.drawable.nasak_mark),
             contentDescription = stringResource(id = R.string.img_http_sms_logo),
             modifier = Modifier.size(100.dp)
         )

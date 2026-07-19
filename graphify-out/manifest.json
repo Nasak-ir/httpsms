@@ -100,8 +100,8 @@
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/login/LoginActivityContent.kt": {
-    "mtime": 1784482154.4523027,
-    "ast_hash": "93358470f26c13da69d1e10512491f55",
+    "mtime": 1784490771.527667,
+    "ast_hash": "9533987dafb9968d473f9c45654f30f7",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/login/LoginViewModel.kt": {
@@ -110,8 +110,8 @@
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt": {
-    "mtime": 1784482154.4539635,
-    "ast_hash": "f7b52064b2d636b6ba020f6caefa9945",
+    "mtime": 1784490771.528198,
+    "ast_hash": "f20007832f9c3675191a18422f30abaa",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/main/MainViewModel.kt": {
@@ -210,8 +210,8 @@
     "semantic_hash": ""
   },
   "api/pkg/di/container.go": {
-    "mtime": 1784487912.6670094,
-    "ast_hash": "30ba86c1b7fd1ebee24c89e005f5de7b",
+    "mtime": 1784489301.0,
+    "ast_hash": "f30c7cf256902f3c5b7f66a9f57118fb",
     "semantic_hash": ""
   },
   "api/pkg/discord/application.go": {
@@ -600,8 +600,8 @@
     "semantic_hash": ""
   },
   "api/pkg/handlers/discord_handler.go": {
-    "mtime": 1784488827.828694,
-    "ast_hash": "d41f65d1f08fc443db1f6dbe416c470b",
+    "mtime": 1784489301.0,
+    "ast_hash": "efb9fdae422aeb8f162c97650287345b",
     "semantic_hash": ""
   },
   "api/pkg/handlers/events_handler.go": {
@@ -625,8 +625,8 @@
     "semantic_hash": ""
   },
   "api/pkg/handlers/integration_3cx_handler.go": {
-    "mtime": 1784488827.8281775,
-    "ast_hash": "ca1a0360863d573a0fa5136c20445cba",
+    "mtime": 1784489301.0,
+    "ast_hash": "1f4fa89c4d7cf8d1add45c4f77405202",
     "semantic_hash": ""
   },
   "api/pkg/handlers/lemonsqueezy_handler.go": {
@@ -635,8 +635,8 @@
     "semantic_hash": ""
   },
   "api/pkg/handlers/message_handler.go": {
-    "mtime": 1784483683.9782133,
-    "ast_hash": "5fd1d58c452e694f418c500702325808",
+    "mtime": 1784489301.0,
+    "ast_hash": "9790293b8d405f71f1feb40765d42394",
     "semantic_hash": ""
   },
   "api/pkg/handlers/message_send_schedule_handler.go": {
@@ -665,13 +665,13 @@
     "semantic_hash": ""
   },
   "api/pkg/handlers/user_handler.go": {
-    "mtime": 1784483793.933819,
-    "ast_hash": "2a38fc18a85f97da3829ca705b9751cc",
+    "mtime": 1784489301.0,
+    "ast_hash": "ca5bda31d61927724a623108f61eee39",
     "semantic_hash": ""
   },
   "api/pkg/handlers/webhook_handler.go": {
-    "mtime": 1784488827.8292074,
-    "ast_hash": "09b36a8f319c1a239bbdf0258aae626c",
+    "mtime": 1784489301.0,
+    "ast_hash": "28150dd681aaa26b48577d3b92991a19",
     "semantic_hash": ""
   },
   "api/pkg/listeners/billing_listener.go": {
@@ -750,8 +750,8 @@
     "semantic_hash": ""
   },
   "api/pkg/middlewares/api_key_auth_middleware.go": {
-    "mtime": 1784483683.9782133,
-    "ast_hash": "401d44932b78cda040e752a6e6fd6aa9",
+    "mtime": 1784489301.0,
+    "ast_hash": "89ba86a984493437ede42a171007df85",
     "semantic_hash": ""
   },
   "api/pkg/middlewares/authenticated_middlesare.go": {
@@ -760,8 +760,8 @@
     "semantic_hash": ""
   },
   "api/pkg/middlewares/bearer_api_key_auth_middleware.go": {
-    "mtime": 1784486595.6591043,
-    "ast_hash": "d9394b4d4d9abfd20ca673e92fb1c369",
+    "mtime": 1784489301.0,
+    "ast_hash": "2d717435c9c1ee04d0edbacff69221f6",
     "semantic_hash": ""
   },
   "api/pkg/middlewares/bearer_auth_middleware.go": {
@@ -770,13 +770,13 @@
     "semantic_hash": ""
   },
   "api/pkg/middlewares/http_request_logger_middleware.go": {
-    "mtime": 1784483683.9802437,
-    "ast_hash": "b31949071cf9da3daae5c7145b26550e",
+    "mtime": 1784489301.0,
+    "ast_hash": "5db04e1e259b68ccc8165b20cdee7f7f",
     "semantic_hash": ""
   },
   "api/pkg/middlewares/phone_api_key_auth_middleware.go": {
-    "mtime": 1784486595.6575916,
-    "ast_hash": "a1c96afc65421d1b88f19feb131ace13",
+    "mtime": 1784489301.0,
+    "ast_hash": "e652ffefc7cbd4b2e236f80ab632707c",
     "semantic_hash": ""
   },
   "api/pkg/repositories/attachment_repository.go": {
@@ -850,8 +850,8 @@
     "semantic_hash": ""
   },
   "api/pkg/repositories/gorm_phone_api_key_repository.go": {
-    "mtime": 1784486595.6601107,
-    "ast_hash": "1081af06ff55fb4df5b6bb00833e4580",
+    "mtime": 1784489301.0,
+    "ast_hash": "df2334730fce64b39eebc9b85df4410d",
     "semantic_hash": ""
   },
   "api/pkg/repositories/gorm_phone_notification_repository.go": {
@@ -865,8 +865,8 @@
     "semantic_hash": ""
   },
   "api/pkg/repositories/gorm_user_repository.go": {
-    "mtime": 1784486595.6591043,
-    "ast_hash": "aa4f69ffe26d55b91a3405533ca8f80d",
+    "mtime": 1784489301.0,
+    "ast_hash": "75e789ee5eeda4198e12b725529d0260",
     "semantic_hash": ""
   },
   "api/pkg/repositories/gorm_webhook_repository.go": {
@@ -1175,8 +1175,8 @@
     "semantic_hash": ""
   },
   "api/pkg/services/billing_service.go": {
-    "mtime": 1784482551.033015,
-    "ast_hash": "eb995a5c6308c1aa91a093c64a9a623a",
+    "mtime": 1784489301.0,
+    "ast_hash": "b8b6ffc57bcbfdef60482e2e5c82073d",
     "semantic_hash": ""
   },
   "api/pkg/services/discord_service.go": {
@@ -1290,8 +1290,8 @@
     "semantic_hash": ""
   },
   "api/pkg/services/user_service.go": {
-    "mtime": 1784486835.921695,
-    "ast_hash": "f9c2acf48c3488a066fbee4f45089006",
+    "mtime": 1784489301.0,
+    "ast_hash": "694398bdec527ecd735f7b018a6c8a98",
     "semantic_hash": ""
   },
   "api/pkg/services/webhook_service.go": {
@@ -1350,8 +1350,8 @@
     "semantic_hash": ""
   },
   "api/pkg/validators/message_handler_validator.go": {
-    "mtime": 1784486514.534007,
-    "ast_hash": "216d754c624571cd7c9e0b3d5d4e47ba",
+    "mtime": 1784489301.0,
+    "ast_hash": "151486e603ec9737f3e3097f00a329a7",
     "semantic_hash": ""
   },
   "api/pkg/validators/message_send_schedule_handler_validator.go": {
@@ -1375,8 +1375,8 @@
     "semantic_hash": ""
   },
   "api/pkg/validators/turnstile_token_validator.go": {
-    "mtime": 1784486514.533007,
-    "ast_hash": "8d24b678bd38f0221662dd9dd2cbfd54",
+    "mtime": 1784489301.0,
+    "ast_hash": "d4d4baeee7d05479fd304351c66efdc9",
     "semantic_hash": ""
   },
   "api/pkg/validators/user_handler_validator.go": {
@@ -2395,7 +2395,7 @@
     "semantic_hash": ""
   },
   "api/pkg/services/billing_service_test.go": {
-    "mtime": 1784483816.511444,
+    "mtime": 1784483816.0,
     "ast_hash": "e9bda4e97c4b7bf79d0d0a9fef50826a",
     "semantic_hash": ""
   },
@@ -2409,17 +2409,17 @@
     "ast_hash": "2a98e0490303a8b4afc39e027150e725",
     "semantic_hash": ""
   },
-  "android/app/src/main/res/drawable/logo_cropped.png": {
-    "mtime": 1784023622.3557916,
-    "ast_hash": "9f46a404dcb528c57639ea4cd8e186d1",
-    "semantic_hash": ""
-  },
   "web/public/brand/nasak-logo.png": {
     "mtime": 1784023622.3557916,
     "ast_hash": "6536c00c6b31038d7472e7792740e7f2",
     "semantic_hash": ""
   },
   "web/public/brand/nasak-mark.png": {
+    "mtime": 1784023622.3557916,
+    "ast_hash": "9f46a404dcb528c57639ea4cd8e186d1",
+    "semantic_hash": ""
+  },
+  "android/app/src/main/res/drawable/nasak_mark.png": {
     "mtime": 1784023622.3557916,
     "ast_hash": "9f46a404dcb528c57639ea4cd8e186d1",
     "semantic_hash": ""
