@@ -5,6 +5,8 @@
     <string name="menuIconName">بیشتر</string>
     <string name="notification_channel_default">com.httpsms.notification.default</string>
     <string name="sign_in_button">اتصال به پیامک نسک</string>
+    <string name="qr_code_scanned">کلید اتصال دریافت شد</string>
+    <string name="qr_scan_cancelled">اسکن لغو شد</string>
     <string name="text_area_api_key">کلید اتصال گوشی</string>
     <string name="img_http_sms_logo">Nasak SMS logo</string>
     <string name="get_your_api_key">کلید اتصال را از این نشانی بگیرید:\nsms.nasak.ir/phone-api-keys</string>

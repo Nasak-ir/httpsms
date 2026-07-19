@@ -17,8 +17,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.core.app.ActivityCompat
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.GoogleApiAvailability
 import com.httpsms.ui.login.LoginScreen
 import com.httpsms.ui.login.LoginViewModel
 import com.httpsms.ui.theme.HttpSmsTheme
@@ -49,22 +47,17 @@ class LoginActivity : AppCompatActivity() {
                     viewModel = viewModel,
                     onQrScanClick = { startQrCodeScan() },
                     onLoginClick = {
-                        val error = isGooglePlayServicesAvailable()
-                        if (error != null) {
-                            Toast.makeText(this@LoginActivity, error, Toast.LENGTH_SHORT).show()
-                        } else {
-                            viewModel.login(
-                                context = this@LoginActivity,
-                                countryCode = getCountryCode(),
-                                onFcmTokenError = { message ->
-                                    Toast.makeText(
-                                        this@LoginActivity,
-                                        message,
-                                        Toast.LENGTH_LONG
-                                    ).show()
-                                }
-                            )
-                        }
+                        viewModel.login(
+                            context = this@LoginActivity,
+                            countryCode = getCountryCode(),
+                            onFcmTokenError = { message ->
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    message,
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        )
                     }
                 )
             }
@@ -74,9 +67,9 @@ class LoginActivity : AppCompatActivity() {
     private val barcodeLauncher = registerForActivityResult(ScanContract()) { result ->
         if (result.contents != null) {
             viewModel.onApiKeyChange(result.contents)
-            Toast.makeText(this, "Scanned: ${result.contents}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.qr_code_scanned, Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(this, "Scan cancelled", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.qr_scan_cancelled, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -140,18 +133,6 @@ class LoginActivity : AppCompatActivity() {
         requestPermissionLauncher.launch(permissions)
 
         Timber.d("creating permissions launcher")
-    }
-
-    private fun isGooglePlayServicesAvailable(): String? {
-        val googleApiAvailability = GoogleApiAvailability.getInstance()
-        val status = googleApiAvailability.isGooglePlayServicesAvailable(this)
-        if (status != ConnectionResult.SUCCESS) {
-            if (googleApiAvailability.isUserResolvableError(status)) {
-                googleApiAvailability.getErrorDialog(this, status, 2404)?.show()
-            }
-            return googleApiAvailability.getErrorString(status)
-        }
-        return null
     }
 
     private fun redirectToMain() {
