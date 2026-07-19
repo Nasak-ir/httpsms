@@ -90,6 +90,11 @@ sudo nginx -t && sudo systemctl reload nginx
 sudo certbot --nginx -d sms.nasak.ir --redirect --non-interactive --agree-tos
 ```
 
+The supplied Nginx configuration sends `no-store` for application documents
+while caching fingerprinted `/_nuxt/` assets as immutable. Keep this split when
+changing the proxy: caching the SPA HTML can leave clients with an old document
+that references assets removed by a newer release.
+
 ## Android gateway
 
 The Android app is built with the same Firebase project's `google-services.json`.

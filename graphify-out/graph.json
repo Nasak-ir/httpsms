@@ -32508,7 +32508,7 @@
       "label": "Android gateway",
       "file_type": "document",
       "source_file": "docs/NASAK_PRODUCTION.md",
-      "source_location": "L93",
+      "source_location": "L98",
       "_origin": "ast",
       "id": "docs_nasak_production_android_gateway",
       "community": 127,
@@ -32518,7 +32518,7 @@
       "label": "Operations",
       "file_type": "document",
       "source_file": "docs/NASAK_PRODUCTION.md",
-      "source_location": "L124",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "docs_nasak_production_operations",
       "community": 127,
@@ -82697,7 +82697,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/NASAK_PRODUCTION.md",
-      "source_location": "L93",
+      "source_location": "L98",
       "weight": 1.0,
       "source": "docs_nasak_production_nasak_sms_production_deployment",
       "target": "docs_nasak_production_android_gateway",
@@ -82727,7 +82727,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/NASAK_PRODUCTION.md",
-      "source_location": "L124",
+      "source_location": "L129",
       "weight": 1.0,
       "source": "docs_nasak_production_nasak_sms_production_deployment",
       "target": "docs_nasak_production_operations",
@@ -84585,5 +84585,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1aba8ae708761c323c4e72ebbd93affbad646cbb"
+  "built_at_commit": "b071a9f218e9308a359e0b26cdd9518b5be33977"
 }
