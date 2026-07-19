@@ -48,7 +48,10 @@ class MainActivity : AppCompatActivity() {
                     viewModel = viewModel,
                     onSettingsClick = { onSettingsClick() },
                     onSmsPermissionClick = {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://httpsms.com/blog/grant-send-and-read-sms-permissions-on-android"))
+                        val intent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://github.com/Nasak-ir/httpsms/blob/main/docs/NASAK_PRODUCTION.md#android-gateway")
+                        )
                         startActivity(intent)
                     },
                     onBatteryOptimizationClick = {
@@ -211,7 +214,6 @@ class MainActivity : AppCompatActivity() {
 
         if(Settings.isDebugLogEnabled(this)) {
             Timber.plant(Timber.DebugTree())
-            Timber.plant(LogzTree(this.applicationContext))
         }
     }
 

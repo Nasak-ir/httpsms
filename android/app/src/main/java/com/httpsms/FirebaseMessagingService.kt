@@ -127,7 +127,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         if(Settings.isDebugLogEnabled(this)) {
             Timber.plant(Timber.DebugTree())
-            Timber.plant(LogzTree(this.applicationContext))
         }
     }
 

@@ -248,5 +248,15 @@
   "246": ".GetSubscriptionPayments",
   "247": "UserAPIKeyRotatedPayload",
   "248": "install-firebase-credentials.sh",
-  "249": "AGENTS.md"
+  "249": "AGENTS.md",
+  "250": "MessageReceive",
+  "251": "HeartbeatMonitor",
+  "252": "MessageAPIDeletedPayload",
+  "253": "loadMessages",
+  "254": "MainScreen",
+  "255": "SettingsScreen",
+  "256": "MessageSend",
+  "257": "PhoneHeartbeatMissedPayload",
+  "258": "BillingDateOrdinal.vue",
+  "259": ".register"
 }

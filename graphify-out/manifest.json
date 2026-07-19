@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "android/app/build.gradle.kts": {
-    "mtime": 1784404639.0342975,
-    "ast_hash": "eae35d2f4f53e6cb4b2f49927c0d5457",
+    "mtime": 1784440384.668317,
+    "ast_hash": "4b0806fe09a8529e61c9dc72fdcc78e3",
     "semantic_hash": ""
   },
   "android/app/src/androidTest/java/com/httpsms/ExampleInstrumentedTest.kt": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/FirebaseMessagingService.kt": {
-    "mtime": 1784404639.0413475,
-    "ast_hash": "5de6c98643599c37486602faa227bbae",
+    "mtime": 1784440384.6723907,
+    "ast_hash": "70c937ccd1fc2307812621ab660020ac",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/HttpSmsApiService.kt": {
@@ -44,14 +44,9 @@
     "ast_hash": "13e8ee9357f56b047750a003274272b4",
     "semantic_hash": ""
   },
-  "android/app/src/main/java/com/httpsms/LogzTree.kt": {
-    "mtime": 1784404639.043337,
-    "ast_hash": "85f8c514681227ef6d24bf26f7d66ddf",
-    "semantic_hash": ""
-  },
   "android/app/src/main/java/com/httpsms/MainActivity.kt": {
-    "mtime": 1784404639.0443413,
-    "ast_hash": "ab2b1824ad23fc1117b9fc5da806e432",
+    "mtime": 1784440384.6733937,
+    "ast_hash": "8d2b86573720c3ea7fa0fac65fe42f7c",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/Models.kt": {
@@ -75,13 +70,13 @@
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/Settings.kt": {
-    "mtime": 1784404639.047145,
-    "ast_hash": "e942700dbd655773d7730e169739a1d9",
+    "mtime": 1784440384.6743913,
+    "ast_hash": "a3355d287f4579805db2f09c725d82c4",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/SettingsActivity.kt": {
-    "mtime": 1784404639.048144,
-    "ast_hash": "9bc4d11e9a509f71e522f2914ef9ccb7",
+    "mtime": 1784440384.675918,
+    "ast_hash": "44f3b67b0a05452743a73d1c0e12b1e3",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/SmsManagerService.kt": {
@@ -100,13 +95,13 @@
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/services/StickyNotificationService.kt": {
-    "mtime": 1784404639.051165,
-    "ast_hash": "d4496d3caf39d9b3818aade17935c942",
+    "mtime": 1784440384.6780345,
+    "ast_hash": "0291253b948dfdf45a36217615027bbd",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/login/LoginActivityContent.kt": {
-    "mtime": 1784404639.052177,
-    "ast_hash": "773a0a2957a845dc5c364c4e404b2aa7",
+    "mtime": 1784440384.6790454,
+    "ast_hash": "c137c96012794373bb45c763d1d3f4f1",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/login/LoginViewModel.kt": {
@@ -160,8 +155,8 @@
     "semantic_hash": ""
   },
   "android/build.gradle.kts": {
-    "mtime": 1784404639.082501,
-    "ast_hash": "d28fcd0d73c6a2dc7a8df066ed53be51",
+    "mtime": 1784440384.667261,
+    "ast_hash": "2a478dbeab17c94425abf80e24383488",
     "semantic_hash": ""
   },
   "android/gradlew": {
@@ -1895,8 +1890,8 @@
     "semantic_hash": ""
   },
   "docs/NASAK_PRODUCTION.md": {
-    "mtime": 1784438910.2874405,
-    "ast_hash": "26047878dd551663acf28a386436cabf",
+    "mtime": 1784440434.714088,
+    "ast_hash": "b0f5fe435aefacdf062d2a6a560806ea",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-05-26-nuxt4-vuetify4-migration.md": {
@@ -2275,8 +2270,8 @@
     "semantic_hash": ""
   },
   "android/app/google-services.example.json": {
-    "mtime": 1784408500.4232185,
-    "ast_hash": "4bf4fb63e240a25424cf68a831ab9104",
+    "mtime": 1784440551.6426556,
+    "ast_hash": "7cc3a53d1c998a8b20482358bbda8b1e",
     "semantic_hash": ""
   },
   "ops/install-firebase-credentials.sh": {
@@ -2287,6 +2282,11 @@
   "AGENTS.md": {
     "mtime": 1784408591.9717953,
     "ast_hash": "c3317874724eaba4f0bf1b52c5f63f54",
+    "semantic_hash": ""
+  },
+  ".github/workflows/android.yml": {
+    "mtime": 1784440585.3186874,
+    "ast_hash": "60cc68d1611d56ec01007593d235ee95",
     "semantic_hash": ""
   }
 }

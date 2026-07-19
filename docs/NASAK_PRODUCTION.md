@@ -76,8 +76,22 @@ sudo certbot --nginx -d sms.nasak.ir --redirect --non-interactive --agree-tos
 
 ## Android gateway
 
-Build the Android application with the same Firebase project's
-`google-services.json`. On first launch, set the server URL to:
+The Android app is built with the same Firebase project's `google-services.json`.
+The file is stored only as the encrypted GitHub Actions secret
+`ANDROID_GOOGLE_SERVICES_JSON_BASE64` and is created inside the runner for the
+duration of the build. Release signing uses these additional secrets:
+
+- `ANDROID_RELEASE_KEYSTORE_BASE64`
+- `ANDROID_RELEASE_KEYSTORE_PASSWORD`
+- `ANDROID_RELEASE_KEY_ALIAS`
+- `ANDROID_RELEASE_KEY_PASSWORD`
+
+Pushes to `main` produce a signed workflow artifact. Tags matching `sms-v*`
+also publish `NasakSms.apk` in a GitHub Release. The signing keystore must be
+kept in an offline recovery kit because every future update must use the same
+key.
+
+The Nasak build defaults to this server URL:
 
 ```text
 https://sms.nasak.ir/api
@@ -86,6 +100,10 @@ https://sms.nasak.ir/api
 Sign in with the same Firebase account as the web panel, grant SMS permissions,
 register the SIM phone number, and keep battery optimization disabled for the
 gateway application.
+
+The production fork does not include the upstream Axiom or Sentry telemetry.
+Application diagnostics stay on the device unless a Nasak-owned monitoring
+provider is deliberately configured in a future release.
 
 ## Operations
 

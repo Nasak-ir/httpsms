@@ -29,3 +29,6 @@ backups/
 firebase-credentials.json
 google-services.json
 !android/app/google-services.example.json
+*.jks
+*.keystore
+*.p12

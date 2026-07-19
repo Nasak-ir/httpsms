@@ -1,13 +1,23 @@
 plugins {
     id("com.android.application")
     id("com.google.gms.google-services")
-    id("io.sentry.android.gradle") version "6.14.0"
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
 val gitHash = providers.exec {
     commandLine("git", "rev-parse", "--short", "HEAD")
 }.standardOutput.asText.map { it.trim() }
+
+val releaseKeystorePath = providers.environmentVariable("ANDROID_KEYSTORE_PATH").orNull
+val releaseKeystorePassword = providers.environmentVariable("ANDROID_KEYSTORE_PASSWORD").orNull
+val releaseKeyAlias = providers.environmentVariable("ANDROID_KEY_ALIAS").orNull
+val releaseKeyPassword = providers.environmentVariable("ANDROID_KEY_PASSWORD").orNull
+val hasReleaseSigning = listOf(
+    releaseKeystorePath,
+    releaseKeystorePassword,
+    releaseKeyAlias,
+    releaseKeyPassword
+).all { !it.isNullOrBlank() }
 
 android {
     compileSdk = 37
@@ -16,18 +26,32 @@ android {
         applicationId = "com.httpsms"
         minSdk = 28
         targetSdk = 37
-        versionCode = 1
-        versionName = gitHash.getOrElse("unknown")
+        versionCode = providers.environmentVariable("ANDROID_VERSION_CODE")
+            .orNull
+            ?.toIntOrNull()
+            ?: 1
+        versionName = providers.environmentVariable("ANDROID_VERSION_NAME")
+            .orNull
+            ?.takeIf { it.isNotBlank() }
+            ?: gitHash.getOrElse("unknown")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        getByName("debug") {
-            manifestPlaceholders["sentryEnvironment"] = "development"
+    signingConfigs {
+        if (hasReleaseSigning) {
+            create("release") {
+                storeFile = file(requireNotNull(releaseKeystorePath))
+                storePassword = requireNotNull(releaseKeystorePassword)
+                keyAlias = requireNotNull(releaseKeyAlias)
+                keyPassword = requireNotNull(releaseKeyPassword)
+            }
         }
+    }
+
+    buildTypes {
         getByName("release") {
-            manifestPlaceholders["sentryEnvironment"] = "production"
             isMinifyEnabled = false
+            signingConfig = signingConfigs.findByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
