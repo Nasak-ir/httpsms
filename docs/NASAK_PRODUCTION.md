@@ -28,6 +28,17 @@ provide all three matching artifacts:
 Enable Email/Password sign-in in Firebase Authentication. Add
 `sms.nasak.ir` to Firebase Authentication authorized domains.
 
+Install the downloaded service-account JSON without copying it into the
+repository or printing its private key:
+
+```bash
+sudo /opt/nasak-sms/repository/ops/install-firebase-credentials.sh \
+  /tmp/firebase-service-account.json
+```
+
+The installer verifies that the service account belongs to the configured
+Firebase project, atomically updates `api.env`, and removes the source file.
+
 Cloudflare Turnstile is required only for the public message-search feature.
 The rest of the panel can run while its keys are empty.
 

@@ -1410,8 +1410,8 @@
     "semantic_hash": ""
   },
   "ops/health-check.sh": {
-    "mtime": 1784405143.1122365,
-    "ast_hash": "1b6198ef3151c92934f323f1663db3b4",
+    "mtime": 1784439446.403503,
+    "ast_hash": "c8becd626346a9fc2598bf8f7f76e36b",
     "semantic_hash": ""
   },
   "ops/install-docker-ubuntu.sh": {
@@ -1895,8 +1895,8 @@
     "semantic_hash": ""
   },
   "docs/NASAK_PRODUCTION.md": {
-    "mtime": 1784406990.9825346,
-    "ast_hash": "3e114bf250fed062c84320326032592e",
+    "mtime": 1784438910.2874405,
+    "ast_hash": "26047878dd551663acf28a386436cabf",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-05-26-nuxt4-vuetify4-migration.md": {
@@ -2277,6 +2277,16 @@
   "android/app/google-services.example.json": {
     "mtime": 1784408500.4232185,
     "ast_hash": "4bf4fb63e240a25424cf68a831ab9104",
+    "semantic_hash": ""
+  },
+  "ops/install-firebase-credentials.sh": {
+    "mtime": 1784438927.2373934,
+    "ast_hash": "a3f212a54f59be72b1e573a630692d2a",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1784408591.9717953,
+    "ast_hash": "c3317874724eaba4f0bf1b52c5f63f54",
     "semantic_hash": ""
   }
 }
