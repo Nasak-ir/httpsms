@@ -259,5 +259,18 @@
   "257": "PhoneHeartbeatMissedPayload",
   "258": "BillingDateOrdinal.vue",
   "259": ".register",
-  "260": ".GetSubscriptionPayments"
+  "260": ".GetSubscriptionPayments",
+  "261": "commit-msg",
+  "262": "post-applypatch",
+  "263": "post-checkout",
+  "264": "post-commit",
+  "265": "post-merge",
+  "266": "post-rewrite",
+  "267": "pre-applypatch",
+  "268": "pre-auto-gc",
+  "269": "pre-commit",
+  "270": "pre-merge-commit",
+  "271": "pre-push",
+  "272": "pre-rebase",
+  "273": "prepare-commit-msg"
 }

@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/LoginActivity.kt": {
-    "mtime": 1784404639.043337,
-    "ast_hash": "13e8ee9357f56b047750a003274272b4",
+    "mtime": 1784468134.345978,
+    "ast_hash": "1fb0fd55381d34d211cca5b058cafea3",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/MainActivity.kt": {
@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/login/LoginViewModel.kt": {
-    "mtime": 1784404639.052177,
-    "ast_hash": "92c4989cd6bdce431787ad5aed9b7876",
+    "mtime": 1784468134.3464842,
+    "ast_hash": "a40a87e269de70d16b938394fb04e2d4",
     "semantic_hash": ""
   },
   "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt": {
@@ -210,8 +210,8 @@
     "semantic_hash": ""
   },
   "api/pkg/di/container.go": {
-    "mtime": 1784404639.0982373,
-    "ast_hash": "ea086c94289c299623b40fd225361cb8",
+    "mtime": 1784461495.2039533,
+    "ast_hash": "1578eac5a9c167dc1f1baa58e3a4a475",
     "semantic_hash": ""
   },
   "api/pkg/discord/application.go": {
@@ -765,13 +765,13 @@
     "semantic_hash": ""
   },
   "api/pkg/middlewares/bearer_auth_middleware.go": {
-    "mtime": 1784404639.1557682,
-    "ast_hash": "5e99af2964654c73d93dde275d6fc5e3",
+    "mtime": 1784461495.2021136,
+    "ast_hash": "78a37088ff00552e8bf099914a74ed22",
     "semantic_hash": ""
   },
   "api/pkg/middlewares/http_request_logger_middleware.go": {
-    "mtime": 1784404639.1557682,
-    "ast_hash": "2de437e3b3bc2adb68ebd46b793972fa",
+    "mtime": 1784456856.5676272,
+    "ast_hash": "844b29050b65b2d4224b2f67cd88cb28",
     "semantic_hash": ""
   },
   "api/pkg/middlewares/phone_api_key_auth_middleware.go": {
@@ -1495,8 +1495,8 @@
     "semantic_hash": ""
   },
   "web/app/components/FirebaseAuth.vue": {
-    "mtime": 1784404639.2455611,
-    "ast_hash": "bf7e628412d067bc51e44024cde25a9c",
+    "mtime": 1784462718.9491713,
+    "ast_hash": "8597adfd7e7217c226b0a9895795e3e5",
     "semantic_hash": ""
   },
   "web/app/components/FixedHeader.vue": {
@@ -1560,8 +1560,8 @@
     "semantic_hash": ""
   },
   "web/app/middleware/auth.ts": {
-    "mtime": 1784450988.2692924,
-    "ast_hash": "3acc22fbabfd312b68c015deeafacace",
+    "mtime": 1784451494.3912542,
+    "ast_hash": "36b1783c3ed395e4948075e63a5ac94f",
     "semantic_hash": ""
   },
   "web/app/middleware/guest.ts": {
@@ -1640,8 +1640,8 @@
     "semantic_hash": ""
   },
   "web/app/pages/phone-api-keys/index.vue": {
-    "mtime": 1784451027.354042,
-    "ast_hash": "89d937bafdcd71e4e3364c9461b9736a",
+    "mtime": 1784451494.5395155,
+    "ast_hash": "b0ba45230fee1d73784c0294b8dcedd3",
     "semantic_hash": ""
   },
   "web/app/pages/privacy-policy/index.vue": {
@@ -1705,8 +1705,8 @@
     "semantic_hash": ""
   },
   "web/app/stores/auth.ts": {
-    "mtime": 1784450963.8799672,
-    "ast_hash": "c362287d438e2333de168a6105b07945",
+    "mtime": 1784459998.9463017,
+    "ast_hash": "f24d7dcd9a43273e01bc01bd26feebf7",
     "semantic_hash": ""
   },
   "web/app/stores/billing.ts": {
@@ -1725,13 +1725,13 @@
     "semantic_hash": ""
   },
   "web/app/stores/phones.ts": {
-    "mtime": 1784404639.2767408,
-    "ast_hash": "e31d6d0917307166e6d76b3bd8b36420",
+    "mtime": 1784462718.7749226,
+    "ast_hash": "a4b5919cabdeb7be916af8baefed4762",
     "semantic_hash": ""
   },
   "web/app/stores/threads.ts": {
-    "mtime": 1784404639.2767408,
-    "ast_hash": "1316a4ddf16fea6708dcf390d40bee5f",
+    "mtime": 1784462718.8057642,
+    "ast_hash": "4b66ad1fc5f1fb291ca1f109c9423bdc",
     "semantic_hash": ""
   },
   "web/app/types/nuxt-shims.d.ts": {
@@ -1880,8 +1880,8 @@
     "semantic_hash": ""
   },
   "compose.production.yml": {
-    "mtime": 1784406990.9810302,
-    "ast_hash": "5a2e8b95b1db227cc7a7d13506303142",
+    "mtime": 1784454913.2050035,
+    "ast_hash": "5513acab818ebb9d51e8ad37246f3115",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
@@ -1890,8 +1890,8 @@
     "semantic_hash": ""
   },
   "docs/NASAK_PRODUCTION.md": {
-    "mtime": 1784440434.714088,
-    "ast_hash": "b0f5fe435aefacdf062d2a6a560806ea",
+    "mtime": 1784461566.8176167,
+    "ast_hash": "1982f2d17e395e972bc247600d85e5ed",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-05-26-nuxt4-vuetify4-migration.md": {
@@ -2287,6 +2287,111 @@
   ".github/workflows/android.yml": {
     "mtime": 1784442713.4006367,
     "ast_hash": "49adabdf21c6e7b7137dfbe684611bf3",
+    "semantic_hash": ""
+  },
+  "api/pkg/handlers/firebase_email_auth_handler.go": {
+    "mtime": 1784463109.6170616,
+    "ast_hash": "bff2534e6436978fdd99f1320317a8f9",
+    "semantic_hash": ""
+  },
+  "api/pkg/requests/firebase_email_auth_request.go": {
+    "mtime": 1784458586.0426564,
+    "ast_hash": "12ece0be99a6aa77e634219daf62ace3",
+    "semantic_hash": ""
+  },
+  "api/pkg/responses/firebase_email_auth_responses.go": {
+    "mtime": 1784458586.0436563,
+    "ast_hash": "b3bebf3dfb703afb44f129bb0cf29f2c",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/applypatch-msg": {
+    "mtime": 1784451468.7407007,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/commit-msg": {
+    "mtime": 1784451468.739703,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/h": {
+    "mtime": 1784451297.2690115,
+    "ast_hash": "15239a01c5554e56ff745570fb583a91",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/husky.sh": {
+    "mtime": 1784451468.748702,
+    "ast_hash": "13871d2ab13e8423790ecb2c01c78c18",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/post-applypatch": {
+    "mtime": 1784451468.742699,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/post-checkout": {
+    "mtime": 1784451468.7447066,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/post-commit": {
+    "mtime": 1784451468.739703,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/post-merge": {
+    "mtime": 1784451468.7457027,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/post-rewrite": {
+    "mtime": 1784451468.7447066,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/pre-applypatch": {
+    "mtime": 1784451468.741711,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/pre-auto-gc": {
+    "mtime": 1784451468.747706,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/pre-commit": {
+    "mtime": 1784451468.7377033,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/pre-merge-commit": {
+    "mtime": 1784451468.7387013,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/pre-push": {
+    "mtime": 1784451468.7467005,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/pre-rebase": {
+    "mtime": 1784451468.743701,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "web/.husky/_/prepare-commit-msg": {
+    "mtime": 1784451468.7387013,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "api/pkg/authlocal/token.go": {
+    "mtime": 1784461495.2006402,
+    "ast_hash": "c2a8a18a3646893f628a9c706af13ec0",
+    "semantic_hash": ""
+  },
+  "api/pkg/entities/local_auth_credential.go": {
+    "mtime": 1784461495.2006402,
+    "ast_hash": "1449f0609ab0bd046b792c444720a358",
     "semantic_hash": ""
   }
 }

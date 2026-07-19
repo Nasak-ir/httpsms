@@ -56,13 +56,10 @@ class LoginActivity : AppCompatActivity() {
                             viewModel.login(
                                 context = this@LoginActivity,
                                 countryCode = getCountryCode(),
-                                onGooglePlayServicesError = {
-                                    Toast.makeText(this@LoginActivity, it, Toast.LENGTH_SHORT).show()
-                                },
-                                onFcmTokenMissing = {
+                                onFcmTokenError = { message ->
                                     Toast.makeText(
                                         this@LoginActivity,
-                                        "Cannot find FCM token. Make sure you have Google Play Services installed",
+                                        message,
                                         Toast.LENGTH_LONG
                                     ).show()
                                 }

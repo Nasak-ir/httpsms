@@ -10,6 +10,8 @@ import android.webkit.URLUtil
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.FirebaseApp
+import com.google.firebase.messaging.FirebaseMessaging
 import com.httpsms.Constants
 import com.httpsms.HttpSmsApiService
 import com.httpsms.Settings
@@ -19,10 +21,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.net.URI
 import java.net.URISyntaxException
+import kotlin.coroutines.resume
 
 data class LoginUiState(
     val apiKey: String = "",
@@ -122,14 +126,8 @@ class LoginViewModel : ViewModel() {
         _uiState.value = _uiState.value.copy(serverUrl = value, serverUrlError = null)
     }
 
-    fun login(context: Context, countryCode: String, onGooglePlayServicesError: (String) -> Unit, onFcmTokenMissing: () -> Unit) {
+    fun login(context: Context, countryCode: String, onFcmTokenError: (String) -> Unit) {
         val currentState = _uiState.value
-        
-        // Validation logic from LoginActivity.onLoginClick
-        if (Settings.getFcmToken(context) == null) {
-            onFcmTokenMissing()
-            return
-        }
 
         _uiState.value = currentState.copy(isLoading = true)
 
@@ -171,11 +169,21 @@ class LoginViewModel : ViewModel() {
                 return@launch
             }
 
+            val fcmTokenResult = resolveFcmToken(context)
+            val fcmToken = fcmTokenResult.getOrNull()
+            if (fcmToken.isNullOrBlank()) {
+                val reason = fcmTokenResult.exceptionOrNull()?.message
+                    ?: "Firebase did not return a registration token"
+                _uiState.value = _uiState.value.copy(isLoading = false)
+                onFcmTokenError("Cannot connect to Firebase notifications: $reason")
+                return@launch
+            }
+
             val authResult = try {
                 withContext(Dispatchers.IO) {
                     val service = HttpSmsApiService(apiKey, URI(serverUrl))
                     val e164Phone1 = PhoneNumberValidator.formatE164(phone1, countryCode)
-                    val response1 = service.updateFcmToken(e164Phone1, Constants.SIM1, Settings.getFcmToken(context) ?: "")
+                    val response1 = service.updateFcmToken(e164Phone1, Constants.SIM1, fcmToken)
                     
                     if (response1.second != null || response1.third != null) {
                         return@withContext Pair(response1.second, response1.third)
@@ -183,7 +191,7 @@ class LoginViewModel : ViewModel() {
 
                     if (currentState.isDualSim) {
                         val e164Phone2 = PhoneNumberValidator.formatE164(phone2, countryCode)
-                        val response2 = service.updateFcmToken(e164Phone2, Constants.SIM2, Settings.getFcmToken(context) ?: "")
+                        val response2 = service.updateFcmToken(e164Phone2, Constants.SIM2, fcmToken)
                         return@withContext Pair(response2.second, response2.third)
                     }
 
@@ -216,6 +224,35 @@ class LoginViewModel : ViewModel() {
             }
 
             _uiState.value = _uiState.value.copy(isLoading = false, loginSuccess = true)
+        }
+    }
+
+    private suspend fun resolveFcmToken(context: Context): Result<String> {
+        Settings.getFcmToken(context)?.takeIf { it.isNotBlank() }?.let { return Result.success(it) }
+
+        return suspendCancellableCoroutine { continuation ->
+            try {
+                if (FirebaseApp.getApps(context).isEmpty() && FirebaseApp.initializeApp(context) == null) {
+                    continuation.resume(Result.failure(IllegalStateException("Firebase configuration is missing from this app build")))
+                    return@suspendCancellableCoroutine
+                }
+
+                FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+                    if (!continuation.isActive) return@addOnCompleteListener
+                    val token = task.result?.takeIf { task.isSuccessful && it.isNotBlank() }
+                    if (token != null) {
+                        Settings.setFcmTokenAsync(context, token)
+                        continuation.resume(Result.success(token))
+                    } else {
+                        val cause = task.exception ?: IllegalStateException("FCM token is unavailable")
+                        Timber.e(cause, "Could not retrieve FCM token during login")
+                        continuation.resume(Result.failure(cause))
+                    }
+                }
+            } catch (error: Exception) {
+                Timber.e(error, "Firebase initialization failed during login")
+                if (continuation.isActive) continuation.resume(Result.failure(error))
+            }
         }
     }
 }
