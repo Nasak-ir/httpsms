@@ -1840,8 +1840,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/deploy-nasak.yml": {
-    "mtime": 1784482154.4264748,
-    "ast_hash": "34c4ac8a54af3fd8c28502c7109b7be2",
+    "mtime": 1784492378.2981374,
+    "ast_hash": "61bf87b70fac033bf0c3f6019f22483d",
     "semantic_hash": ""
   },
   ".github/workflows/web.yml": {

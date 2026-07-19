@@ -54,7 +54,7 @@ jobs:
           printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_ed25519
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 0600 ~/.ssh/id_ed25519 ~/.ssh/known_hosts
-          printf 'Host production\n  HostName %s\n  User %s\n  IdentityFile ~/.ssh/id_ed25519\n  IdentitiesOnly yes\n' "$DEPLOY_HOST" "$DEPLOY_USER" > ~/.ssh/config
+          printf 'Host production\n  HostName %s\n  User %s\n  IdentityFile ~/.ssh/id_ed25519\n  IdentitiesOnly yes\n  ServerAliveInterval 30\n  ServerAliveCountMax 20\n  TCPKeepAlive yes\n  ConnectTimeout 20\n' "$DEPLOY_HOST" "$DEPLOY_USER" > ~/.ssh/config
 
       - name: Upload verified release
         env:
