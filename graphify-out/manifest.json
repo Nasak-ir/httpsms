@@ -2423,5 +2423,10 @@
     "mtime": 1784023622.3557916,
     "ast_hash": "9f46a404dcb528c57639ea4cd8e186d1",
     "semantic_hash": ""
+  },
+  "web/app/plugins/telemetry.client.ts": {
+    "mtime": 1784551604.858021,
+    "ast_hash": "676220b39621f083e37a584b3ab92175",
+    "semantic_hash": ""
   }
 }
