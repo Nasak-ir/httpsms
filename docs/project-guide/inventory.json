@@ -1,0 +1,3524 @@
+{
+  "schema": "project-inventory.v1",
+  "repository": "httpsms",
+  "source": {
+    "commit": "e57f8606b3ca03c04bce9cd8d2d4bc5da48efeb1",
+    "generated": "2026-10-29",
+    "extraction": "git ls-tree tracked paths; filename classification only; not runtime or reachability analysis"
+  },
+  "counts": {
+    "tracked": 876,
+    "included": 875,
+    "excluded": 1,
+    "tests": 12,
+    "contracts": 256,
+    "operations": 25
+  },
+  "excludedPatterns": [
+    "environment and secret-looking paths",
+    "database dumps and key material",
+    "dependency/build output"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "category": "other"
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "category": "operations"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "category": "operations"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "category": "operations"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "category": "operations"
+    },
+    {
+      "path": ".github/ghbadge.png",
+      "category": "operations"
+    },
+    {
+      "path": ".github/workflows/android.yml",
+      "category": "operations"
+    },
+    {
+      "path": ".github/workflows/api.yml",
+      "category": "operations"
+    },
+    {
+      "path": ".github/workflows/deploy-nasak.yml",
+      "category": "operations"
+    },
+    {
+      "path": ".github/workflows/web.yml",
+      "category": "operations"
+    },
+    {
+      "path": ".gitignore",
+      "category": "other"
+    },
+    {
+      "path": ".mcp.json",
+      "category": "other"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "category": "other"
+    },
+    {
+      "path": "AGENTS.md",
+      "category": "other"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "category": "other"
+    },
+    {
+      "path": "LICENSE",
+      "category": "other"
+    },
+    {
+      "path": "README.md",
+      "category": "documentation"
+    },
+    {
+      "path": "SECURITY.md",
+      "category": "other"
+    },
+    {
+      "path": "android/.gitignore",
+      "category": "other"
+    },
+    {
+      "path": "android/app/.gitignore",
+      "category": "other"
+    },
+    {
+      "path": "android/app/build.gradle.kts",
+      "category": "other"
+    },
+    {
+      "path": "android/app/google-services.example.json",
+      "category": "other"
+    },
+    {
+      "path": "android/app/proguard-rules.pro",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/androidTest/java/com/httpsms/ExampleInstrumentedTest.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/ic_launcher-playstore.png",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/Constants.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/DeliveredReceiver.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/Encrypter.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/FirebaseMessagingService.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/HttpSmsApiService.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/LoginActivity.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/MainActivity.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/Models.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ReceivedReceiver.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/Receiver.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/SentReceiver.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/Settings.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/SettingsActivity.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/SmsManagerService.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/receivers/BootReceiver.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/receivers/PhoneStateReceiver.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/services/StickyNotificationService.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/login/LoginActivityContent.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/login/LoginViewModel.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/main/MainActivityContent.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/main/MainViewModel.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/settings/SettingsActivityContent.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/settings/SettingsViewModel.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/theme/Theme.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/ui/theme/Typography.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/validators/PhoneNumberValidator.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/java/com/httpsms/worker/HeartbeatWorker.kt",
+      "category": "source"
+    },
+    {
+      "path": "android/app/src/main/res/drawable-anydpi/ic_stat_name.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable-hdpi/ic_stat_name.png",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable-mdpi/ic_stat_name.png",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable-xhdpi/ic_stat_name.png",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable-xxhdpi/ic_stat_name.png",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/baseline_check_circle_24.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/baseline_settings_24.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_colored_logo.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_launcher_background.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_login.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_pulse.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/logo_cropped.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/logo_mono_cropped.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/nasak_mark.png",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/open_in_new_24.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/values-night/themes.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/values/colors.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/values/ic_launcher_background.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/values/strings.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/values/themes.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/xml/backup_rules.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/xml/data_extraction_rules.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/main/res/xml/file_paths.xml",
+      "category": "other"
+    },
+    {
+      "path": "android/app/src/test/java/com/httpsms/ExampleUnitTest.kt",
+      "category": "tests"
+    },
+    {
+      "path": "android/build.gradle.kts",
+      "category": "other"
+    },
+    {
+      "path": "android/gradle.properties",
+      "category": "other"
+    },
+    {
+      "path": "android/gradle/gradle-daemon-jvm.properties",
+      "category": "other"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "category": "other"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "category": "other"
+    },
+    {
+      "path": "android/gradlew",
+      "category": "other"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "category": "other"
+    },
+    {
+      "path": "android/settings.gradle.kts",
+      "category": "other"
+    },
+    {
+      "path": "api/.env.docker",
+      "category": "contracts"
+    },
+    {
+      "path": "api/.env.production",
+      "category": "contracts"
+    },
+    {
+      "path": "api/.gitignore",
+      "category": "contracts"
+    },
+    {
+      "path": "api/Dockerfile",
+      "category": "operations"
+    },
+    {
+      "path": "api/cloudbuild.yaml",
+      "category": "contracts"
+    },
+    {
+      "path": "api/docs/docs.go",
+      "category": "documentation"
+    },
+    {
+      "path": "api/docs/swagger.json",
+      "category": "documentation"
+    },
+    {
+      "path": "api/docs/swagger.yaml",
+      "category": "documentation"
+    },
+    {
+      "path": "api/go.mod",
+      "category": "contracts"
+    },
+    {
+      "path": "api/go.sum",
+      "category": "contracts"
+    },
+    {
+      "path": "api/main.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/authlocal/token.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/cache/cache.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/cache/memory_cache.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/cache/redis_cache.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/di/config.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/di/container.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/application.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/application_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/channel_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/client.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/client_config.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/client_option.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/client_option_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/guild_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/discord/response.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/event_payload_formatter.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/event_payload_formatter_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/factory.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/hermes_mailer.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/hermes_notification_email_factory.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/hermes_notification_email_factory_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/hermes_theme.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/hermes_theme_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/hermes_user_email_factory.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/hermes_user_email_factory_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/mailer.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/notification_email_factory.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/smtp_mailer_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/emails/user_email_factory.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/auth_context.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/billing_usage.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/billing_usage_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/bulk_message.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/discord.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/heartbeat.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/heartbeat_monitor.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/integration_3cx.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/local_auth_credential.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/message.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/message_send_schedule.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/message_send_schedule_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/message_thread.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/phone.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/phone_api_key.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/phone_notification.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/user.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/user_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/entities/webhook.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/discord_message_failed_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/listeners.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_api_deleted_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_api_sent_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_call_missed_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_notification_failed_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_notification_scheduled_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_notification_send_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_notification_sent_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_phone_delivered_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_phone_received_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_phone_sending_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_phone_sent_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_send_expired_check_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_send_expired_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_send_failed_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_send_retry_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_send_schedule_deleted_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/message_thead_api_deleted_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/phone_deleted_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/phone_heartbeat_check_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/phone_heartbeat_missed.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/phone_heartbeat_offline_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/phone_heartbeat_online_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/phone_updated_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/user_account_created_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/user_account_deleted_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/user_api_key_rotated_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/user_subscription_canceled_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/user_subscription_created_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/user_subscription_expired_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/user_subscription_updated_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/events/webhook_event_failed_event.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/attachment_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/billing_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/bulk_message_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/discord_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/events_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/firebase_email_auth_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/handler_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/heartbeat_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/integration_3cx_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/lemonsqueezy_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/message_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/message_send_schedule_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/message_thread_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/phone_api_key_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/phone_api_key_handler_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/phone_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/user_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/handlers/webhook_handler.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/billing_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/discord_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/email_notification_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/heartbeat_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/integration_3cx_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/marketing_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/message_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/message_send_schedule_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/message_thread_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/phone_api_key_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/phone_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/phone_notification_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/user_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/webhook_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/listeners/websocket_listener.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/middlewares/api_key_auth_middleware.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/middlewares/authenticated_middlesare.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/middlewares/bearer_api_key_auth_middleware.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/middlewares/bearer_auth_middleware.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/middlewares/http_request_logger_middleware.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/middlewares/phone_api_key_auth_middleware.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/attachment_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/attachment_repository_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/billing_usage_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/billing_usage_repository_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/discord_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/google_cloud_storage_attachment_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_billing_usage_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_discord_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_heartbeat_monitor_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_heartbeat_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_integration_3cx_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_message_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_message_send_schedule_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_message_thread_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_phone_api_key_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_phone_notification_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_phone_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_user_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/gorm_webhook_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/heartbeat_monitor_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/heartbeat_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/integration_3cx_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/memory_attachment_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/message_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/message_send_schedule_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/message_thread_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/mongo_heartbeat_monitor_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/mongo_heartbeat_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/mongodb.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/phone_api_key_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/phone_notification_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/phone_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/user_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/repositories/webhook_repository.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/billing_usage_history_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/bulk_message_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/discord_index_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/discord_store_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/discord_update_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/firebase_email_auth_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/heartbeat_index_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/heartbeat_store_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/integration_3cx_message_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_bulk_send_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_call_missed_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_event_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_index_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_outstanding_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_receive_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_search_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_send_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_send_schedule_store_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_thread_index_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/message_thread_update_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/phone_api_key_index_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/phone_api_key_store_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/phone_delete_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/phone_fcm_token_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/phone_index_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/phone_update_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/user_notification_update_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/user_payment_invoice_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/user_update_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/webhook_index_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/webhook_store_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/requests/webhook_update_request.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/billing_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/bulk_message_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/discord_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/firebase_email_auth_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/heartbeat_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/message_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/message_send_schedule_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/message_thead_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/phone_api_key_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/phone_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/response.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/user_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/responses/webhook_responses.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/billing_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/billing_service_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/discord_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/email_notification_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/emulator_fcm_client.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/emulator_push_queue.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/entitlement_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/event_dispatcher_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/fcm_client.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/google_cloud_push_queue_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/heartbeat_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/integration_3cx_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/lemonsqueezy_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/marketting_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/message_send_schedule_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/message_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/message_service_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/message_thread_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/message_thread_service_test.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/phone_api_key_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/phone_notification_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/phone_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/push_queue_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/user_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/services/webhook_service.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/telemetry/gorm_logger.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/telemetry/logger.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/telemetry/otel_tracer.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/telemetry/tracer.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/telemetry/zerolog_logger.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/billing_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/bulk_message_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/discord_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/heartbeat_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/lemonsqueezy_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/message_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/message_send_schedule_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/message_thread_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/phone_api_key_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/phone_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/turnstile_token_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/user_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/pkg/validators/webhook_handler_validator.go",
+      "category": "contracts"
+    },
+    {
+      "path": "api/root.crt",
+      "category": "contracts"
+    },
+    {
+      "path": "compose.production.yml",
+      "category": "operations"
+    },
+    {
+      "path": "deploy/api.env.example",
+      "category": "operations"
+    },
+    {
+      "path": "deploy/compose.env.example",
+      "category": "operations"
+    },
+    {
+      "path": "docker-compose.yml",
+      "category": "operations"
+    },
+    {
+      "path": "docs/NASAK_PRODUCTION.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/NASAK_SMS.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/project-guide/README.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/project-guide/architecture.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/project-guide/operations.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/project-guide/remaining-work.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/project-guide/source-map.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-05-26-nuxt4-vuetify4-migration.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-07-18-message-thread-archive-ui.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-07-18-unarchive-thread-on-receive.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-07-18-webhook-email-payload-formatting.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-05-26-nuxt4-vuetify4-migration-design.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-06-24-login-last-used-badge-design.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-07-05-affiliates-landing-page-design.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-07-13-getting-started-page-design.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-07-18-message-thread-archive-ui-design.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-07-18-unarchive-thread-on-receive-design.md",
+      "category": "documentation"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-07-18-webhook-email-payload-formatting-design.md",
+      "category": "documentation"
+    },
+    {
+      "path": "graphify-out/.graphify_labels.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/.graphify_root",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/GRAPH_REPORT.md",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/007372fb9f02b0d1e7ce8c09f0e72b0495a6465bba776ab61fa16e98c84188a9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/01847a1d5361a0782e5e3f71a9f74376f65bf185bccd5b8e56a17884a0d06ce2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/02c4935fd9a0b0a60ffd9e3ea6638f46140aab5734824ced4d4912023635c268.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/03b131eecd86b026604880b4bd0c45ef8060dac80f0f41d1e67e1c2d96bb997c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/03c3c9c21bbe46a1d94eb3a18aaa858055a99b4118620b91bfc6da103fe4ba28.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/049736a491cedf8ad3e9cd1cb488f64ab83750d14a33a5059b5cc602f69933ad.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/049bb7f1c0c9caeff4ab2edcd3d85a78598a7b7d97d4c9e8a238b14f2ee328fc.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/04a3e819374bcfdcd8a4775445bb9aa022696ed835c02c6116debad7df4a6cd6.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/04d720400154e72f137e4e93f6ecd0b4502674a6bfff53eb5a5da43bb1c06f56.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/056d8dc8b0ec0324a52e5386b3f4cba6cb30b5a8170798171af3bc9d7a03aab7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/072ccfa623d02e8d32c2a0bbcddc0ef1b34584b8ddc528afb34500651f1e2a82.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/081a1e77759850196385c6c244686466102ca5f7a56ac7974c13e41433925495.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/083191b66e941321ac9c16649db482b85fa2f494684bd1e5a12ed52a15474a6a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0837847cb657bda2424ddbfe93939167023d4afab4258c507fa348e19640a2bb.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/08bf327f16ec4e369647d1a96a4179d045af1c414ff03bf5025b8bbc277d91ed.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/092be5254ca12023f8021ecbde78a43257224ba2bfb7761131266d0b7e338088.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0989d9d8d13adf72cbc8c6859be504373c0d0e1658dca0788e7e9b096e1d4830.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0a9c29c26fe2a95e68ef2a21d741966f323de1bce1be4b772476d098f24835c7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0ac840b37f0baef5bfb84a787878c32c7b586362efb8efc598fd4e2f58b7dd86.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0c64918e7a2dd3af6987b27782be4becf7d097305038e0747ad89dd6c59513a8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0c83be0632ced4775a82cd606e08730278b9507b878633b09aadb8006b4d2efd.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0cc5dbab8de875d6ee2a102abfd4286e9971ca6897f6fde1e9ebfca9ebc94be8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0d09d9345d02cccfc8174dd086463126b61e42ae8bbc88735141428cd55f4639.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0dfd57aacf02e4ff79580b451bd00c500e0a22251acdcaafaeb0bf995fd7b543.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/0eab5b544c26a6d6006b81afbedd76e463d4468a4acdbcefc415a09f80c1dc33.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/10c36328df643868a951fa2fe2fdeff1eafb9fe24aa44e0c7995ed87ae3b9476.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/10d58527ffc2c7233bf2d8da336e2d6b1a528c9356fd2c07ef5feb9768c34a4d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/1126a04f29394dc3c63c0dff4762ee9aaa51fc3788b2f3d14c4e7bc008156eb9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/121027900d80c6e8636f3abe38cabbedff2a57ae9a063550fdb309c63488ca93.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/136fb86802828cc47d87ae21bf69664773213d834d845552675c4e144ef963b8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/138ba1c04a485537863939ab92f774134cd2fec12d04d1a8cb78f848e3be973a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/13c6b0c33a8350ba88d7163167ba47e539458d296075ac235699b20e4db6f796.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/14474f8331e858ad055f36e2ec4506e080b6424d87a474b941aa1f5415bb28da.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/14e003d779dbc91e9f77e493efc242149a8830d2d273586d171fd9601b318590.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/1595595cb0fa08f02b0272801f14f271e953832a8aea13ca4c636e0d2b400040.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/15d976882c0e792c480763e2505bcfd05996ddf9e35248a60a96093c265858bb.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/1775274ab2ab4a5767b4f5958a7b75f8e1eb08a9e7d5ebcdff4b9b12dca755c0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/189a33b55b94bfa8327d09773b6377c01b724a5a4fef050088bb5bc7d8590b59.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/196f3aafa640959c299f71f97cd1333763ee0d65c3f11a297e68d99a9937b47f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/1a51723dea21fb98d2fc6ae2878fa3c689dc3844cc621898bc827ee06d12ca85.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/1cce8e216ee72d2f8496d453d923b5f4463a74430e9a99ea4af63d1237dd8bd9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2066c7e88d8b60f14ff7ebbbdbf1873984198a73c29112d5be5792d493434c96.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/216840660ce29e3255845a173f61cc45952d2f7088485cdf37251ce9dc4fca8f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2549ceae0f7ce474bc78208a0ac315b2d3b383c3b50069d2a964658c76a3b432.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/26484d1ef290600db3a026c9dc164f196582df1f088b569fe259838a8b483b74.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/28cd647c7c3b06dc93664697ba749b761f6b6445e0e94b45430944bc2e5363ac.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/28dbad2ecb7d25a693fa6053d927d7cfd559033787bcec4ee525c544ad12ba8e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/292810184c97680fa29d1a04ddebec11804dc3e04828c9bde5aa7467bdcb3f04.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/29a2aa881b2fda355cd7e180cd32fbfa68156ba4778ddcb4b02cbe65af0259c7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2af7f849abc95f9eb7eed450426eda8ad178a3aa42c2e58db8bf5653594aa962.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2be30518b20091a6bb877572f239022cfbac9cdbdf2b16c5534ef171e40ba4de.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2cf0c7ca154896788d96151e065daf677bf55d0390b7c06f35fc1b774f3d178d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2cfaf8aec6db61b0327f16e9cd80c3c688c6a95f3ab07d5fb291a005112e3783.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2d573db2f7b6a5fa7998fde877dc83f5a3e6f13c4ef34fb16152c24d61fc212e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2d68f0318d65aaa6d5815cace4f6e8d4d8ebff58834f5de2dd9f635cecd48bae.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2dc3a6afda69181b9fd008f499ec2afd1cc6354e215e7dfc7c3bd17e4b35d8b2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2e549c62d8d8a285241498dbd9fce4c28c21741a405935aeef9166b7cac59bef.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2e69846926f70bdf02f247efff5486e76563ac8422911591cf9dd5cfdb4d5f1a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2f1073a06f086c0142eb49ce3d3882f31c7cd46d8f5a02d342efbb25e6f09c3d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/2f58b28269fd0d6b4ec981841b11e894e627c2491e83a65b2c70b1aae3f91728.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/320bbcc272fdcd474a25a8ae54405f3c852e46fba979aa4ef62712e0ad5bd91c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/32a7e4541fe6ef7c55f191ee85a68e53eb3c3262b527c5fe95ccc49a440040d0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/32c6d59b70f23bcf7eaa4f3083b001e7cf7b5111b1649ee8ec598e069c9f6d0b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/330aaae694e96a0c387be83599db240b3412786d8f4e8e9b7911bb202fe5ac11.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/33163ab35e3f8afe03b04e8fa19bbdf3020a8d4ef13ba2a082385abb1259cb76.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/33e3f081e72776cab434efbc0c48fd1ae866017009985c5c93138f9d34883596.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/3417edfaf4454779f3ca72e18d6ccd3f15de5315865419fc295be28b1cc77e26.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/3572d4bd83c19a24140b815085bb5584f70f6cc94ed5bef82721a72174a20f4a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/36c6a442c01c0ff9920720a6a52a4d95fec2c342fb37d2508fa14081075033d2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/36cdb9be5b12667b54ca62ff71a0762eaf2cc758498a9d1309760674cc8e5136.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/3798f221d4b0c19ade926aea81baeea964860e1362d81eab0b4307a0e2f3f35c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/380458306b369ffc94efabdd4d1d211094912d28a4abf8e1238cb49ac0d0fb72.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/38ce3f312157d729e55e21abb5cbcb5e97a3b2f0606d1852f11dd09f590a896e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/39b469df8f92e02808778ad70163883e46a93d376b8bd55c4db8a2990ef4d0a5.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/3a6849afd6396cb772bc2b0b894ede966c4362b74ae68111e4c17b0e44e48503.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/3b268307976a7665c406f3435c6867289f8025e0fcb36847a518de6f26b2ac33.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4106277f844f70d1e7d47f3a57e56ced28af6167984c8f20cc477652ab3336a2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4164043a2f3d85209eda8ac744bf5c1a7c85bce5f75997c2a3fdbeb602c8beb2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/420505c491551252ca54f52e1a97ab58b2c5ba0361c527c3cc88fbdb0b678787.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/426f7921717d4b9a779419dbe8abf97fd6dbbe59ecfe5912772adf133f1b275a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/432fe6219595202658fac957165efa5a9878f0ca4a3f6f3eae5dd53180236d42.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/44b5bb5b32e5d3a50d26619279046f1f6b042c068c5756890b30a3e3de2041f2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/457da54f4a6ca8aea65aebdf306b53644f5b059bfd2af53cf7697953cda416c1.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/46662b636c9141273bc883be392d057aeb150258d662d40c29e4221c8c04066b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/46857d9822c5d959932ac3946e49f1bdd4e041b98d777ccab3f3a3ef69254939.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4770b8f4562268f3cff72d01d1250c33c4e8f3cf9bf36aff6c76bebc06d55cc2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4790add60e958253a80fb7a353459134af1507274947d69cea3e007a99b952cc.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/48162a5c61c6797b744b0f51b6ff4eefe08fa23cff422fbb67c48418b44d3319.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/48437bd893dee78c8b64bd17412aef67ed5e303b0efd4c173b80aafbf1213c27.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/48665f5e9597b78d8935026d615a6a92359669f180165af3b59c62d199aa33fa.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/49093f8ef5f5629c77812019f59920f202e8b16c1733127e3233951976a8f270.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/492f25a75b3e4af179b19ed18efc56c1e38c0283231045b86b9f6a02351c7cd9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4ac2ef6b15174d040cd5d4378b4ef82b2b6b09e4d64f02061cbcf9d10f64ca1f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4ad2c553af70d2bcee2bb4b73584120382316bebd9f90ebe36f81d057e5d980f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4b3647f7058eb5e8d86a6de9b59a38f0ed2327182553b032f58dde6dad031332.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4b835a5a728e5d47c1df44c2c94fc188b4a91106316d3e53ed756c9d3d14dcd0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4bfbb764e72410ede78098019d53fc1774c73f7afc2f7517c0299f58dd8471ec.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4d6ed4cad31b2d4659e9c42bce4868dea870612351739bca4fd716eb48a8589a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4db07c7ecbfe1a716261ba23233f2458de1dfc1306281b89451b483419e7c492.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/4ec02502386679594ba26e6750577fb69ca0a05049508bd202e823831b10d25b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/50d21ea1184f6aa7f2d70c7c394bbce4192a77064174e6d6c664626e1faeb3d2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/50fb5f72ba871b4c2f61c7037e235903207c6658a2901b18118a778126202f45.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/518ddc44405f6ce5d92cc31a209053e214141ad9c86f314015427692f9e6ce16.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/51e858ad4a4656ed73cf0ccf51552c4b2ce2d400f294fedd137ac1411245784b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/52ee546e343128319f038588705d36e4329ff0c89da8811053c65dfbc62e402c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/556edc4f211ae7ebcc554dfa19fe92da7d3692bde29f49a975608cd7eb457c39.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/563a5bdb027cdfe679e0455c3de2fced7efdf66cb09dfa5fa9cc99c2c104811f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/572fc8a41b6ddd2dc0432ac0578e5b554f723a0fcaf9c3a6b2f46fca4091d419.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/57d33ef9e628533bdfe6683193aebab8ce96ab0369590618b82077490e9413e1.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/584ffd3c032b86a74e6f84e679a1bafcbb3f031aa3ae623b1e9be253497b98af.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5b2b1a741a4e48327c534774cba180545345cab49ed668341ed1c39ea5887106.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5b3784ec176a9093b84a80b13c7ccadbbad0dd9d236206e9a1b36497494d6bea.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5b6b002213614eaaf346fe768ce2212c4affe5dd7ad108502a16de6b6addbcab.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5b7c9b5814d8657cd936c4195b9563bc63d57140a5fbc3e1a1709df0139163ca.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5bb3c91e38344682bc1850fc0fb669e01c38f22f9da7e5b3214f6195664b37d5.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5bea1bbf0afaffdae1b9259ce1781ca4d73a82576d27e146d6c30220ab462e63.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5c0eed787d00a81316b8098e08a608ef245a6716fb8de83f2d302956c48fa62d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5cfad00c6353e54c9c75443f9a41dc70bef0ec05606c234df4c80b992d8d1c51.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5ddd1b21d39aded1c365c1945c6cfb74b04e2409fd222238141651f0216d2aeb.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/5de1b8cc6d4addb327835b3b87457a7c70646a2806328efd2ddae6caf00a54cc.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/617e28cba27cb7b4149557daa96b58b395f16a98c5b95de6f4c434aa9570221b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/623514e6233f2d8ca9729b0975af5ccff577e27845e4be72f64c4f124ffc4525.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/635fa64602ee33b4032c8f1a34a9bf6b25c5c454fc97f22c991e4f96b8c0ac16.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/6382c52d5bcc75c05f83863adf101feb0b6493807f4f01f5232be2fd14f65169.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/654315ad9b65b00344fe6be4ec8aa83223ddb3c4e5240f6cce2f23799bad8e0d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/654abbbcadf4953e659fda75fb3889f1baf17f0f3a33660f6536b3cf22e6790b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/6618bdb27508b3ef5ec20ec94e9558c592a9da37fbfc48cddbacada3c809ab82.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/683a123050d11dd59164ea9c71b6c2c004ecf9b4492f3fdc641a607e477e6b83.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/6865c42cb1481503d0f1b00ec1441b4d8c6fdf3a054ff04ef44aa9817dd36e08.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/69c98ac41de6c1cfd92cb0ddeee96343fc13973fc7f966dea14b644005837ddb.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/6d039f62f87bde9c2dcb296479d85762be75df1af1d88cc01dff39bf706fbd30.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/6dfc049301920c23e2b96444fc8b9d07e5d647e2ff4415b7bc4ee82d50763944.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/6f0fc5c030bd2dd66ae4e1eafa21db322d8ab7afa8d71860afee734a6e6e3583.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/6f1cf3dad5ea9b9f5b5f9705dcbebd9fca50d084b14e356b86a11dc394d6379c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7117dfd064965445ac615e954f98b089e48bf44508fc8b57231c2a4dad73e4d6.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/71c68760400750104a76934bf1a8e9c644d24f34b679a90119e171ef11b3a53c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/71d2f14e029299344a9261f4dc16f055f38e7fcebf8e8cc636b24b16a641f52c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7377a661e81bf6d02a6358c65c0acffc3452104c0b5a54d42ea9e40f3b70c3e3.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/73d4b4fa1fae835f6a8e37a23c089ee3424691318ed01b8b9c6c8e43b7ebe074.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/749246932f6c91b7db3a2ca3b882200e8af4222049c12115d96ba79d56ebc595.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/74f559cb223cdd937f4d89368b24fa0b20ad501362739fe0bb82c7552d0f8d04.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7796b97a2de95c9f3223dfa1c332ee948a46d3df9b17ec5b3d6d7f9c776e804c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/785231d50878b45d435fccabdc1e4bbe4203403f17cbede880d94ca856bb6d13.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/78c0be349ea9040b10555f2526d04eef50aa63de9e41d2de114d0921535956e6.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/78e4fc0941f79df5638c7e12ada94042bd8ae40325c8ac3c0c948e3f1004a587.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7a68036079bf2d4357875be2610b041d59189e77a1c7912d9eb35dd39dba96e7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7ae4e474b34ffa8e986cbe9c1aaa4dab88c696aead3b9de87cb9bfafb72e2e94.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7e3297741f8d799771fd2b08b51d387f24b7cde11c908326ab1afc6b70ae0944.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7f759a74dba9c2f3b36d05299fbd7eeec3629919b63db47dae2375a5c736e9bd.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/7fb49d33b730318733f422b4cebecc236d8568713b090d33017cab98e9add26e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/80d6b661d16f6dbdb1486db1956e53d17131c96667dab8bc565687ff5e1b34d0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/828cc031f38b1cc5c351391524183838131728f0b2da437110528e838253a6ff.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/83f542ff718e5a55a3bb5257bb7e7c031156967dbd898bbfeba126187607c70f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/84d001002af25cad4391818e80cbc2b7d37bc6e3d7a58e306f02299fe4e7a2c2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/858d459e6026d4c767f9a4ddd32ad84dd8093eb7d2c3aca9132556870b5b05bd.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/85dd5b683f2401dcdd5e3ba313b0a905dc93987e55a93d9c5baf3c9abfd24ee3.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/85f6ab2c75d592233d807ccc60f99e5a1f8e47f4f4abd14ffe1e862cc101f6fa.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/87d9bcf6aa76e1bfec690f2d1779771f022d0becc9ed02c7085341fbbbb24238.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8918840aec5b553af681c8af05c341a266c196d1de36becae0d75eee20d58029.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/89fbb8f1056e18ae0b6d956b7be45fdc4606ea966efe8cddd47876062d3f8a53.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8acf0659532a50da31ae049bcb5abe2d655641b37d3083447354ab3cd45c3e5c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8afa1d66c3161452dc3a336eaa76d6b4960147f343245f179e7f5d01dfc9a230.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8b4066c63fb29f93cd08f10178110ae89392982494d647dece329ad4e4d6d020.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8c221f8a7a233cc05d01e7c3311f757d815af80363fc211e900efbfb7ddf8398.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8c34b070004fe1b3073d84ffb3fb744b4446883d5bfafc020e627220f33017f5.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8c84547aa4274c5cd6e062f1d92f0edaf11d68b28158b43a17c9303bce7b92c0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8c877b3775461b0db6a4708043a06d043d955aeb7c1559aeb5d66245f46d056b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8c948abfa538d80f7d1f7a15acab4eac5c6eb59dbdcee5a711629502413e4ff2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8cd20a03fa0aee1e6263be553d8f80e353c5a901cd4d5e7715798f8274484eca.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/8fd84da58db6769391ea09ba960d9e4349b8323bf5ac83dc67cf64a914896996.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/90117f6f76ffca431f5fe625281d26b2c4304e4b322215000eecec80037e8322.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/91b2d2f454ecbaa1ced4b52bcf99f2f640d633de800c5719fa3ce4b2f01cca1c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/91e58cc886388bad78e165454152c1089b570a700bd0462e41a9081ecdfbe5b5.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9205b37fe000211d1b1ecfb179fb7dd278a6e51601b30ab08037c393b138308e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/92e7dc663a36cf183f97aeda93fb5c8bf1195dff5d8b6109ac0bb66c10213dfa.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/932883d5c115e004ab0246eb0e559f81bc6e66fe77f4fca4304e76d3a34358a0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/93d84decb65d4032ca66bc02207e9f45f4fd6653b0264687d299e68f6b3c5e43.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/94f7a07a98bb022ef63b9757e3aa3c0218e13427416d68d248287ad5e87e88c1.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9587d922c7d3ed64da413c7a51b2babfc393f889f574d3e8fb74eeb841a30140.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9689ca622e42aa23d90ae1ba1601a14f7fb5fb488d8aa8becf19555ac02077a9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/981b9aadad4b4f957453c5a2d763bfce3798e1c72bf1dd66f6a8d58c2881afc7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/996a79e2cb07de03b0b3c61463c7fa5a553afe6dd3ce9d98c03d51965a31f6d2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/99766e186a377cc0008b915477941567f766aa6027363c5804193799fd10aaec.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9aefe2166b7ccad24c14ab1dc08b840edddd81a4cfc6d40e2e7ebc5343b74191.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9c87546c4581a9fc94888ae9f19c40c6b952345245301fe374a2496140df4b48.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9d5469b3f1c4aa8e23029afc7e53ab928694f4668724981a385b2fc63669fb2d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9d620da35b791d8bd6f88c0aa57622523f4dda4f14600b479c6d1ef055fb8f26.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9ded35265312dd3d0d96d1aa5c78d70dc5e618c839e7e7ceee0fe9708c38bda9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9e1a4cbf75aa975716413bb5b85db234711a193b0f0524b94e1ba44c03019300.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9f48cbb55aee3e5c2f619e69631597cae667e4dea2c9faec019163c9148d0dbd.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9fa3e9af8d1d7e91c0bcbdd08cc040dcf1ab93f8ebd875f78327d500f592db5b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/9fdb40a5ed737fd28b0105777fef0769826f589b3b45017271f48a374fce66d3.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a0b05e6ddf97105d35fc99a1567593d5e3f541a446267a053a07768c7a6c1724.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a2aadf22e48e042affaf05dd654464fe474ed244a683b4f06d05b6c3415ee390.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a35b5705e9aaeb69925d28ca0ce17c62b18209b7d7bda929bb8aa274b33073e0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a4fed1d9f0b3acc40cc079cc0c1dea3350b5660badbed8a84857219cce35cc5c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a509a7c1c16f21138d67d8ad4a35414506ab87cac64cb36db4c35838f721df4c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a594773910f75516e75ba522067d18e300d55eabb48aef1a6ea52b80abd54fb0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a5d0c2df82d671f2555d0bac7984795f816da9ce995d53ea7232521a83189f6d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/a818d567078bd1ac94a3196f2ceed20706aba101dd531e060455914d7d3f9ccf.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/aab0b6b3a0810540e7747acbc0ad99af1b64faeec1d6f65349dade2933e87d3e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ab514419a804508a236dd332f9d4f1100f9cbff2de92fb0f5d2194a38cea1d3e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ab8791346a1cd8725ea9b42011095622fc9692d7f849e27d9fce3136620241aa.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ab89ed5914d429772485af45fcbdac6655eefd5c31f76e43891e5cb117543aaa.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/acdf349b9092d7a91c93ecd6a2831e9d13da6122dbc81cd919031dc4b313d10f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ad63d3d9a72f0c31e46985deb97f69c5d15d946eb7fdf0a49fa4fd508ec0b5ba.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/adda30521afd32678e6464ef266a1f603b28d3c9fa32629f410e7e3c26173a09.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ae78314ea5445bb3fef6a245e46716be4fc4545ecd123371ccb9e645a48e1260.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/aead1a5f3615d066d28d16e7038c015367b9adab7a0890d22b1d44e57176878f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/aef9fe290f28c07e56cc6ba92ab2bc915e680f3a1265ebc19e8ce129ae13a8db.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b14ae0711c1c10e06a7457ba19570b09697b863e5d646568e28a34940a0a68eb.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b1b08289318929fa1dec57244b9d72557c7c5ad17821d529cf235f0aa814db27.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b2488d88e4ac0418d89813151fb9d37651eb9d2efe43d614ed55bc2191eaeeda.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b286527c4c46467d93185dc39f232b39f27c3ba6fd02f27fdb68085b40577c25.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b28cfa5ae46faf91f821cde645b2267de22130a89a818dde7f998f0bb67505b3.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b2a6a32fc03eb653faac8cf7b4c5d34ea6ec431be2cdc667a5e385017f3b7133.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b2a9093a4c31ef8a6864a604552f384b729bcef427fe35ec3a29510c63e64a18.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b362ee80cc5b0b96af84741a16651205a5035437a0c974950aadd2d96c6f3473.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b4972a908a064b01dc00f49564faeb81b8b5a91d7254d4a40eb7367d29f7ee87.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b4fc2374b04a78a032ef595ea2933566eeb19b70b00c76f71b09d15db85dbb2e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b65bf0ab050e9b60ec35ad00e368ce9e6d5668c5a793c60637fe5863f2e89e73.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b6a01ce3ee7c11632d43ba5c34e08a5ef511b488060dc2aacdfe6614877d85ca.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b6f747dd1981f281907dc2b8a3663aa679dfb5466c13e890ae8ffd6aafb7d8b4.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b87ea8e5cded2a949e193ac6b233a586429b2c26374522ac148f539ecf18c5f1.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/b958963cc6fe37611530928375eb86ae7f1aabdbbdb01fc2038379bffe60f792.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ba32a75b3fc98f80460dc07939defec99987420a507257edf0876fec879aefde.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ba907fc84e6a5be20597d41ad5a4053e2739ed93b02440ea1ff9d1746f2137ea.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/bd62a4c337c1677c70c7c3708622937d7abfd48ca4bf993b2ff1170f4244cb4a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/bddb35f886ce258e5d41d5627e00d9af454c8e0e28ae7bb874bf596c59c09526.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/be76f29397008d432cc91dcf7fe531e4adab0175503810023e7b4ce9a1974ad5.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/bfcab47ed7dfda6070a52c927eacd78691d93a3b73d901f35387e0d5c72fa62a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c17ef2d19615e91d5d12447c727a3a9dbb56a84c8c9fae78c48b3c7b75884b56.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c1c0cf555339c149a6e5a0c4d5804b776830a0df2449efd01efb0de31d58cf82.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c253ff5b1cc6a798cdf5a2f4173e003c531d000c7adc9fff314c707a0607957d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c25dde261dc7dbcdb81989b214b8daeb0e1f8072a9f1e19dd7c264b9ff1c96b7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c2848fdd2a6cbfc867c531a2bedb8139724c702460a5b1434830cf43e2787179.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c362ab70fb1e96e0c3cad5a81f5c0757932a442e86daee8369e48d8cfd62adc2.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c36c6b6cc545845b80a26df4104b1d0288fd36ec45ace73ef78983b35baf6640.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c4975e5eee7503f3fbe87a9ce014322daf26232a52692f34794171408c7ee66b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c4f0495fb87c90f842759f6bab69c3e38d205a775c5247db02e89567b3f3317c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c5a56977edfec42121adbe76df6516acecbf674c1995df6debe81e725e689b10.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c6209cc28006de6535fffc0a9f066feb028d31ea4d0f86c2fc7a18e24b0899e8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c648616d744366d8cd64fb9ac030f6cfb9ad7f4e51005a1e89364d2e026b8cf6.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c683ca84f036e89a4f1f5c5df2680c3ccc1179fb125a8bffe50cd9eadd20580d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c6dcb45b9edcf1e8ee58b7dde33f61c56e95c1f0099c88a7173f6b8f6329fe6e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c720d1f5bdac1b1f5f73f006d1e7930c30934743f475ac4ae56f6e802d98d855.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c7b994fbecf79066dbc85a2d5753459b0e7f60125b3dc24d31e60ff4ce7a42ab.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c8b88255dc189f1b077bf87641df6b2bf516f221489c49c1419fb69e1382f834.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c916c21274f12397ba0bd796d8344e221529285faa1c259820055d1a4d92022b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c978087371a38e4c8e80ebed05b0f391ddd24ccd4b292d0a12979fd01c74eb01.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/c9a8c1a93d448c8056872d238502b4d506b6de5c60b24004c1f681996796aa95.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ca19bb59f5b7d048b85ceaa3cd2bd1fde15b4ec2415eb8464aa27b0cefbc0bbf.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/cbfcea7a11d99f44fc028f62e4d085a83173f2e5eeaffb868f61d1e7411bc877.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/cc1d28b9e98d268c46e966111f8766e700cbbb2a0eed77f61bf9142c7b2ea3c8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/cc2db09f6bc02e0cda2052193110f169f0c0662ea64e6e08206a3c436319b1c5.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/cd46f13e22bcafe2256d711ef4a636544a5145835a856f0261892e0a78783442.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ce5a69323168763c4093d6ce00bbba31907af95786c5f4fb5eee0565585005c1.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/cebfb189c3697454d7263ee6c9010734eedbcd11d38883306d37c97ec663497e.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/cf6bac29d85fea2317380762bba4887a0583708b2657ba93761a7ba563d41568.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/cfb279b99a31929b1280ca6a9ecd4df3fc786b7c765cf25ae625544b497f8aae.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d3478d3eecbc8e1af47b7b723f9c85f55a2faeaad3c5d1d06ce57f1b87015888.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d3f3b0476f0c7e641c166d3b8ee617c68cf7afd66b0ee3d874a900514fbda1b3.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d64e5c621d2cc01ec009a2a0360135f143b905b159516bb341589e553582968f.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d6ed7a22f937ba05d814e3b9ed836446cc02cba80989a1241d3330f6d5f1120b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d70c3247b92ab80480903b7cbebe57dd7f6596166a8e6a7b47aac466b7221dac.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d744505b570e37d2f4c3d7fce20a41060d0673c1e7b7e17aa3d9b65dd30f58d7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d78ccdd1a95dd9983ed2d218ab9cd2431db28b6cdf58664dc1d13db985f2e2ff.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d7b046a7ba31a3e77f003dae8aec3f81d1feb34dd7c6265c8a70618eb4d84d06.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d88a1fd7dcf628236582548a40028dd7929ce8e5fc86deb029fda467e60e2326.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/d8cbfa412d4f28dbe54e941169471636e0c86e044690aed926c2772c7bd1fa07.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dae0379a245542c4d7877674f9a383b1356c92e02f7b206dcb943069eb9ea6fe.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/db536097ff09c7ddf80851f12a214f45bf33b1d97bfff5475271e07ac3d8c9c7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dbaf14b7d2d5e3627eaefb09f9c325e73528e720fedc8463d78fae76051eb638.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dc47cf789c0df6bb1b072258b6cb4adde125fa7ebded58c74e82bceb801e36dd.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dcce016247300b06de6f2412f86871e5314989dced92b87e5e5a9a6c30f0e9bc.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dd79ffad10807b81e061d18dd82471c71923c6b6cbf27237922b93e065c454f8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/de16afe73ed2ff2f4df348a348891d3ef54d49fd6f6dbcf51d17f0392ff76531.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/de2c0aebf0c99ed69530f346e6f2958fd409c610d650701e1d79f0fa67a17cf1.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/de381d0c61ae8e17be7568d416e6b85a7f546838e186c51956d7746f386eb60b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/de6416731f2d5047236250328c0453e66345eeb2482f8e87befa52975b2aac3a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dfb3a7f08e315727bf7b59e3068e5b84dfcab8300d6e29c3f684d0736df71f46.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dfc4a4211d328a9c8da872dbc917bb9602e8a8e9a09fcf38921cd2010e3257a4.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/dfc7f77f22d0f7ad643710df655afd4b4222795cb7be359849fbff54889d691d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e0339747b8cd49a581b8421de079fde82796dc850da7d9ab6095a5b8fbbee0af.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e0af386fc176b86fe85c4898f98e19aec580da2eb584c98e514473e4247b5ec9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e16e392d1b81e4f21852a01c3f6ea025628103c9683b7cb8e24f08d3128dd61a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e494b0d8429643bac43b6ce3e527301bef8cc565c2d441a7362155db7b9fc2cc.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e53468914267b608157976125898b55b1bac3e5f421664585004a548e73331a0.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e56a983dbcee8f7018b283e93321d4c082152ee68491ea1e2ec433191cc3e2c8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e5aac008c71720a6c26c88f8355ca9c2f32edb8477131a781e8dfa5fa54cee7c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e61860fe57d86875166d42e3e48399560a7e395537b2dcc61da1bf0d7896578b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e77e314bb76441367ebd28650d303dd43533049d5ff67be47bc0cc6d9e8e2730.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e77fb0c8a9a940e71e4dde73236484fd682c29a3da020ffa361ed433a826457d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/e7e14c9920207ecd95c1d2261fda5386fd9d5a630b1d6932ec655cbfd7202f02.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/eae59eac3e04d29ad89cc850a06a245050963af8611b92629e0559a50f941553.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ec1d822e2c1cb8f1b24fde7b9bfe350a80a0c75a99f4632038b7c5c6ee6ee9eb.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/eca5e88b4a24a4f87b9853cf72e657d7bb5175e73496f4ac4af7cce6bb557cbe.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/eeb1dc072fce46f50b4a3f6363ddda367f73111444b6b48c118c590318553685.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ef13a8ee53fb0764be5b19494edd12f29bbac09ef8f08dee857b3d5575219f23.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ef5f80b17ec17c1dc1f49218f5fb2c536b8a70f1c591417debe44454ad296d30.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ef754d33a604f0a4737bfa0d3b8791258528e70c10f74a176db8cbc3f26e99ae.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ef9b1d1f282139bde0f8700bb8933ba557c43055bc4fca44bc8f61ac194a5c2d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/eff122120f6f3cb3c7e26373c09ab4db2712afdf3e9f1dcbfa37db66fc6d09f5.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f0bc5dbed8762e9377be8ca7e0134c6178bdc5fa6cc9422b0493df0e696dbad8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f145d7b21ff0237e7943a549c3559842eb0da688a32cc547cd96d06f43d2ed6d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f1f265c486984c6c7f12095ed7a3bca32cbfa7057cf1ec859002a2c026d49e9a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f47c4c1e8b1e5de1087940453225c35dfba0243ca35b28c334e4c457f8bd65ea.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f5a435b29f88e342b6592bc7c499744de30fcd5662c8d63a6dcd8a1bce5594dd.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f60f4001dd59d3088f205e7b451c6574c540e11ee389b294494e7d76c6429f0d.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f6724ab8d643453353e573ce6cc4074c56c3ba0ade827f63299c64cc9b259f85.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f6e72b4176135e6a7fe44e2865487804afc9f784686304a320ad82af7444ddb7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f6e8dedd49f1caf95557ced0a4e3fbd40e2683827c91a809e7c4ad0ef09cfc05.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f735f6b36cb35e825322601b10a417c92a7cbccea44b958c0879b74f3346a25b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f7ffd1ecffbb50a8df196fea1f3e23c8f1eff5e6da255b7a495f9746af6c2446.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/f997f99fe27dc3002abd5097eb608ddc6c34b984962b2efc55d841b66e389377.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fa3d5be1c2c5a5a34d89dd93f192b114eaf334af44a293ba609bbf9ef5438c39.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/faef21d5390eb62f353fe5c29025898e3425488bd32ee09d27092cbcedae199c.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fb7a5adf7f3be31d776225c53d398a645dad1556880f6ad5634fe3cb02edae47.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fbe8643b7391d42c3be81c28ae95734bf162d17e1efc8c8af01b1ceca22a3528.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fcfeab25b0139b166c18e254492f666559aa33bc2677659bb1a3deb7579459ee.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fd50a3f665c5b2ea2afb45487dd42e229bf6dfd37b6c870bef6b3a48129468a7.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fe0b2c811cdbcead3dd13689087dcd2342a1b0125fe096adf8ac5e8517e6b4c8.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fe77bffb86954c9e2b853d4ce1cd5f78f13a12642b587cce6c905ff77c14f2c9.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/fec98cc655216107ded0fcb8e951c33e18c098155edd275c0bf3442a9d1bc73a.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.10/ffada2f3f949d828e79b3ab8b88395102de2bde055e0593abc04d469c5eb319b.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/cache/stat-index.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/graph.html",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/graph.json",
+      "category": "other"
+    },
+    {
+      "path": "graphify-out/manifest.json",
+      "category": "other"
+    },
+    {
+      "path": "ops/backup.sh",
+      "category": "operations"
+    },
+    {
+      "path": "ops/deploy.sh",
+      "category": "operations"
+    },
+    {
+      "path": "ops/health-check.sh",
+      "category": "operations"
+    },
+    {
+      "path": "ops/install-docker-ubuntu.sh",
+      "category": "operations"
+    },
+    {
+      "path": "ops/install-firebase-credentials.sh",
+      "category": "operations"
+    },
+    {
+      "path": "ops/nasak-sms-backup.service",
+      "category": "operations"
+    },
+    {
+      "path": "ops/nasak-sms-backup.timer",
+      "category": "operations"
+    },
+    {
+      "path": "ops/nasak-sms.service",
+      "category": "operations"
+    },
+    {
+      "path": "ops/nginx-sms.nasak.ir.conf",
+      "category": "operations"
+    },
+    {
+      "path": "ops/sms-setup.html",
+      "category": "operations"
+    },
+    {
+      "path": "tests/.env.test",
+      "category": "tests"
+    },
+    {
+      "path": "tests/README.md",
+      "category": "documentation"
+    },
+    {
+      "path": "tests/docker-compose.yml",
+      "category": "tests"
+    },
+    {
+      "path": "tests/generate-firebase-credentials.sh",
+      "category": "tests"
+    },
+    {
+      "path": "tests/go.mod",
+      "category": "tests"
+    },
+    {
+      "path": "tests/go.sum",
+      "category": "tests"
+    },
+    {
+      "path": "tests/helpers_test.go",
+      "category": "tests"
+    },
+    {
+      "path": "tests/integration_test.go",
+      "category": "tests"
+    },
+    {
+      "path": "tests/unarchive_thread_integration_test.go",
+      "category": "tests"
+    },
+    {
+      "path": "tests/wiremock/mappings/fcm-send.json",
+      "category": "tests"
+    },
+    {
+      "path": "tests/wiremock/mappings/oauth-token.json",
+      "category": "tests"
+    },
+    {
+      "path": "tests/wiremock/mappings/webhook-receiver.json",
+      "category": "tests"
+    },
+    {
+      "path": "web/.env.docker",
+      "category": "other"
+    },
+    {
+      "path": "web/.env.production",
+      "category": "other"
+    },
+    {
+      "path": "web/.firebaserc",
+      "category": "other"
+    },
+    {
+      "path": "web/.gitignore",
+      "category": "other"
+    },
+    {
+      "path": "web/.husky/commit-msg",
+      "category": "other"
+    },
+    {
+      "path": "web/.husky/pre-commit",
+      "category": "other"
+    },
+    {
+      "path": "web/.prettierignore",
+      "category": "other"
+    },
+    {
+      "path": "web/.prettierrc",
+      "category": "other"
+    },
+    {
+      "path": "web/Dockerfile",
+      "category": "operations"
+    },
+    {
+      "path": "web/README.md",
+      "category": "documentation"
+    },
+    {
+      "path": "web/app/app.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/assets/main.css",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/AppToast.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/BackButton.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/BillingDateOrdinal.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/BlogAuthorBio.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/BlogInfo.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/BlogSidebar.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/CopyButton.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/FirebaseAuth.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/FixedHeader.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/LoadingButton.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/LoadingDashboard.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/MessageThread.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/MessageThreadHeader.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/NuxtLogo.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/components/ThemeToggle.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/composables/useApi.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/composables/useFilters.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/layouts/blank.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/layouts/default.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/layouts/error.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/layouts/website.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/middleware/auth.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/middleware/guest.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/pages/billing/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/end-to-end-encryption-to-sms-messages.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/forward-incoming-sms-from-phone-to-webhook.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/grant-send-and-read-sms-permissions-on-android.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/how-to-send-sms-messages-from-excel.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/send-bulk-sms-from-csv-file-with-no-code.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/send-sms-from-android-phone-with-python.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/bulk-messages/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/heartbeats/[id].vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/login.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/messages/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/phone-api-keys/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/privacy-policy/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/search-messages/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/settings/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/terms-and-conditions/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/threads/[id]/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/pages/threads/index.vue",
+      "category": "other"
+    },
+    {
+      "path": "web/app/plugins/chart.client.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/plugins/firebase.client.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/plugins/highlightjs.client.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/plugins/telemetry.client.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/plugins/vPhoneInput.client.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/plugins/vue-glow.client.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/stores/app.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/stores/auth.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/stores/billing.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/stores/messages.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/stores/notifications.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/stores/phones.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/stores/threads.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/types/nuxt-shims.d.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/utils/api-error.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/utils/bag.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/utils/capitalize.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/utils/countries.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/utils/errors.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/app/utils/filters.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/commitlint.config.mjs",
+      "category": "other"
+    },
+    {
+      "path": "web/eslint.config.mjs",
+      "category": "other"
+    },
+    {
+      "path": "web/firebase.json",
+      "category": "other"
+    },
+    {
+      "path": "web/nginx.conf",
+      "category": "other"
+    },
+    {
+      "path": "web/nuxt.config.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/package.json",
+      "category": "other"
+    },
+    {
+      "path": "web/pnpm-lock.yaml",
+      "category": "other"
+    },
+    {
+      "path": "web/pnpm-workspace.yaml",
+      "category": "other"
+    },
+    {
+      "path": "web/public/avatar.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/brand/nasak-logo.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/brand/nasak-mark.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/favicon.ico",
+      "category": "other"
+    },
+    {
+      "path": "web/public/fonts/vazirmatn-arabic-400.woff2",
+      "category": "other"
+    },
+    {
+      "path": "web/public/fonts/vazirmatn-arabic-600.woff2",
+      "category": "other"
+    },
+    {
+      "path": "web/public/fonts/vazirmatn-latin-400.woff2",
+      "category": "other"
+    },
+    {
+      "path": "web/public/fonts/vazirmatn-latin-600.woff2",
+      "category": "other"
+    },
+    {
+      "path": "web/public/header.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/alert.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/arnold.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/end-to-end-encryption-to-sms-messages/encryption-key-android.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/end-to-end-encryption-to-sms-messages/send-sms-message.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/forward-incoming-sms-from-phone-to-webhook/android-app.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/forward-incoming-sms-from-phone-to-webhook/header.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/forward-incoming-sms-from-phone-to-webhook/settings.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/forward-incoming-sms-from-phone-to-webhook/webhook.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/grant-send-and-read-sms-permissions-on-android/allow-restricted-settings.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/grant-send-and-read-sms-permissions-on-android/allow.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/grant-send-and-read-sms-permissions-on-android/app-info.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-bulk-sms-from-csv-file-with-no-code/bulk-csv-upload.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-bulk-sms-from-csv-file-with-no-code/httpms-spreedsheet.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-sms-from-android-phone-with-python/header.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-sms-from-android-phone-with-python/sms-sent.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/google-sheets.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/zapier-action-action.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/zapier-action-event.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/zapier-trigger.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/bulk-sms-template.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/code-snippet.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/connection.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/discord-logo-blue.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/discord-logo.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/flow-diagram.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/httpsms-github.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/icon.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/logo-mono.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/logo.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/logos/uneed.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/manage-phones.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/mobile-encryption.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/open-source.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/person-texting.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/phone-api-key.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/phone-login.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/queue.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/schedule-messages.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/writing-code-phone.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/img/zapier-logo.svg",
+      "category": "other"
+    },
+    {
+      "path": "web/public/integrations.js",
+      "category": "source"
+    },
+    {
+      "path": "web/public/logo-bg-none.png",
+      "category": "other"
+    },
+    {
+      "path": "web/public/templates/httpsms-bulk.csv",
+      "category": "other"
+    },
+    {
+      "path": "web/public/templates/httpsms-bulk.xlsx",
+      "category": "other"
+    },
+    {
+      "path": "web/shared/types/api.ts",
+      "category": "contracts"
+    },
+    {
+      "path": "web/shared/types/message.ts",
+      "category": "source"
+    },
+    {
+      "path": "web/stylelint.config.mjs",
+      "category": "other"
+    },
+    {
+      "path": "web/tsconfig.json",
+      "category": "other"
+    },
+    {
+      "path": "web/tsconfig.tsbuildinfo",
+      "category": "other"
+    }
+  ]
+}
