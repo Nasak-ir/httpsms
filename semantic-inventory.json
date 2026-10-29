@@ -1,0 +1,883 @@
+﻿{
+    "schemaVersion":  "1.0",
+    "repository":  "httpsms-repo",
+    "branch":  "codex/documentation-audit",
+    "trackedFileCount":  879,
+    "technology":  {
+                       "packageScripts":  {
+                                              "web/package.json":  [
+                                                                       "build",
+                                                                       "dev",
+                                                                       "generate",
+                                                                       "preview",
+                                                                       "postinstall",
+                                                                       "prepare",
+                                                                       "api:models",
+                                                                       "lint:js",
+                                                                       "lint:style",
+                                                                       "lint:prettier",
+                                                                       "lint",
+                                                                       "lintfix",
+                                                                       "test"
+                                                                   ]
+                                          },
+                       "languages":  [
+                                         "JavaScript/TypeScript",
+                                         "Kotlin/Gradle",
+                                         "Go"
+                                     ],
+                       "gradleFiles":  [
+                                           "android/app/build.gradle.kts",
+                                           "android/build.gradle.kts",
+                                           "android/gradle.properties",
+                                           "android/gradle/gradle-daemon-jvm.properties",
+                                           "android/gradle/wrapper/gradle-wrapper.jar",
+                                           "android/gradle/wrapper/gradle-wrapper.properties",
+                                           "android/gradlew",
+                                           "android/gradlew.bat",
+                                           "android/settings.gradle.kts"
+                                       ],
+                       "frameworks":  [
+                                          "Node.js"
+                                      ],
+                       "expoNextSignals":  [
+
+                                           ]
+                   },
+    "routes":  [
+                   {
+                       "path":  "api/pkg/handlers/handler.go",
+                       "kind":  "handler"
+                   }
+               ],
+    "tests":  [
+                  {
+                      "path":  "android/app/src/test/java/com/httpsms/ExampleUnitTest.kt",
+                      "name":  "ExampleUnitTest"
+                  },
+                  {
+                      "path":  "api/pkg/discord/client_option_test.go",
+                      "name":  "client_option_test"
+                  },
+                  {
+                      "path":  "api/pkg/emails/event_payload_formatter_test.go",
+                      "name":  "event_payload_formatter_test"
+                  },
+                  {
+                      "path":  "api/pkg/emails/hermes_notification_email_factory_test.go",
+                      "name":  "hermes_notification_email_factory_test"
+                  },
+                  {
+                      "path":  "api/pkg/emails/hermes_theme_test.go",
+                      "name":  "hermes_theme_test"
+                  },
+                  {
+                      "path":  "api/pkg/emails/hermes_user_email_factory_test.go",
+                      "name":  "hermes_user_email_factory_test"
+                  },
+                  {
+                      "path":  "api/pkg/entities/billing_usage_test.go",
+                      "name":  "billing_usage_test"
+                  },
+                  {
+                      "path":  "api/pkg/entities/message_send_schedule_test.go",
+                      "name":  "message_send_schedule_test"
+                  },
+                  {
+                      "path":  "api/pkg/entities/user_test.go",
+                      "name":  "user_test"
+                  },
+                  {
+                      "path":  "api/pkg/handlers/handler_test.go",
+                      "name":  "handler_test"
+                  },
+                  {
+                      "path":  "api/pkg/handlers/phone_api_key_handler_test.go",
+                      "name":  "phone_api_key_handler_test"
+                  },
+                  {
+                      "path":  "api/pkg/repositories/attachment_repository_test.go",
+                      "name":  "attachment_repository_test"
+                  },
+                  {
+                      "path":  "api/pkg/repositories/billing_usage_repository_test.go",
+                      "name":  "billing_usage_repository_test"
+                  },
+                  {
+                      "path":  "api/pkg/services/billing_service_test.go",
+                      "name":  "billing_service_test"
+                  },
+                  {
+                      "path":  "api/pkg/services/message_service_test.go",
+                      "name":  "message_service_test"
+                  },
+                  {
+                      "path":  "api/pkg/services/message_thread_service_test.go",
+                      "name":  "message_thread_service_test"
+                  },
+                  {
+                      "path":  "tests/.env.test",
+                      "name":  ".env"
+                  },
+                  {
+                      "path":  "tests/README.md",
+                      "name":  "README"
+                  },
+                  {
+                      "path":  "tests/docker-compose.yml",
+                      "name":  "docker-compose"
+                  },
+                  {
+                      "path":  "tests/generate-firebase-credentials.sh",
+                      "name":  "generate-firebase-credentials"
+                  },
+                  {
+                      "path":  "tests/go.mod",
+                      "name":  "go"
+                  },
+                  {
+                      "path":  "tests/go.sum",
+                      "name":  "go"
+                  },
+                  {
+                      "path":  "tests/helpers_test.go",
+                      "name":  "helpers_test"
+                  },
+                  {
+                      "path":  "tests/integration_test.go",
+                      "name":  "integration_test"
+                  },
+                  {
+                      "path":  "tests/seed.sql",
+                      "name":  "seed"
+                  },
+                  {
+                      "path":  "tests/unarchive_thread_integration_test.go",
+                      "name":  "unarchive_thread_integration_test"
+                  },
+                  {
+                      "path":  "tests/wiremock/mappings/fcm-send.json",
+                      "name":  "fcm-send"
+                  },
+                  {
+                      "path":  "tests/wiremock/mappings/oauth-token.json",
+                      "name":  "oauth-token"
+                  },
+                  {
+                      "path":  "tests/wiremock/mappings/webhook-receiver.json",
+                      "name":  "webhook-receiver"
+                  }
+              ],
+    "contracts":  [
+                      ".github/workflows/api.yml",
+                      "android/app/src/main/java/com/httpsms/HttpSmsApiService.kt",
+                      "api/.env.docker",
+                      "api/.env.production",
+                      "api/.gitignore",
+                      "api/Dockerfile",
+                      "api/cloudbuild.yaml",
+                      "api/docs/docs.go",
+                      "api/docs/swagger.json",
+                      "api/docs/swagger.yaml",
+                      "api/go.mod",
+                      "api/go.sum",
+                      "api/main.go",
+                      "api/pkg/authlocal/token.go",
+                      "api/pkg/cache/cache.go",
+                      "api/pkg/cache/memory_cache.go",
+                      "api/pkg/cache/redis_cache.go",
+                      "api/pkg/di/config.go",
+                      "api/pkg/di/container.go",
+                      "api/pkg/discord/application.go",
+                      "api/pkg/discord/application_service.go",
+                      "api/pkg/discord/channel_service.go",
+                      "api/pkg/discord/client.go",
+                      "api/pkg/discord/client_config.go",
+                      "api/pkg/discord/client_option.go",
+                      "api/pkg/discord/client_option_test.go",
+                      "api/pkg/discord/guild_service.go",
+                      "api/pkg/discord/response.go",
+                      "api/pkg/emails/event_payload_formatter.go",
+                      "api/pkg/emails/event_payload_formatter_test.go",
+                      "api/pkg/emails/factory.go",
+                      "api/pkg/emails/hermes_mailer.go",
+                      "api/pkg/emails/hermes_notification_email_factory.go",
+                      "api/pkg/emails/hermes_notification_email_factory_test.go",
+                      "api/pkg/emails/hermes_theme.go",
+                      "api/pkg/emails/hermes_theme_test.go",
+                      "api/pkg/emails/hermes_user_email_factory.go",
+                      "api/pkg/emails/hermes_user_email_factory_test.go",
+                      "api/pkg/emails/mailer.go",
+                      "api/pkg/emails/notification_email_factory.go",
+                      "api/pkg/emails/smtp_mailer_service.go",
+                      "api/pkg/emails/user_email_factory.go",
+                      "api/pkg/entities/auth_context.go",
+                      "api/pkg/entities/billing_usage.go",
+                      "api/pkg/entities/billing_usage_test.go",
+                      "api/pkg/entities/bulk_message.go",
+                      "api/pkg/entities/discord.go",
+                      "api/pkg/entities/heartbeat.go",
+                      "api/pkg/entities/heartbeat_monitor.go",
+                      "api/pkg/entities/integration_3cx.go",
+                      "api/pkg/entities/local_auth_credential.go",
+                      "api/pkg/entities/message.go",
+                      "api/pkg/entities/message_send_schedule.go",
+                      "api/pkg/entities/message_send_schedule_test.go",
+                      "api/pkg/entities/message_thread.go",
+                      "api/pkg/entities/phone.go",
+                      "api/pkg/entities/phone_api_key.go",
+                      "api/pkg/entities/phone_notification.go",
+                      "api/pkg/entities/user.go",
+                      "api/pkg/entities/user_test.go",
+                      "api/pkg/entities/webhook.go",
+                      "api/pkg/events/discord_message_failed_event.go",
+                      "api/pkg/events/listeners.go",
+                      "api/pkg/events/message_api_deleted_event.go",
+                      "api/pkg/events/message_api_sent_event.go",
+                      "api/pkg/events/message_call_missed_event.go",
+                      "api/pkg/events/message_notification_failed_event.go",
+                      "api/pkg/events/message_notification_scheduled_event.go",
+                      "api/pkg/events/message_notification_send_event.go",
+                      "api/pkg/events/message_notification_sent_event.go",
+                      "api/pkg/events/message_phone_delivered_event.go",
+                      "api/pkg/events/message_phone_received_event.go",
+                      "api/pkg/events/message_phone_sending_event.go",
+                      "api/pkg/events/message_phone_sent_event.go",
+                      "api/pkg/events/message_send_expired_check_event.go",
+                      "api/pkg/events/message_send_expired_event.go",
+                      "api/pkg/events/message_send_failed_event.go",
+                      "api/pkg/events/message_send_retry_event.go",
+                      "api/pkg/events/message_send_schedule_deleted_event.go",
+                      "api/pkg/events/message_thead_api_deleted_event.go",
+                      "api/pkg/events/phone_deleted_event.go",
+                      "api/pkg/events/phone_heartbeat_check_event.go",
+                      "api/pkg/events/phone_heartbeat_missed.go",
+                      "api/pkg/events/phone_heartbeat_offline_event.go",
+                      "api/pkg/events/phone_heartbeat_online_event.go",
+                      "api/pkg/events/phone_updated_event.go",
+                      "api/pkg/events/user_account_created_event.go",
+                      "api/pkg/events/user_account_deleted_event.go",
+                      "api/pkg/events/user_api_key_rotated_event.go",
+                      "api/pkg/events/user_subscription_canceled_event.go",
+                      "api/pkg/events/user_subscription_created_event.go",
+                      "api/pkg/events/user_subscription_expired_event.go",
+                      "api/pkg/events/user_subscription_updated_event.go",
+                      "api/pkg/events/webhook_event_failed_event.go",
+                      "api/pkg/handlers/attachment_handler.go",
+                      "api/pkg/handlers/billing_handler.go",
+                      "api/pkg/handlers/bulk_message_handler.go",
+                      "api/pkg/handlers/discord_handler.go",
+                      "api/pkg/handlers/events_handler.go",
+                      "api/pkg/handlers/firebase_email_auth_handler.go",
+                      "api/pkg/handlers/handler.go",
+                      "api/pkg/handlers/handler_test.go",
+                      "api/pkg/handlers/heartbeat_handler.go",
+                      "api/pkg/handlers/integration_3cx_handler.go",
+                      "api/pkg/handlers/lemonsqueezy_handler.go",
+                      "api/pkg/handlers/message_handler.go",
+                      "api/pkg/handlers/message_send_schedule_handler.go",
+                      "api/pkg/handlers/message_thread_handler.go",
+                      "api/pkg/handlers/phone_api_key_handler.go",
+                      "api/pkg/handlers/phone_api_key_handler_test.go",
+                      "api/pkg/handlers/phone_handler.go",
+                      "api/pkg/handlers/user_handler.go",
+                      "api/pkg/handlers/webhook_handler.go",
+                      "api/pkg/listeners/billing_listener.go",
+                      "api/pkg/listeners/discord_listener.go",
+                      "api/pkg/listeners/email_notification_listener.go",
+                      "api/pkg/listeners/heartbeat_listener.go",
+                      "api/pkg/listeners/integration_3cx_listener.go",
+                      "api/pkg/listeners/marketing_listener.go",
+                      "api/pkg/listeners/message_listener.go",
+                      "api/pkg/listeners/message_send_schedule_listener.go",
+                      "api/pkg/listeners/message_thread_listener.go",
+                      "api/pkg/listeners/phone_api_key_listener.go",
+                      "api/pkg/listeners/phone_listener.go",
+                      "api/pkg/listeners/phone_notification_listener.go",
+                      "api/pkg/listeners/user_listener.go",
+                      "api/pkg/listeners/webhook_listener.go",
+                      "api/pkg/listeners/websocket_listener.go",
+                      "api/pkg/middlewares/api_key_auth_middleware.go",
+                      "api/pkg/middlewares/authenticated_middlesare.go",
+                      "api/pkg/middlewares/bearer_api_key_auth_middleware.go",
+                      "api/pkg/middlewares/bearer_auth_middleware.go",
+                      "api/pkg/middlewares/http_request_logger_middleware.go",
+                      "api/pkg/middlewares/phone_api_key_auth_middleware.go",
+                      "api/pkg/repositories/attachment_repository.go",
+                      "api/pkg/repositories/attachment_repository_test.go",
+                      "api/pkg/repositories/billing_usage_repository.go",
+                      "api/pkg/repositories/billing_usage_repository_test.go",
+                      "api/pkg/repositories/discord_repository.go",
+                      "api/pkg/repositories/google_cloud_storage_attachment_repository.go",
+                      "api/pkg/repositories/gorm_billing_usage_repository.go",
+                      "api/pkg/repositories/gorm_discord_repository.go",
+                      "api/pkg/repositories/gorm_heartbeat_monitor_repository.go",
+                      "api/pkg/repositories/gorm_heartbeat_repository.go",
+                      "api/pkg/repositories/gorm_integration_3cx_repository.go",
+                      "api/pkg/repositories/gorm_message_repository.go",
+                      "api/pkg/repositories/gorm_message_send_schedule_repository.go",
+                      "api/pkg/repositories/gorm_message_thread_repository.go",
+                      "api/pkg/repositories/gorm_phone_api_key_repository.go",
+                      "api/pkg/repositories/gorm_phone_notification_repository.go",
+                      "api/pkg/repositories/gorm_phone_repository.go",
+                      "api/pkg/repositories/gorm_user_repository.go",
+                      "api/pkg/repositories/gorm_webhook_repository.go",
+                      "api/pkg/repositories/heartbeat_monitor_repository.go",
+                      "api/pkg/repositories/heartbeat_repository.go",
+                      "api/pkg/repositories/integration_3cx_repository.go",
+                      "api/pkg/repositories/memory_attachment_repository.go",
+                      "api/pkg/repositories/message_repository.go",
+                      "api/pkg/repositories/message_send_schedule_repository.go",
+                      "api/pkg/repositories/message_thread_repository.go",
+                      "api/pkg/repositories/mongo_heartbeat_monitor_repository.go",
+                      "api/pkg/repositories/mongo_heartbeat_repository.go",
+                      "api/pkg/repositories/mongodb.go",
+                      "api/pkg/repositories/phone_api_key_repository.go",
+                      "api/pkg/repositories/phone_notification_repository.go",
+                      "api/pkg/repositories/phone_repository.go",
+                      "api/pkg/repositories/repository.go",
+                      "api/pkg/repositories/user_repository.go",
+                      "api/pkg/repositories/webhook_repository.go",
+                      "api/pkg/requests/billing_usage_history_request.go",
+                      "api/pkg/requests/bulk_message_request.go",
+                      "api/pkg/requests/discord_index_request.go",
+                      "api/pkg/requests/discord_store_request.go",
+                      "api/pkg/requests/discord_update_request.go",
+                      "api/pkg/requests/firebase_email_auth_request.go",
+                      "api/pkg/requests/heartbeat_index_request.go",
+                      "api/pkg/requests/heartbeat_store_request.go",
+                      "api/pkg/requests/integration_3cx_message_request.go",
+                      "api/pkg/requests/message_bulk_send_request.go",
+                      "api/pkg/requests/message_call_missed_request.go",
+                      "api/pkg/requests/message_event_request.go",
+                      "api/pkg/requests/message_index_request.go",
+                      "api/pkg/requests/message_outstanding_request.go",
+                      "api/pkg/requests/message_receive_request.go",
+                      "api/pkg/requests/message_search_request.go",
+                      "api/pkg/requests/message_send_request.go",
+                      "api/pkg/requests/message_send_schedule_store_request.go",
+                      "api/pkg/requests/message_thread_index_request.go",
+                      "api/pkg/requests/message_thread_update_request.go",
+                      "api/pkg/requests/phone_api_key_index_request.go",
+                      "api/pkg/requests/phone_api_key_store_request.go",
+                      "api/pkg/requests/phone_delete_request.go",
+                      "api/pkg/requests/phone_fcm_token_request.go",
+                      "api/pkg/requests/phone_index_request.go",
+                      "api/pkg/requests/phone_update_request.go",
+                      "api/pkg/requests/request.go",
+                      "api/pkg/requests/user_notification_update_request.go",
+                      "api/pkg/requests/user_payment_invoice_request.go",
+                      "api/pkg/requests/user_update_request.go",
+                      "api/pkg/requests/webhook_index_request.go",
+                      "api/pkg/requests/webhook_store_request.go",
+                      "api/pkg/requests/webhook_update_request.go",
+                      "api/pkg/responses/billing_responses.go",
+                      "api/pkg/responses/bulk_message_responses.go",
+                      "api/pkg/responses/discord_responses.go",
+                      "api/pkg/responses/firebase_email_auth_responses.go",
+                      "api/pkg/responses/heartbeat_responses.go",
+                      "api/pkg/responses/message_responses.go",
+                      "api/pkg/responses/message_send_schedule_responses.go",
+                      "api/pkg/responses/message_thead_responses.go",
+                      "api/pkg/responses/phone_api_key_responses.go",
+                      "api/pkg/responses/phone_responses.go",
+                      "api/pkg/responses/response.go",
+                      "api/pkg/responses/user_responses.go",
+                      "api/pkg/responses/webhook_responses.go",
+                      "api/pkg/services/billing_service.go",
+                      "api/pkg/services/billing_service_test.go",
+                      "api/pkg/services/discord_service.go",
+                      "api/pkg/services/email_notification_service.go",
+                      "api/pkg/services/emulator_fcm_client.go",
+                      "api/pkg/services/emulator_push_queue.go",
+                      "api/pkg/services/entitlement_service.go",
+                      "api/pkg/services/event_dispatcher_service.go",
+                      "api/pkg/services/fcm_client.go",
+                      "api/pkg/services/google_cloud_push_queue_service.go",
+                      "api/pkg/services/heartbeat_service.go",
+                      "api/pkg/services/integration_3cx_service.go",
+                      "api/pkg/services/lemonsqueezy_service.go",
+                      "api/pkg/services/marketting_service.go",
+                      "api/pkg/services/message_send_schedule_service.go",
+                      "api/pkg/services/message_service.go",
+                      "api/pkg/services/message_service_test.go",
+                      "api/pkg/services/message_thread_service.go",
+                      "api/pkg/services/message_thread_service_test.go",
+                      "api/pkg/services/phone_api_key_service.go",
+                      "api/pkg/services/phone_notification_service.go",
+                      "api/pkg/services/phone_service.go",
+                      "api/pkg/services/push_queue_service.go",
+                      "api/pkg/services/service.go",
+                      "api/pkg/services/user_service.go",
+                      "api/pkg/services/webhook_service.go",
+                      "api/pkg/telemetry/gorm_logger.go",
+                      "api/pkg/telemetry/logger.go",
+                      "api/pkg/telemetry/otel_tracer.go",
+                      "api/pkg/telemetry/tracer.go",
+                      "api/pkg/telemetry/zerolog_logger.go",
+                      "api/pkg/validators/billing_handler_validator.go",
+                      "api/pkg/validators/bulk_message_handler_validator.go",
+                      "api/pkg/validators/discord_handler_validator.go",
+                      "api/pkg/validators/heartbeat_handler_validator.go",
+                      "api/pkg/validators/lemonsqueezy_handler_validator.go",
+                      "api/pkg/validators/message_handler_validator.go",
+                      "api/pkg/validators/message_send_schedule_handler_validator.go",
+                      "api/pkg/validators/message_thread_handler_validator.go",
+                      "api/pkg/validators/phone_api_key_handler_validator.go",
+                      "api/pkg/validators/phone_handler_validator.go",
+                      "api/pkg/validators/turnstile_token_validator.go",
+                      "api/pkg/validators/user_handler_validator.go",
+                      "api/pkg/validators/validator.go",
+                      "api/pkg/validators/webhook_handler_validator.go",
+                      "api/root.crt",
+                      "deploy/api.env.example",
+                      "docs/superpowers/plans/2026-05-26-nuxt4-vuetify4-migration.md",
+                      "docs/superpowers/specs/2026-05-26-nuxt4-vuetify4-migration-design.md",
+                      "web/app/composables/useApi.ts",
+                      "web/app/pages/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier.vue",
+                      "web/app/pages/phone-api-keys/index.vue",
+                      "web/app/utils/api-error.ts",
+                      "web/app/utils/capitalize.ts",
+                      "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/google-sheets.png",
+                      "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/zapier-action-action.png",
+                      "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/zapier-action-event.png",
+                      "web/public/img/blog/send-sms-when-new-row-is-added-to-google-sheets-using-zapier/zapier-trigger.png",
+                      "web/public/img/phone-api-key.png",
+                      "web/public/img/zapier-logo.svg",
+                      "web/shared/types/api.ts"
+                  ],
+    "workflows":  [
+                      ".github/workflows/android.yml",
+                      ".github/workflows/api.yml",
+                      ".github/workflows/deploy-nasak.yml",
+                      ".github/workflows/web.yml"
+                  ],
+    "researchSections":  [
+                             {
+                                 "file":  ".github/copilot-instructions.md",
+                                 "sections":  [
+                                                  "Copilot Instructions for httpSMS",
+                                                  "Build, Test, and Lint Commands",
+                                                  "API (Go)",
+                                                  "Development with hot-reload",
+                                                  "Build",
+                                                  "Run tests",
+                                                  "Run a single test",
+                                                  "Generate Swagger docs (required after changing API annotations)",
+                                                  "Pre-commit hooks run: go-fumpt, go-imports, go-lint, go-mod-tidy",
+                                                  "Web (Nuxt/Vue)",
+                                                  "Install dependencies",
+                                                  "Development server (port 3000)",
+                                                  "Lint (eslint + stylelint + prettier)",
+                                                  "Auto-fix lint issues",
+                                                  "Run tests (Jest)",
+                                                  "Static site generation (production build)",
+                                                  "Regenerate TypeScript API models from Swagger",
+                                                  "Android (Kotlin)",
+                                                  "Build",
+                                                  "Debug APK",
+                                                  "Release APK",
+                                                  "Docker (full stack)",
+                                                  "Start all services (PostgreSQL, Redis, API, Web)",
+                                                  "API at localhost:8000, Web at localhost:3000",
+                                                  "Architecture",
+                                                  "API â€” Layered Architecture with Event-Driven Processing",
+                                                  "Web â€” Nuxt 2 Static SPA",
+                                                  "Android â€” Task-Oriented, Event-Driven",
+                                                  "Key Conventions",
+                                                  "API (Go)",
+                                                  "Web (Vue/TypeScript)",
+                                                  "Android (Kotlin)"
+                                              ]
+                             },
+                             {
+                                 "file":  "AGENTS.md",
+                                 "sections":  [
+                                                  "Repository agent guidance"
+                                              ]
+                             },
+                             {
+                                 "file":  "CODE_OF_CONDUCT.md",
+                                 "sections":  [
+                                                  "Contributor Covenant Code of Conduct",
+                                                  "Our Pledge",
+                                                  "Our Standards",
+                                                  "Enforcement Responsibilities",
+                                                  "Scope",
+                                                  "Enforcement",
+                                                  "Enforcement Guidelines",
+                                                  "1. Correction",
+                                                  "2. Warning",
+                                                  "3. Temporary Ban",
+                                                  "4. Permanent Ban",
+                                                  "Attribution"
+                                              ]
+                             },
+                             {
+                                 "file":  "README.md",
+                                 "sections":  [
+                                                  "Ù¾ÛŒØ§Ù…Ú© Ù†Ø³Ú©",
+                                                  "Upstream project",
+                                                  "Table Of Contents",
+                                                  "Why?",
+                                                  "Web UI",
+                                                  "API",
+                                                  "Android App",
+                                                  "Chat/forum",
+                                                  "Features",
+                                                  "End-to-end Encryption",
+                                                  "Webhook",
+                                                  "Back Pressure",
+                                                  "Message Expiration",
+                                                  "API Clients",
+                                                  "Flows",
+                                                  "Sending an SMS Message",
+                                                  "Self Host Setup - Docker",
+                                                  "1. Setup Firebase",
+                                                  "2. Setup SMTP Email service",
+                                                  "3. Setup Cloudflare Turnstile",
+                                                  "4. Download the code",
+                                                  "5. Setup the environment variables",
+                                                  "Cloudflare Turnstile site key from step 3",
+                                                  "SMTP email server settings",
+                                                  "Firebase service account credentials",
+                                                  "This is the `projectId` from your firebase web config",
+                                                  "Cloudflare Turnstile secret key from step 3",
+                                                  "6. Build and Run",
+                                                  "7. Create the System User",
+                                                  "8. Build the Android App.",
+                                                  "Integration Testing",
+                                                  "License"
+                                              ]
+                             },
+                             {
+                                 "file":  "SECURITY.md",
+                                 "sections":  [
+                                                  "Security Policy",
+                                                  "Supported Versions",
+                                                  "Reporting a Vulnerability"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/NASAK_PRODUCTION.md",
+                                 "sections":  [
+                                                  "Nasak SMS production deployment",
+                                                  "Architecture",
+                                                  "Required external configuration",
+                                                  "Server layout",
+                                                  "First deployment",
+                                                  "Fill the runtime values, then:",
+                                                  "Android gateway",
+                                                  "Operations"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/NASAK_SMS.md",
+                                 "sections":  [
+                                                  "Ù¾ÛŒØ§Ù…Ú© Ù†Ø³Ú©",
+                                                  "Ù‡Ø²ÛŒÙ†Ù‡ Ùˆ Ù…Ø­Ø¯ÙˆØ¯ÛŒØª",
+                                                  "Ù…Ø¹Ù…Ø§Ø±ÛŒ",
+                                                  "Ø±Ø§Ù‡â€ŒØ§Ù†Ø¯Ø§Ø²ÛŒ Ú¯ÙˆØ´ÛŒ",
+                                                  "Ø§Ø±Ø³Ø§Ù„ Ù¾ÛŒØ§Ù…",
+                                                  "Ø§ØªØµØ§Ù„ Ø¨Ù‡ Ø³Ø§ÛŒØª Ø§ØµÙ„ÛŒ Ù†Ø³Ú©",
+                                                  "Ù…ØªØºÛŒØ±Ù‡Ø§ÛŒ self-hosted",
+                                                  "Ø§Ù…Ù†ÛŒØª",
+                                                  "Backup Ùˆ Ø¨Ø§Ø²ÛŒØ§Ø¨ÛŒ",
+                                                  "Ø³Ù„Ø§Ù…Øª Ø³Ø±ÙˆÛŒØ³",
+                                                  "ØªÙˆØ³Ø¹Ù‡"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/project-guide/README.md",
+                                 "sections":  [
+                                                  "Ø±Ø§Ù‡Ù†Ù…Ø§ÛŒ Ø¯Ø±Ú¯Ø§Ù‡ Ù¾ÛŒØ§Ù…Ú©"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/project-guide/architecture.md",
+                                 "sections":  [
+                                                  "Ù…Ø¹Ù…Ø§Ø±ÛŒ",
+                                                  "ÙˆØ¶Ø¹ÛŒØª Ù¾ÛŒØ§Ù… Ø¯Ø± Ù…Ø¯Ù„"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/project-guide/change-rules.md",
+                                 "sections":  [
+                                                  "Ù‚ÙˆØ§Ø¹Ø¯ ØªØºÛŒÛŒØ± Ùˆ Ù¾Ø°ÛŒØ±Ø´",
+                                                  "Ù…Ø¹ÛŒØ§Ø± Ù¾Ø§ÛŒØ§Ù†"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/project-guide/operations.md",
+                                 "sections":  [
+                                                  "Ø¹Ù…Ù„ÛŒØ§Øª Ùˆ Ø§Ù…Ù†ÛŒØª"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/project-guide/remaining-work.md",
+                                 "sections":  [
+                                                  "Ú©Ø§Ø±Ù‡Ø§ÛŒ Ø¨Ø§Ø²"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/project-guide/source-map.md",
+                                 "sections":  [
+                                                  "Ù†Ù‚Ø´Ù‡Ù” Ù…Ù†Ø§Ø¨Ø¹ Ù†Ø³Ø®Ù‡â€ŒØ¯Ø§Ø±",
+                                                  "Ù‚Ø±Ø§Ø±Ø¯Ø§Ø¯ Ùˆ API",
+                                                  "Ù…Ø³ØªÙ†Ø¯Ø§Øª Ùˆ ØªØµÙ…ÛŒÙ…â€ŒÙ‡Ø§",
+                                                  "Ø¹Ù…Ù„ÛŒØ§Øª Ùˆ Ø§Ù†ØªØ´Ø§Ø±",
+                                                  "Ø¢Ø²Ù…ÙˆÙ†â€ŒÙ‡Ø§"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/project-guide/validation.md",
+                                 "sections":  [
+                                                  "Ø§Ø¹ØªØ¨Ø§Ø±Ø³Ù†Ø¬ÛŒ Ù…Ø³ØªÙ†Ø¯Ø§Øª Ùˆ Ø´ÙˆØ§Ù‡Ø¯",
+                                                  "Ú©Ù†ØªØ±Ù„â€ŒÙ‡Ø§ÛŒ Ø§Ù†Ø¬Ø§Ù…â€ŒØ´Ø¯Ù‡",
+                                                  "Ù†ØªÛŒØ¬Ù‡",
+                                                  "Ù…Ø­Ø¯ÙˆØ¯ÛŒØª"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/plans/2026-05-26-nuxt4-vuetify4-migration.md",
+                                 "sections":  [
+                                                  "Nuxt 4 + Vuetify 4 Migration Implementation Plan",
+                                                  "File Structure",
+                                                  "Task 1: Backup Old Code \u0026 Scaffold Nuxt 4 Project",
+                                                  "Remove old source files but keep .env and static for reference",
+                                                  "We\u0027ll scaffold fresh and copy what we need",
+                                                  "Remove old web directory entirely",
+                                                  "Create fresh Nuxt 4 project",
+                                                  "Task 2: Configure nuxt.config.ts",
+                                                  "Copy from old .env (reference the backed-up content)",
+                                                  "Task 3: Port Utility Files"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/plans/2026-07-18-message-thread-archive-ui.md",
+                                 "sections":  [
+                                                  "Message Thread Archive UI Implementation Plan",
+                                                  "Global Constraints",
+                                                  "Task 1: Active Thread Primary Color",
+                                                  "Task 2: Archive Without Switching Filters",
+                                                  "Task 3: Production Validation"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/plans/2026-07-18-unarchive-thread-on-receive.md",
+                                 "sections":  [
+                                                  "Unarchive Thread on Receive Implementation Plan",
+                                                  "Global Constraints",
+                                                  "File Structure",
+                                                  "Task 1: Add `UnarchiveThread` field to the Phone entity",
+                                                  "Task 2: Add `UnarchiveThread` to the received-message event payload",
+                                                  "Task 3: Populate `UnarchiveThread` on the payload in ReceiveMessage",
+                                                  "Task 4: Thread unarchive decision helper + wiring (TDD)",
+                                                  "Task 5: Pass the flag through the received-message listener",
+                                                  "Task 6: Accept `unarchive_thread` in the phone upsert request/service"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/plans/2026-07-18-webhook-email-payload-formatting.md",
+                                 "sections":  [
+                                                  "Webhook Email Payload Formatting Implementation Plan",
+                                                  "Global Constraints",
+                                                  "File Structure",
+                                                  "Task 1: Build the event payload formatter",
+                                                  "Task 2: Add opt-in rich dictionary rendering to the Hermes theme",
+                                                  "Task 3: Wire formatting into the webhook failure email"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/specs/2026-05-26-nuxt4-vuetify4-migration-design.md",
+                                 "sections":  [
+                                                  "httpSMS Frontend Migration: Nuxt 2 + Vuetify 2 â†’ Nuxt 4 + Vuetify 4",
+                                                  "Summary",
+                                                  "Target Versions",
+                                                  "Decisions",
+                                                  "Architecture",
+                                                  "Directory Structure (Nuxt 4)",
+                                                  "Key Migration Patterns",
+                                                  "Components: Class-based â†’ `\u003cscript setup\u003e`",
+                                                  "Vuetify Breakpoints: `$vuetify.breakpoint` â†’ `useDisplay()`",
+                                                  "State: Vuex â†’ Pinia",
+                                                  "Firebase: `this.$fire.auth` â†’ VueFire composables",
+                                                  "Dynamic Routes: `_id` â†’ `[id]`",
+                                                  "Vuetify 4 Breaking Changes to Address",
+                                                  "Vuetify MCP Usage Per Component",
+                                                  "Pinia Store Design",
+                                                  "Plugin Migrations",
+                                                  "Migration Order (Tasks)",
+                                                  "Phase 1: Scaffold \u0026 Configuration",
+                                                  "Phase 2: Foundation",
+                                                  "Phase 3: State Management",
+                                                  "Phase 4: Layouts \u0026 Middleware",
+                                                  "Phase 5: Components (use Vuetify MCP for each)",
+                                                  "Phase 6: Pages (use Vuetify MCP for each)",
+                                                  "Phase 7: Final Setup",
+                                                  "Phase 8: Verification (EVERY component and page)",
+                                                  "Verification Strategy",
+                                                  "Risk Mitigations"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/specs/2026-06-24-login-last-used-badge-design.md",
+                                 "sections":  [
+                                                  "Login \"Last Used\" Badge â€” Design",
+                                                  "Problem",
+                                                  "Goal",
+                                                  "Scope",
+                                                  "Approach",
+                                                  "Storage",
+                                                  "Recording the method",
+                                                  "Reading the method",
+                                                  "Display",
+                                                  "Edge cases",
+                                                  "Testing",
+                                                  "Out of scope"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/specs/2026-07-05-affiliates-landing-page-design.md",
+                                 "sections":  [
+                                                  "Affiliates Landing Page â€” Design",
+                                                  "Goal",
+                                                  "Files",
+                                                  "Conventions to follow",
+                                                  "Page structure",
+                                                  "1. Hero",
+                                                  "2. Why promote httpSMS (benefit cards)",
+                                                  "3. How it works (3 numbered steps)",
+                                                  "4. FAQ (static two-column grid â€” no expansion panels)",
+                                                  "5. Closing CTA banner",
+                                                  "SEO meta",
+                                                  "Out of scope",
+                                                  "Testing / verification"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/specs/2026-07-13-getting-started-page-design.md",
+                                 "sections":  [
+                                                  "Getting Started page â€” Design",
+                                                  "Goal",
+                                                  "Route",
+                                                  "Page structure (top â†’ bottom)",
+                                                  "Placeholders",
+                                                  "Discoverability",
+                                                  "Conventions to follow",
+                                                  "Out of scope"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/specs/2026-07-18-message-thread-archive-ui-design.md",
+                                 "sections":  [
+                                                  "Message Thread Archive UI Design",
+                                                  "Goal",
+                                                  "Active Thread Styling",
+                                                  "Archive and Unarchive Behavior",
+                                                  "Error Handling",
+                                                  "Validation"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/specs/2026-07-18-unarchive-thread-on-receive-design.md",
+                                 "sections":  [
+                                                  "Auto-unarchive Message Threads on Inbound Message (per-phone)",
+                                                  "Problem",
+                                                  "Decisions",
+                                                  "Design",
+                                                  "1. Data model â€” `api/pkg/entities/phone.go`",
+                                                  "2. Event payload â€” `api/pkg/events/message_phone_received_event.go`",
+                                                  "3. Populate the flag â€” `api/pkg/services/message_service.go`",
+                                                  "4. Thread service trigger â€” `api/pkg/services/message_thread_service.go`",
+                                                  "5. Listener â€” `api/pkg/listeners/message_thread_listener.go`",
+                                                  "6. Request/params â€” phone upsert",
+                                                  "7. Web frontend â€” `web/`",
+                                                  "8. Swagger",
+                                                  "Testing",
+                                                  "Out of scope"
+                                              ]
+                             },
+                             {
+                                 "file":  "docs/superpowers/specs/2026-07-18-webhook-email-payload-formatting-design.md",
+                                 "sections":  [
+                                                  "Webhook Email Payload Formatting",
+                                                  "Problem",
+                                                  "Decisions",
+                                                  "Design",
+                                                  "1. Payload formatter",
+                                                  "2. Hermes dictionary rendering",
+                                                  "3. Webhook email factory",
+                                                  "Data Flow",
+                                                  "Error Handling and Security",
+                                                  "Testing",
+                                                  "Out of Scope"
+                                              ]
+                             },
+                             {
+                                 "file":  "graphify-out/GRAPH_REPORT.md",
+                                 "sections":  [
+                                                  "Graph Report - nasak-sms  (2026-07-20)",
+                                                  "Corpus Check",
+                                                  "Summary",
+                                                  "Graph Freshness",
+                                                  "Community Hubs (Navigation)"
+                                              ]
+                             },
+                             {
+                                 "file":  "tests/README.md",
+                                 "sections":  [
+                                                  "Integration Tests",
+                                                  "Architecture",
+                                                  "Components",
+                                                  "How It Works",
+                                                  "FCM Redirect",
+                                                  "Test Coverage",
+                                                  "Prerequisites",
+                                                  "Running Locally",
+                                                  "1. Generate Firebase Credentials",
+                                                  "2. Set Environment Variable",
+                                                  "3. Start the Stack",
+                                                  "4. Wait for Seeding",
+                                                  "5. Run Tests",
+                                                  "6. Tear Down",
+                                                  "One-Liner",
+                                                  "CI/CD",
+                                                  "Test Data",
+                                                  "Project Structure",
+                                                  "Troubleshooting",
+                                                  "API fails to start",
+                                                  "Tests timeout waiting for `delivered` status",
+                                                  "Seed container fails",
+                                                  "Adding New Tests"
+                                              ]
+                             },
+                             {
+                                 "file":  "web/README.md",
+                                 "sections":  [
+                                                  "Nuxt Minimal Starter",
+                                                  "Setup",
+                                                  "npm",
+                                                  "pnpm",
+                                                  "yarn",
+                                                  "bun",
+                                                  "Development Server",
+                                                  "npm",
+                                                  "pnpm",
+                                                  "yarn",
+                                                  "bun",
+                                                  "Production",
+                                                  "npm",
+                                                  "pnpm",
+                                                  "yarn",
+                                                  "bun",
+                                                  "npm",
+                                                  "pnpm",
+                                                  "yarn",
+                                                  "bun"
+                                              ]
+                             }
+                         ],
+    "sensitiveFilesSkipped":  true,
+    "source":  "tracked text files only"
+}
