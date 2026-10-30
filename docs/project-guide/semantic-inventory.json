@@ -1,0 +1,1290 @@
+﻿{
+    "schema":  "nasak-semantic-inventory.v1",
+    "source":  {
+                   "repository":  "httpsms",
+                   "commit":  "906282c9c158eb3585617b8d89f31c21193166ac",
+                   "generated":  "2026-10-29T16:25:33Z",
+                   "scope":  "tracked paths from git ls-tree; secret and data-like paths excluded",
+                   "method":  "safe path classification with literal filename evidence"
+               },
+    "counts":  {
+                   "trackedFiles":  881,
+                   "safeTrackedFiles":  880,
+                   "routes":  262,
+                   "tests":  13,
+                   "contracts":  2,
+                   "migrations":  11,
+                   "operations":  26
+               },
+    "routes":  [
+                   {
+                       "file":  ".github/workflows/api.yml",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/.env.docker",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/.env.production",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/.gitignore",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/Dockerfile",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/cloudbuild.yaml",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/docs/docs.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/docs/swagger.json",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/docs/swagger.yaml",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/go.mod",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/go.sum",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/main.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/authlocal/token.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/cache/cache.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/cache/memory_cache.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/cache/redis_cache.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/di/config.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/di/container.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/application.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/application_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/channel_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/client.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/client_config.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/client_option.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/client_option_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/guild_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/discord/response.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/event_payload_formatter.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/event_payload_formatter_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/factory.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/hermes_mailer.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/hermes_notification_email_factory.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/hermes_notification_email_factory_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/hermes_theme.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/hermes_theme_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/hermes_user_email_factory.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/hermes_user_email_factory_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/mailer.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/notification_email_factory.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/smtp_mailer_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/emails/user_email_factory.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/auth_context.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/billing_usage.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/billing_usage_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/bulk_message.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/discord.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/heartbeat.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/heartbeat_monitor.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/integration_3cx.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/local_auth_credential.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/message.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/message_send_schedule.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/message_send_schedule_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/message_thread.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/phone.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/phone_api_key.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/phone_notification.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/user.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/user_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/entities/webhook.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/discord_message_failed_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/listeners.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_api_deleted_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_api_sent_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_call_missed_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_notification_failed_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_notification_scheduled_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_notification_send_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_notification_sent_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_phone_delivered_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_phone_received_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_phone_sending_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_phone_sent_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_send_expired_check_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_send_expired_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_send_failed_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_send_retry_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_send_schedule_deleted_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/message_thead_api_deleted_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/phone_deleted_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/phone_heartbeat_check_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/phone_heartbeat_missed.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/phone_heartbeat_offline_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/phone_heartbeat_online_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/phone_updated_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/user_account_created_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/user_account_deleted_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/user_api_key_rotated_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/user_subscription_canceled_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/user_subscription_created_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/user_subscription_expired_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/user_subscription_updated_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/events/webhook_event_failed_event.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/attachment_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/billing_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/bulk_message_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/discord_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/events_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/firebase_email_auth_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/handler_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/heartbeat_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/integration_3cx_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/lemonsqueezy_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/message_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/message_send_schedule_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/message_thread_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/phone_api_key_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/phone_api_key_handler_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/phone_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/user_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/handlers/webhook_handler.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/billing_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/discord_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/email_notification_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/heartbeat_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/integration_3cx_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/marketing_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/message_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/message_send_schedule_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/message_thread_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/phone_api_key_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/phone_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/phone_notification_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/user_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/webhook_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/listeners/websocket_listener.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/middlewares/api_key_auth_middleware.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/middlewares/authenticated_middlesare.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/middlewares/bearer_api_key_auth_middleware.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/middlewares/bearer_auth_middleware.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/middlewares/http_request_logger_middleware.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/middlewares/phone_api_key_auth_middleware.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/attachment_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/attachment_repository_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/billing_usage_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/billing_usage_repository_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/discord_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/google_cloud_storage_attachment_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_billing_usage_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_discord_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_heartbeat_monitor_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_heartbeat_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_integration_3cx_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_message_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_message_send_schedule_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_message_thread_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_phone_api_key_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_phone_notification_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_phone_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_user_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/gorm_webhook_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/heartbeat_monitor_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/heartbeat_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/integration_3cx_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/memory_attachment_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/message_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/message_send_schedule_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/message_thread_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/mongo_heartbeat_monitor_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/mongo_heartbeat_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/mongodb.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/phone_api_key_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/phone_notification_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/phone_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/user_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/repositories/webhook_repository.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/billing_usage_history_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/bulk_message_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/discord_index_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/discord_store_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/discord_update_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/firebase_email_auth_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/heartbeat_index_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/heartbeat_store_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/integration_3cx_message_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_bulk_send_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_call_missed_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_event_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_index_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_outstanding_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_receive_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_search_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_send_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_send_schedule_store_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_thread_index_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/message_thread_update_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/phone_api_key_index_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/phone_api_key_store_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/phone_delete_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/phone_fcm_token_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/phone_index_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/phone_update_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/user_notification_update_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/user_payment_invoice_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/user_update_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/webhook_index_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/webhook_store_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/requests/webhook_update_request.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/billing_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/bulk_message_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/discord_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/firebase_email_auth_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/heartbeat_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/message_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/message_send_schedule_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/message_thead_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/phone_api_key_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/phone_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/response.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/user_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/responses/webhook_responses.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/billing_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/billing_service_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/discord_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/email_notification_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/emulator_fcm_client.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/emulator_push_queue.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/entitlement_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/event_dispatcher_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/fcm_client.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/google_cloud_push_queue_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/heartbeat_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/integration_3cx_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/lemonsqueezy_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/marketting_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/message_send_schedule_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/message_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/message_service_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/message_thread_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/message_thread_service_test.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/phone_api_key_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/phone_notification_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/phone_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/push_queue_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/user_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/services/webhook_service.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/telemetry/gorm_logger.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/telemetry/logger.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/telemetry/otel_tracer.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/telemetry/tracer.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/telemetry/zerolog_logger.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/billing_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/bulk_message_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/discord_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/heartbeat_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/lemonsqueezy_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/message_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/message_send_schedule_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/message_thread_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/phone_api_key_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/phone_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/turnstile_token_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/user_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/pkg/validators/webhook_handler_validator.go",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "api/root.crt",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "deploy/api.env.example",
+                       "evidence":  "path classification; runtime registration not proven"
+                   },
+                   {
+                       "file":  "web/shared/types/api.ts",
+                       "evidence":  "path classification; runtime registration not proven"
+                   }
+               ],
+    "tests":  [
+                  {
+                      "file":  "android/app/src/test/java/com/httpsms/ExampleUnitTest.kt",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/.env.test",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/README.md",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/docker-compose.yml",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/generate-firebase-credentials.sh",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/go.mod",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/go.sum",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/helpers_test.go",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/integration_test.go",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/unarchive_thread_integration_test.go",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/wiremock/mappings/fcm-send.json",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/wiremock/mappings/oauth-token.json",
+                      "evidence":  "test-like path; execution not proven"
+                  },
+                  {
+                      "file":  "tests/wiremock/mappings/webhook-receiver.json",
+                      "evidence":  "test-like path; execution not proven"
+                  }
+              ],
+    "contracts":  [
+                      {
+                          "file":  "api/docs/swagger.json",
+                          "evidence":  "contract-like path"
+                      },
+                      {
+                          "file":  "api/docs/swagger.yaml",
+                          "evidence":  "contract-like path"
+                      }
+                  ],
+    "migrations":  [
+                       {
+                           "file":  "docs/superpowers/plans/2026-05-26-nuxt4-vuetify4-migration.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/plans/2026-07-18-message-thread-archive-ui.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/plans/2026-07-18-unarchive-thread-on-receive.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/plans/2026-07-18-webhook-email-payload-formatting.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/specs/2026-05-26-nuxt4-vuetify4-migration-design.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/specs/2026-06-24-login-last-used-badge-design.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/specs/2026-07-05-affiliates-landing-page-design.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/specs/2026-07-13-getting-started-page-design.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/specs/2026-07-18-message-thread-archive-ui-design.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/specs/2026-07-18-unarchive-thread-on-receive-design.md",
+                           "evidence":  "migration-like path"
+                       },
+                       {
+                           "file":  "docs/superpowers/specs/2026-07-18-webhook-email-payload-formatting-design.md",
+                           "evidence":  "migration-like path"
+                       }
+                   ],
+    "operations":  [
+                       {
+                           "file":  ".github/CODEOWNERS",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/FUNDING.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/copilot-instructions.md",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/dependabot.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/ghbadge.png",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/workflows/android.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/workflows/api.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/workflows/deploy-nasak.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  ".github/workflows/web.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "api/Dockerfile",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "compose.production.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "deploy/api.env.example",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "deploy/compose.env.example",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "docker-compose.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/backup.sh",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/deploy.sh",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/health-check.sh",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/install-docker-ubuntu.sh",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/install-firebase-credentials.sh",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/nasak-sms-backup.service",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/nasak-sms-backup.timer",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/nasak-sms.service",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/nginx-sms.nasak.ir.conf",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "ops/sms-setup.html",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "tests/docker-compose.yml",
+                           "evidence":  "operations-like path"
+                       },
+                       {
+                           "file":  "web/Dockerfile",
+                           "evidence":  "operations-like path"
+                       }
+                   ],
+    "limitations":  [
+                        "Filename classification is intentionally conservative and does not prove reachability or runtime behavior.",
+                        "No secrets, credentials, database dumps or runtime data were read.",
+                        "Tests, CI, deploy, migration execution and production acceptance remain NOT_RUN unless separately recorded."
+                    ]
+}
